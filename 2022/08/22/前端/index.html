@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>前端 - Hexo</title>
+
+  
+    <meta name="description" content="一.HTML&#x2F;HTML51.form中input可以设置为readonly与disabled,请问两者有什么区别?1)共同点:  Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。 2)区别:   Readonly只针对input(text &#x2F; password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端">
+<meta property="og:url" content="http://example.com/2022/08/22/%E5%89%8D%E7%AB%AF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.HTML&#x2F;HTML51.form中input可以设置为readonly与disabled,请问两者有什么区别?1)共同点:  Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。 2)区别:   Readonly只针对input(text &#x2F; password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-08-22T03:45:29.000Z">
+<meta property="article:modified_time" content="2022-08-22T04:30:33.714Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main">Hexo</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-HTML-x2F-HTML5"><span class="toc-text">一.HTML&#x2F;HTML5</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-form%E4%B8%ADinput%E5%8F%AF%E4%BB%A5%E8%AE%BE%E7%BD%AE%E4%B8%BAreadonly%E4%B8%8Edisabled-%E8%AF%B7%E9%97%AE%E4%B8%A4%E8%80%85%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">1.form中input可以设置为readonly与disabled,请问两者有什么区别?</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AFDOCTYPE%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8"><span class="toc-text">2.什么是DOCTYPE及其作用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E4%B8%8E%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0-%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-text">3.常见的行内元素与块级元素,以及它们的区别与转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-HTML5%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">4.HTML5有哪些新特性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3HTML5%E7%BB%93%E6%9E%84%E7%9A%84%E8%AF%AD%E4%B9%89%E5%8C%96"><span class="toc-text">5.如何理解HTML5结构的语义化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE-%E8%AF%AD%E4%B9%89%E5%8C%96%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">6.为什么要使用语义化标签(语义化的优点)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-src%E4%B8%8Ehref%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">7.src与href的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-img-%E7%9A%84alt%E4%B8%8Etitle-%E6%9C%89%E4%BD%95%E5%BC%82%E5%90%8C"><span class="toc-text">8.img 的alt与title 有何异同</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E4%B8%8A%E6%9C%89%E5%A4%A7%E9%87%8F%E7%9A%84%E5%9B%BE%E7%89%87-%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99-%EF%BC%8C%E5%8A%A0%E8%BD%BD%E5%BE%88%E6%85%A2%EF%BC%8C%E4%BD%A0%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95%E4%BC%98%E5%8C%96%E8%BF%99%E4%BA%9B%E5%9B%BE%E7%89%87%E7%9A%84%E5%8A%A0%E8%BD%BD%EF%BC%8C%E7%BB%99%E7%94%A8%E6%88%B7%E6%9B%B4%E5%A5%BD%E7%9A%84%E4%BD%93%E9%AA%8C"><span class="toc-text">9.一个页面上有大量的图片(大型电商网站)，加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#10-%E8%B0%88%E8%B0%88%E4%BB%A5%E5%89%8D%E7%AB%AF%E8%A7%92%E5%BA%A6%E5%87%BA%E5%8F%91%E5%81%9A%E5%A5%BDSEO%E9%9C%80%E8%A6%81%E8%80%83%E8%99%91%E4%BB%80%E4%B9%88"><span class="toc-text">10.谈谈以前端角度出发做好SEO需要考虑什么</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#11-%E6%B8%90%E8%BF%9B%E5%A2%9E%E5%BC%BA%E5%92%8C%E4%BC%98%E9%9B%85%E9%99%8D%E7%BA%A7%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">11.渐进增强和优雅降级之间的区别?</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#12-websocket-%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E4%B8%8Ecookie"><span class="toc-text">12.websocket 本地存储与cookie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#13-%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%82%B9%E5%92%8C%E7%BC%BA%E7%82%B9"><span class="toc-text">13.请你说说iframe有哪些优点和缺点?</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-css-x2F-css3"><span class="toc-text">二.css&#x2F;css3</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-css%E6%9C%89%E5%93%AA%E4%BA%9B%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8-%E5%AE%83%E4%BB%AC%E7%9A%84%E6%9D%83%E9%87%8D%E6%98%AF%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%E7%9A%84"><span class="toc-text">1.css有哪些基本选择器?它们的权重是如何表示的?</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%BD%B1%E5%93%8D-%E8%A7%A3%E5%86%B3%E9%AB%98%E5%BA%A6%E5%9D%8D%E5%A1%8C-%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">2. 清除浮动带来的影响(解决高度坍塌)有几种方式?</span></a></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-08-22T03:45:29.000Z">2022-08-22</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>前端</span></h1>
+<h4 id="一-HTML-x2F-HTML5"><a href="#一-HTML-x2F-HTML5" class="headerlink" title="一.HTML&#x2F;HTML5"></a>一.HTML&#x2F;HTML5</h4><h5 id="1-form中input可以设置为readonly与disabled-请问两者有什么区别"><a href="#1-form中input可以设置为readonly与disabled-请问两者有什么区别" class="headerlink" title="1.form中input可以设置为readonly与disabled,请问两者有什么区别?"></a>1.form中input可以设置为readonly与disabled,请问两者有什么区别?</h5><h6 id="1-共同点"><a href="#1-共同点" class="headerlink" title="1)共同点:"></a>1)共同点:</h6><p>  Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。</p>
+<h6 id="2-区别"><a href="#2-区别" class="headerlink" title="2)区别:"></a>2)区别:</h6><p>   Readonly只针对input(text &#x2F; password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递出去（ readonly接受值更改可以回传，disable接受改但不回传数据）。</p>
+<h5 id="2-什么是DOCTYPE及其作用"><a href="#2-什么是DOCTYPE及其作用" class="headerlink" title="2.什么是DOCTYPE及其作用"></a>2.什么是DOCTYPE及其作用</h5><p>DOCTYPE是document type的简写，它是一种标记语言的文档类型声明，即告诉浏览器当前 HTML 是用什么版本编写的。</p>
+<h5 id="3-常见的行内元素与块级元素-以及它们的区别与转换"><a href="#3-常见的行内元素与块级元素-以及它们的区别与转换" class="headerlink" title="3.常见的行内元素与块级元素,以及它们的区别与转换"></a>3.常见的行内元素与块级元素,以及它们的区别与转换</h5><h6 id="1-行内元素"><a href="#1-行内元素" class="headerlink" title="1)行内元素:"></a>1)行内元素:</h6><p>a - 锚点<br>select - 项目选择<br>span - 常用内联容器，定义文本内区块<br>strong - 粗体强调<br>img - 图片<br>input - 输入框<br>label - 表格标签<br>textarea - 多行文本输入框<br>br - 换行</p>
+<h6 id="2-块级元素"><a href="#2-块级元素" class="headerlink" title="2)块级元素:"></a>2)块级元素:</h6><p>div<br>ul ,li 非排序列表<br>form - 交互表单<br>table - 表格<br>h1 -h6 标题<br>hr - 水平分隔线<br>p - 段落<br>dl -dt-dd - 定义列表<br>address - 地址<br>blockquote - 块引用<br>fieldset - form控制组</p>
+<h6 id="3-块级元素和内联元素的区别："><a href="#3-块级元素和内联元素的区别：" class="headerlink" title="3)块级元素和内联元素的区别："></a>3)块级元素和内联元素的区别：</h6><p>  (1).块级元素，宽度默认是它容器的100%,各占据一行，垂直方向排列；内联元素，都是同一行，水平方向排列；<br>  (2).块级元素，能容纳其他块元素或者内联元素；内联元素，只能容纳文本或其他内联元素；<br>  (3).块级元素中height，line-height以及margin和padding都可以控制；行内元素设置width无效，height无效(可以设置line-height)，margin上下无效，padding上下无效</p>
+<h6 id="4-块级元素和内联元素之间的转换："><a href="#4-块级元素和内联元素之间的转换：" class="headerlink" title="4)块级元素和内联元素之间的转换："></a>4)块级元素和内联元素之间的转换：</h6><p>(1)display<br>  块元素默认display:block;行内非替换元素(a,span)默认为display：inline;行内替换元素(input)默认为display:inline-block;<br>a.display:none;不显示该元素，也不会保留该元素原先占有的文档流位置。<br>b.display:block;转换为块级元素。<br>c.display:inline;转换为行内元素。<br>d.display:inline-block;转换为行内块级元素。<br>(2).float<br>  当把行内元素设置完float:left&#x2F;right后，该行内元素的display属性会被赋予block值，且拥有浮动特性。行内元素去除了之间的莫名空白。<br>(3).position<br>  当为行内元素进行定位时，position:absolute与position:fixed.都会使得原先的行内元素变为块级元素。</p>
+<h5 id="4-HTML5有哪些新特性"><a href="#4-HTML5有哪些新特性" class="headerlink" title="4.HTML5有哪些新特性"></a>4.HTML5有哪些新特性</h5><ul>
+<li>新的语义元素，比如 [header], [footer], [article], and [section]。</li>
+<li>新的表单控件，比如数字、日期、时间、日历和滑块。</li>
+<li>强大的图像支持（借由 [canvas]和 [svg]）</li>
+<li>强大的多媒体支持（借由 [video] 和 [audio]）</li>
+<li>强大的新 API，比如:<ul>
+<li>用webStorage储存机制取代 cookie。</li>
+<li>HTML5 地理定位</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-如何理解HTML5结构的语义化"><a href="#5-如何理解HTML5结构的语义化" class="headerlink" title="5.如何理解HTML5结构的语义化"></a>5.如何理解HTML5结构的语义化</h5><p>HTML5的语义化指的是合理正确的使用语义化的标签来创建页面结构，如 header,footer,nav，从标签上即可以直观的知道这个标签的作用，而不是滥用div.</p>
+<h5 id="6-为什么要使用语义化标签-语义化的优点"><a href="#6-为什么要使用语义化标签-语义化的优点" class="headerlink" title="6.为什么要使用语义化标签(语义化的优点)"></a>6.为什么要使用语义化标签(语义化的优点)</h5><p>为了更容易让屏幕阅读器读出内容，使网页结构更清晰，更容易被搜索引擎搜入，也为了在实际开发过程中一些团队合作的方便，HTML5新推出了一系列语义化标签如[hearder]&#x2F;[footer]&#x2F;[main]等</p>
+<h5 id="7-src与href的区别"><a href="#7-src与href的区别" class="headerlink" title="7.src与href的区别"></a>7.src与href的区别</h5><p><strong>href</strong>标识超文本引用，用在<strong>link</strong>和<strong>a</strong>等元素上，<strong>href</strong>是引用和页面关联，是在当前元素和引用资源之间建立联系</p>
+<p><strong>src</strong>表示引用资源，表示替换当前元素，用在<strong>img</strong>，<strong>script</strong>，<strong>iframe</strong>上，src是页面内容不可缺少的一部分。</p>
+<h5 id="8-img-的alt与title-有何异同"><a href="#8-img-的alt与title-有何异同" class="headerlink" title="8.img 的alt与title 有何异同"></a>8.img 的alt与title 有何异同</h5><p>alt属性和title属性相同点：<br>    它们都会出现浮层，显示自己设置的图片相关的内容。<br>alt属性和title属性不同点：<br>    alt属性:1.当图片加载不出来的时候，就会在图片未显示的地方出现一段alt设置的属性内容。这个属性的作用是为了给未加载的图片显示提示信息，即使在网络比较差的时候，用户也可以知道图片的内容，方便用户浏览网页。同时在程序员对网站维护的时候也能更快的查找到问题。2.浏览器的搜索引擎可以通过alt属性的文字描述来获取图片。<br>    title属性：title属性可以用在任何的元素上，当用户把鼠标移动到元素上时，就会显示预先设置的title的内容，起到对图片说明的作用，实质上就是对图片的解释和备注。</p>
+<h5 id="9-一个页面上有大量的图片-大型电商网站-，加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验"><a href="#9-一个页面上有大量的图片-大型电商网站-，加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验" class="headerlink" title="9.一个页面上有大量的图片(大型电商网站)，加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验"></a>9.一个页面上有大量的图片(大型电商网站)，加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验</h5><p>1.图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</p>
+<p>2.如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</p>
+<p>3.如果图片为css图片，可以使用Base64等技术。</p>
+<p>4.如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</p>
+<h5 id="10-谈谈以前端角度出发做好SEO需要考虑什么"><a href="#10-谈谈以前端角度出发做好SEO需要考虑什么" class="headerlink" title="10.谈谈以前端角度出发做好SEO需要考虑什么"></a>10.谈谈以前端角度出发做好SEO需要考虑什么</h5><h6 id="1-维护网站，提高内容质量，保持更新"><a href="#1-维护网站，提高内容质量，保持更新" class="headerlink" title="1.维护网站，提高内容质量，保持更新"></a>1.维护网站，提高内容质量，保持更新</h6><p>搜索引擎会考评网站的质量，保持网站的经常更新，使网站拥有大量的、有用的、可读性强的优质信息。网站的权重会相应的提升。为了保持更新频率而去抄袭并不可取。</p>
+<h6 id="2-网站结构布局优化：尽量简单、开门见山，提倡扁平化结构。"><a href="#2-网站结构布局优化：尽量简单、开门见山，提倡扁平化结构。" class="headerlink" title="2.网站结构布局优化：尽量简单、开门见山，提倡扁平化结构。"></a>2.网站结构布局优化：尽量简单、开门见山，提倡扁平化结构。</h6><p>一般而言，建立的网站结构层次越少，越容易被“蜘蛛”抓取，也就容易被收录。一般中小型网站目录结构超过三级，“蜘蛛”便不愿意往下爬，并且根据相关调查：访客如果经过跳转3次还没找到需要的信息，很可能离开。因此，三层目录结构也是体验的需要。</p>
+<h6 id="3-控制页面的大小"><a href="#3-控制页面的大小" class="headerlink" title="3.控制页面的大小"></a>3.控制页面的大小</h6><p>减少http请求，提高网站的加载速度。当速度很慢时，用户体验不好，留不住访客，并且一旦超时，“蜘蛛”也会离开</p>
+<h6 id="4-适量的关键词和网页描述"><a href="#4-适量的关键词和网页描述" class="headerlink" title="4.适量的关键词和网页描述"></a>4.适量的关键词和网页描述</h6><p>1.title标题：只强调重点即可，尽量把重要的关键词放在前面，关键词不要重复出现，尽量做到每个页面的title标题中不要设置相同的内容。</p>
+<p>2.meta keywords标签：关键词，列举出几个页面的重要关键字即可，切记过分堆砌。</p>
+<p>3.meta description标签：网页描述，需要高度概括网页内容，切记不能太长，过分堆砌关键词，每个页面也要有所不同。</p>
+<p>4.a标签：页内链接，要加 “title” 属性加以说明，让访客和 “蜘蛛” 知道。而外部链接，链接到其他网站的，则需要加上 el&#x3D;”nofollow” 属性, 告诉 “蜘蛛” 不要爬，因为一旦“蜘蛛”爬了外部链接之后，就不会再回来了。</p>
+<p>5.img应使用 “alt” 属性加以说明。为图片加上alt属性,当网络速度很慢，或者图片地址失效的时候，就可以体现出alt属性的作用，他可以让用户在图片没有显示的时候知道这个图片的作用。</p>
+<h5 id="11-渐进增强和优雅降级之间的区别"><a href="#11-渐进增强和优雅降级之间的区别" class="headerlink" title="11.渐进增强和优雅降级之间的区别?"></a>11.渐进增强和优雅降级之间的区别?</h5><p>渐进增强 ： 针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p>
+<p>优雅降级 ： 一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p>
+<p>区别： 优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。</p>
+<h5 id="12-websocket-本地存储与cookie"><a href="#12-websocket-本地存储与cookie" class="headerlink" title="12.websocket 本地存储与cookie"></a>12.websocket 本地存储与cookie</h5><p>通过本地存储（Local Storage），web 应用程序能够在用户浏览器中对数据进行本地的存储。存放数据大小为一般为5MB,.只能存储字符串类型,对于复杂的对象可以使用JS提供的JSON对象的stringify和parse来处理。</p>
+<p>1.localStorage 对象存储的是没有截止日期的数据。当浏览器被关闭时数据不会被删除。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 存储</span></span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="string">&quot;lastname&quot;</span>, <span class="string">&quot;Gates&quot;</span>);</span><br><span class="line"><span class="comment">// 取回</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;result&quot;</span>).<span class="property">innerHTML</span> = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;lastname&quot;</span>);</span><br><span class="line"><span class="comment">//移除</span></span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="string">&quot;lastname&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2.sessionStorage 对象等同 localStorage 对象，不同之处在于只对一个 session 存储数据。如果用户关闭具体的浏览器标签页，数据也会被删除。</p>
+<p>3.cookie为HTTP请求发送Set-Cookie HTTP头作为响应的一部分。生命期为只在设置的cookie过期时间之前一直有效(一般默认是浏览器关闭失效,可以自己设置失效时间)，即使窗口或浏览器关闭。 存放数据大小为4K左右 。</p>
+<h5 id="13-请你说说iframe有哪些优点和缺点"><a href="#13-请你说说iframe有哪些优点和缺点" class="headerlink" title="13.请你说说iframe有哪些优点和缺点?"></a>13.请你说说iframe有哪些优点和缺点?</h5><p><strong>优点</strong> <strong>:</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="selector-class">.iframe</span>能够把嵌入的网页原样展现出来；</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.模块分离，便于更改，如果有多个网页引用<span class="selector-tag">iframe</span>，只需要修改<span class="selector-tag">iframe</span>的内容，就可以实现调用的每一个页面内容的更改，方便快捷；</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.网页如果为了统一风格，头部和版本都是一样的，就可以写成一个页面，用<span class="selector-tag">iframe</span>来嵌套，增加代码的可重用；</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>.如果遇到加载缓慢的第三方内容如图标和广告，这些问题可以由<span class="selector-tag">iframe</span>来解决；</span><br><span class="line"></span><br><span class="line"><span class="number">5</span>.重载页面时不需要重载整个页面，只需要重载页面中的一个框架页；</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>.方便制作导航栏。</span><br></pre></td></tr></table></figure>
+
+<p><strong>缺点</strong> <strong>:</strong>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.样式和脚本需要额外链入，调用外部页面,需要额外调用css,增加页面额外的请求次数，增加服务器的http请求；</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>.代码复杂，在网页中使用框架结构最大的弊病是搜索引擎的“蜘蛛”程序无法解读这种页面，会影响搜索引擎优化，不利于网站排名；</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>.框架结构有时会让人感到迷惑，滚动条除了会挤占有限的页面空间外会使<span class="selector-tag">iframe</span>布局混乱，还会分散访问者的注意力，影响用户体验；</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>.链接导航疑问。运用框架结构时，必须保证正确配置所有的导航链接，否则，会给访问者带来很大的麻烦。比如被链接的页面出现在导航框架内，这种情况下访问者便被陷住了，因为此时他没有其他地点可去； </span><br><span class="line"></span><br><span class="line"><span class="number">5</span>.产生多个页面，不易管理；</span><br><span class="line"></span><br><span class="line"><span class="number">6</span>.多数小型的移动设备（PDA 手机）无法完全显示框架，设备兼容性差。</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-css-x2F-css3"><a href="#二-css-x2F-css3" class="headerlink" title="二.css&#x2F;css3"></a>二.css&#x2F;css3</h4><h5 id="1-css有哪些基本选择器-它们的权重是如何表示的"><a href="#1-css有哪些基本选择器-它们的权重是如何表示的" class="headerlink" title="1.css有哪些基本选择器?它们的权重是如何表示的?"></a>1.css有哪些基本选择器?它们的权重是如何表示的?</h5><table>
+<thead>
+<tr>
+<th>id 选择器</th>
+<th>0,1,0,0</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类、伪类、属性选择器</td>
+<td>0,0,1,0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>标签、伪元素选择器</td>
+<td>0,0,0,1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>通配符选择器</td>
+<td>0,0,0,0</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p><strong>后代选择器、子选择器、兄弟选择器、交集选择器</strong>：所有的基础选择器的权重相加</p>
+<p><strong>并集选择器</strong>：相当于多个选择器一起设置样式，权重分开计算即可。</p>
+<h5 id="2-清除浮动带来的影响-解决高度坍塌-有几种方式"><a href="#2-清除浮动带来的影响-解决高度坍塌-有几种方式" class="headerlink" title="2. 清除浮动带来的影响(解决高度坍塌)有几种方式?"></a>2. 清除浮动带来的影响(解决高度坍塌)有几种方式?</h5><h6 id="1-为父元素开启BFC-块级格式化上下文"><a href="#1-为父元素开启BFC-块级格式化上下文" class="headerlink" title="1.为父元素开启BFC(块级格式化上下文)"></a>1.为父元素开启BFC(块级格式化上下文)</h6><p>1)特点:</p>
+<p>①开启BFC的元素不会被浮动元素覆盖</p>
+<p>②开启BFC的父元素与其子元素外边距不会重叠(可以用来解决外边距重叠问题)</p>
+<p>③开启BFC的元素可以包含浮动的子元素</p>
+<p>2)如何开启BFC</p>
+<p>1、float的值不是none。<br>2、position的值不是static或者relative。<br>3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex<br>4、overflow的值不是visible</p>
+<h6 id="2-设置clear"><a href="#2-设置clear" class="headerlink" title="2.设置clear"></a>2.设置clear</h6><p>1).原理:（给子元素设置clear:both相当于给它自动设置了1个mrgin-top外边距从而可以撑开父盒子高度）</p>
+<p>2)实现:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//给父元素设置一个clearfix的class</span><br><span class="line"><span class="selector-class">.clearfix</span>::brfore,</span><br><span class="line">.clearfix::after&#123;</span><br><span class="line">	<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>;</span><br><span class="line">	dispaly:table;</span><br><span class="line">	<span class="attribute">clear</span>:both</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/08/22/hello-world/">Hello World<span class="note">Older</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://example.com/">@John Doe</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
