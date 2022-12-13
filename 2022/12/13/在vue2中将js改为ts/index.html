@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>在vue2中将js改为ts - 个人博客</title>
+
+  
+    <meta name="description" content="在vue2中将js改为ts本文参考了: vue2.x中使用typescript - 掘金 (juejin.cn) 在vue2中使用ts - 掘金 (juejin.cn) 一.下载插件12&#x2F;&#x2F;通过装饰器模式实现了 vue2 的 ts 适配npm i -S vue-property-decorator  二.对vue2的不同option API进行改写(一)name123456789101112&#x2F;&#x2F;j">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在vue2中将js改为ts">
+<meta property="og:url" content="http://example.com/2022/12/13/%E5%9C%A8vue2%E4%B8%AD%E5%B0%86js%E6%94%B9%E4%B8%BAts/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="在vue2中将js改为ts本文参考了: vue2.x中使用typescript - 掘金 (juejin.cn) 在vue2中使用ts - 掘金 (juejin.cn) 一.下载插件12&#x2F;&#x2F;通过装饰器模式实现了 vue2 的 ts 适配npm i -S vue-property-decorator  二.对vue2的不同option API进行改写(一)name123456789101112&#x2F;&#x2F;j">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-13T14:36:34.000Z">
+<meta property="article:modified_time" content="2022-12-13T14:37:34.616Z">
+<meta property="article:author" content="李阳滨">
+<meta property="article:tag" content="个人总结">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main">个人博客</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80-%E4%B8%8B%E8%BD%BD%E6%8F%92%E4%BB%B6"><span class="toc-text">一.下载插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8C-%E5%AF%B9vue2%E7%9A%84%E4%B8%8D%E5%90%8Coption-API%E8%BF%9B%E8%A1%8C%E6%94%B9%E5%86%99"><span class="toc-text">二.对vue2的不同option API进行改写</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89-vuex-module-decorators%E4%BD%BF%E7%94%A8"><span class="toc-text">三.vuex-module-decorators使用:</span></a></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2022-12-13T14:36:34.000Z">2022-12-13</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>在vue2中将js改为ts</span></h1>
+<h1 id="在vue2中将js改为ts"><a href="#在vue2中将js改为ts" class="headerlink" title="在vue2中将js改为ts"></a>在vue2中将js改为ts</h1><p>本文参考了:</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904080335355918#heading-8">vue2.x中使用typescript - 掘金 (juejin.cn)</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6876020863683002382#heading-3">在vue2中使用ts - 掘金 (juejin.cn)</a></p>
+<h5 id="一-下载插件"><a href="#一-下载插件" class="headerlink" title="一.下载插件"></a>一.下载插件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//通过装饰器模式实现了 vue2 的 ts 适配</span><br><span class="line">npm i -S vue-property-decorator</span><br></pre></td></tr></table></figure>
+
+<h5 id="二-对vue2的不同option-API进行改写"><a href="#二-对vue2的不同option-API进行改写" class="headerlink" title="二.对vue2的不同option API进行改写"></a>二.对vue2的不同option API进行改写</h5><h6 id="一-name"><a href="#一-name" class="headerlink" title="(一)name"></a>(一)name</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">  name：App</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法</span><br><span class="line">import &#123; Vue, Component &#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="二-引用组件"><a href="#二-引用组件" class="headerlink" title="(二)引用组件"></a>(二)引用组件</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">import &#123; compA, compB &#125; from &#x27;@/components&#x27;;</span><br><span class="line">export default &#123;</span><br><span class="line">  name：App，</span><br><span class="line">  components: &#123;</span><br><span class="line">    compA,</span><br><span class="line">    compB</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法</span><br><span class="line">import &#123;Component,Vue&#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line">import &#123;compA,comptB&#125; from &#x27;@/components&#x27;;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">        compA,</span><br><span class="line">        compB</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="三-计算属性"><a href="#三-计算属性" class="headerlink" title="(三)计算属性"></a>(三)计算属性</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">    computed: &#123;</span><br><span class="line">        val: function() &#123;</span><br><span class="line">            return xx</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法:将该计算属性名定义为一个函数,并在函数前加上get关键字即可</span><br><span class="line">import &#123;Vue, Components&#125; from &#x27;vue-property-decorator&#x27;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">    get val() &#123;</span><br><span class="line">        ...</span><br><span class="line">        return xx</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="四-监视属性"><a href="#四-监视属性" class="headerlink" title="(四)监视属性"></a>(四)监视属性</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">    watch: &#123;</span><br><span class="line">        val1(newValue,oldValue)&#123;</span><br><span class="line">           ...</span><br><span class="line">        &#125;,</span><br><span class="line">        val2: &#123;</span><br><span class="line">            immediate: true,</span><br><span class="line">            deep: true,</span><br><span class="line">            handler(newValue,oldValue)&#123;</span><br><span class="line">              ...</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法由vue-property-decorator依赖提供@Watch装饰器来完成</span><br><span class="line">import &#123;Vue, Component, Watch&#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">    @Watch(&#x27;val1&#x27;)</span><br><span class="line">    onVal1Change(newVal, oldVal)&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    @Watch(&#x27;val2&#x27;, &#123;immediate: true, deep: true&#125;)</span><br><span class="line">    onVal2Change(newVal, oldVal)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="五-方法-methods"><a href="#五-方法-methods" class="headerlink" title="(五)方法(methods)"></a>(五)方法(methods)</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">  methods:&#123;</span><br><span class="line">    hello()&#123;</span><br><span class="line">      console.log(&#x27;hello world&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法 直接写</span><br><span class="line">import &#123; Vue, Component &#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">  hello()&#123;</span><br><span class="line">    console.log(&#x27;hello world&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="六-生命周期"><a href="#六-生命周期" class="headerlink" title="(六)生命周期"></a>(六)生命周期</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">  created() &#123;</span><br><span class="line">    console.log(&#x27;created&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    console.log(&#x27;mounted&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法 写法不变</span><br><span class="line">import &#123; Vue, Component &#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">  created() &#123;</span><br><span class="line">    console.log(&#x27;created&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    console.log(&#x27;mounted&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="七-props-父传子"><a href="#七-props-父传子" class="headerlink" title="(七)props(父传子)"></a>(七)props(父传子)</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">  props:&#123;</span><br><span class="line">    title:&#123;</span><br><span class="line">      type: String,</span><br><span class="line">      required: false,</span><br><span class="line">      default: &#x27;标题&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法 通过装饰器@Prop实现</span><br><span class="line">import &#123; Vue, Component, Prop &#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">  @Prop(&#123; type: String, default: &#x27;标题&#x27; &#125;) readonly title?: string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="八-emit-子传父"><a href="#八-emit-子传父" class="headerlink" title="(八)$emit(子传父)"></a>(八)$emit(子传父)</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//js写法</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    addNumber(n) &#123;</span><br><span class="line">      this.$emit(&#x27;eventName&#x27;, n);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//ts写法 通过装饰器@Emit实现</span><br><span class="line">import &#123;Vue, Component, Emit&#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line"></span><br><span class="line">@Component</span><br><span class="line">export default class App extends Vue &#123;</span><br><span class="line">  @Emit(&#x27;eventName&#x27;)</span><br><span class="line">  addNumber(n: Number) &#123;</span><br><span class="line">    return n</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>常用的几个API如上,如果有其他特殊API需要使用,可以查看vue-property-decorator的使用文档:</p>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/vue-property-decorator?activeTab=readme">vue-property-decorator - npm (npmjs.com)</a></p>
+<p>另外,如果还想使用Vuex的话,要兼容ts,还需要下一个插件 <a href="https://link.juejin.cn/?target=https://www.npmjs.com/package/vuex-module-decorators">vuex-module-decorators</a>，具体配置也可以自行查看.不过个人建议,多使用ts了,可以直接使用Pinia,中文文档:<a target="_blank" rel="noopener" href="https://pinia.web3doc.top/">Home | Pinia 中文文档 (web3doc.top)</a>。Pinia 最初是为了探索 Vuex 的下一次迭代会是什么样子，结合了 Vuex 5 核心团队讨论中的许多想法。最终，我们意识到 Pinia 已经实现了我们在 Vuex 5 中想要的大部分内容，并决定实现它 取而代之的是新的建议。</p>
+<h5 id="三-vuex-module-decorators使用"><a href="#三-vuex-module-decorators使用" class="headerlink" title="三.vuex-module-decorators使用:"></a>三.vuex-module-decorators使用:</h5><p>下载:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -D vuex-module-decorators</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>store中:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">//state中定义namespace为test的模块</span><br><span class="line">import &#123; VuexModule, Module, Action, Mutation &#125; from &#x27;vuex-module-decorators&#x27;</span><br><span class="line"></span><br><span class="line">// 待实现的state的接口</span><br><span class="line">export interface TestState &#123;</span><br><span class="line">  num: number,</span><br><span class="line">  firstName: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// </span><br><span class="line">@Module(&#123;namespaced: true, name: &#x27;test&#x27;, stateFactory: true&#125;)</span><br><span class="line"></span><br><span class="line">export default class Test extends VuexModule implements TestState &#123;</span><br><span class="line">// state</span><br><span class="line">  public num = 0;</span><br><span class="line">  public firstName = &#x27;&#x27;;</span><br><span class="line"></span><br><span class="line">  @Action</span><br><span class="line">  public emitAddOne() &#123;</span><br><span class="line">  // action中调用mutation</span><br><span class="line">    this.addOne();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @Action</span><br><span class="line">  private emitSubstract() &#123;</span><br><span class="line">    this.substract()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @Mutation</span><br><span class="line">  private addOne() &#123;</span><br><span class="line">    this.num ++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @Mutation</span><br><span class="line">  private substract() &#123;</span><br><span class="line">    this.num --;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  // getters</span><br><span class="line">  get addNum() &#123;</span><br><span class="line">    return this.num ++</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>使用:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Vue, Component &#125; from &#x27;vue-property-decorator&#x27;;</span><br><span class="line">import &#123; getModule &#125; from &#x27;vuex-module-decorator&#x27;;</span><br><span class="line">import test from &#x27;@/store/module/Test&#x27;;</span><br><span class="line">import store from &#x27;@/store/index&#x27;</span><br><span class="line"></span><br><span class="line">const testModule = getModule(test, store)  // 通过getModule()安全访问Store</span><br><span class="line"></span><br><span class="line">@Component(&#123;&#125;);</span><br><span class="line">export default class MyComponent extends Vue &#123;</span><br><span class="line">    public showStateData(): void &#123;</span><br><span class="line">    // 调用state中的data</span><br><span class="line">        console.log(testModule.num)</span><br><span class="line">    &#125;</span><br><span class="line">    // 调用action</span><br><span class="line">    emitAction():void &#123;</span><br><span class="line">          testModule.emitAddOne()</span><br><span class="line">      &#125;</span><br><span class="line">    // 调用mutation  </span><br><span class="line">      emitMutation(): void &#123;</span><br><span class="line">        testModule.substract()</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/12/04/TS%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">TS个人总结<span class="note">Older</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://example.com/">@李阳滨</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
