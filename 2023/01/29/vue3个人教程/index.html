@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>vue3个人教程 - 个人博客</title>
+
+  
+    <meta name="description" content="文件概述: 本人已经有vue2基础,vue3使用基础,想系统的总结一下vue3,加深对vue3的理解 参考文件: (Vue3)_小满zs的博客-CSDN博客 [浅析vue2中 Options API 和vue3中 Composition API 的对比 - 古兰精 - 博客园 (cnblogs.com)](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;goloving&#x2F;p&#x2F;15411870.ht">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3个人教程">
+<meta property="og:url" content="http://example.com/2023/01/29/vue3%E4%B8%AA%E4%BA%BA%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="文件概述: 本人已经有vue2基础,vue3使用基础,想系统的总结一下vue3,加深对vue3的理解 参考文件: (Vue3)_小满zs的博客-CSDN博客 [浅析vue2中 Options API 和vue3中 Composition API 的对比 - 古兰精 - 博客园 (cnblogs.com)](https:&#x2F;&#x2F;www.cnblogs.com&#x2F;goloving&#x2F;p&#x2F;15411870.ht">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-29T14:09:30.000Z">
+<meta property="article:modified_time" content="2023-01-29T14:10:25.230Z">
+<meta property="article:author" content="李阳滨">
+<meta property="article:tag" content="个人总结">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main">个人博客</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">Vue3学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">一.简单介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E3%80%81vue2-%E7%9A%84-Options-API%E4%B8%8Evue3-%E4%B8%AD%E7%9A%84-Composition-API"><span class="toc-text">(一)、vue2 的 Options API与vue3 中的 Composition API</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-Options-API-%E9%80%89%E9%A1%B9API"><span class="toc-text">1.Options API - (选项API)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Composition-API-%E7%BB%84%E5%90%88%E5%BC%8FAPI"><span class="toc-text">2.Composition API - (组合式API)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-Vue3-%E6%96%B0%E7%89%B9%E6%80%A7%E4%BB%8B%E7%BB%8D"><span class="toc-text">(二).Vue3 新特性介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E9%87%8D%E5%86%99%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A"><span class="toc-text">1. 重写双向绑定</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-Vue3-%E4%BC%98%E5%8C%96Vdom"><span class="toc-text">2.Vue3 优化Vdom</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-Vue3-Fragment"><span class="toc-text">3.Vue3 Fragment</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96"><span class="toc-text">4.其他</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-ref%E5%85%A8%E5%AE%B6%E6%A1%B6"><span class="toc-text">二.ref全家桶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-ref"><span class="toc-text">(一)ref()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-Ref"><span class="toc-text">(二)Ref</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-isRef"><span class="toc-text">(三)isRef()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-shallowRef"><span class="toc-text">(四)shallowRef()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94-triggerRef"><span class="toc-text">(五)triggerRef ()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-reactive%E5%85%A8%E5%AE%B6%E6%A1%B6"><span class="toc-text">三.reactive全家桶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-reactive"><span class="toc-text">(一)reactive</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-readonly"><span class="toc-text">(二)readonly</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-isReactive"><span class="toc-text">(三)isReactive</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-shallowReactive"><span class="toc-text">(四)shallowReactive</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-to%E5%85%A8%E5%AE%B6%E6%A1%B6"><span class="toc-text">四.to全家桶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-toRef"><span class="toc-text">(一)toRef()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-toRefs"><span class="toc-text">(二)toRefs()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-toRaw"><span class="toc-text">(三)toRaw()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-computed%E5%B1%9E%E6%80%A7"><span class="toc-text">五.computed属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%AE%9A%E4%B9%89"><span class="toc-text">(一)定义:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E4%BD%BF%E7%94%A8"><span class="toc-text">(二)使用:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-watch%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">六.watch监听器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">(一)基本使用:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">(二)注意事项:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E7%9B%91%E5%90%AC%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE"><span class="toc-text">1.监听多个数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%B7%B1%E5%BA%A6%E7%9B%91%E5%90%AC"><span class="toc-text">2.深度监听</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%8F%AA%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E4%B8%80%E4%B8%AA%E5%B1%9E%E6%80%A7"><span class="toc-text">3.只监听对象中的一个属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E6%B7%B1%E5%BA%A6%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%87%BA%E7%8E%B0%E7%9A%84%E5%90%8C%E6%BA%90%E9%97%AE%E9%A2%98"><span class="toc-text">4.深度监听对象出现的同源问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-watch%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">5.watch返回值</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-watchEffect"><span class="toc-text">七.watchEffect</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%AE%9A%E4%B9%89-1"><span class="toc-text">(一)定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E6%B8%85%E9%99%A4%E5%89%AF%E4%BD%9C%E7%94%A8-oninvalidate"><span class="toc-text">(二)清除副作用(oninvalidate)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-text">(三)返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-text">(四)一些配置项</span></a></li></ol></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2023-01-29T14:09:30.000Z">2023-01-29</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>vue3个人教程</span></h1>
+<p>文件概述:</p>
+<p>本人已经有vue2基础,vue3使用基础,想系统的总结一下vue3,加深对vue3的理解</p>
+<p>参考文件:</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq1195566313/category_11618172.html">(Vue3)_小满zs的博客-CSDN博客</a></p>
+<p>[浅析vue2中 Options API 和vue3中 Composition API 的对比 - 古兰精 - 博客园 (cnblogs.com)](<a target="_blank" rel="noopener" href="https://www.cnblogs.com/goloving/p/15411870.html#:~:text=%E4%B8%80%E3%80%81vue2">https://www.cnblogs.com/goloving/p/15411870.html#:~:text=一、vue2</a> 的 Options API 1 条例清晰：相同的放在相同的地方，但随着组件功能的增大，关联性会大大降低，组件的阅读和理解难度会增加； 2 调用使用,js 代码，我们在使用 options API 的时候，需要确切了解我们具体可以访问到哪些属性以及我们访问到的当前属性的行为。 在后台 VUE 需要将此属性转换为工作代码，因此我们无法从自动建议和类型检查中受益，因此给我们在使用相关属性时造成了一定弊端。)</p>
+<h2 id="Vue3学习笔记"><a href="#Vue3学习笔记" class="headerlink" title="Vue3学习笔记"></a>Vue3学习笔记</h2><h3 id="一-简单介绍"><a href="#一-简单介绍" class="headerlink" title="一.简单介绍"></a>一.简单介绍</h3><h4 id="一-、vue2-的-Options-API与vue3-中的-Composition-API"><a href="#一-、vue2-的-Options-API与vue3-中的-Composition-API" class="headerlink" title="(一)、vue2 的 Options API与vue3 中的 Composition API"></a>(一)、vue2 的 Options API与vue3 中的 Composition API</h4><h5 id="1-Options-API-选项API"><a href="#1-Options-API-选项API" class="headerlink" title="1.Options API - (选项API)"></a>1.Options API - (选项API)</h5><p>　　在 VUE2 中我们会在一个vue文件中methods，computed，watch，data中等等定义属性和方法，共同处理页面逻辑，我们称这种方式为 Options API。</p>
+<p>其优缺点：</p>
+<ul>
+<li>条例清晰：相同的放在相同的地方，但随着组件功能的增大，关联性会大大降低，组件的阅读和理解难度会增加；</li>
+<li>调用使用 this，但逻辑过多时 this 会出现问题，比如指向不明等；</li>
+<li>其本身并不是有效的 js 代码，我们在使用 options API 的时候，需要确切了解我们具体可以访问到哪些属性以及我们访问到的当前属性的行为。在后台 VUE 需要将此属性转换为工作代码，因此我们无法从自动建议和类型检查中受益，因此给我们在使用相关属性时造成了一定弊端。</li>
+</ul>
+<h5 id="2-Composition-API-组合式API"><a href="#2-Composition-API-组合式API" class="headerlink" title="2.Composition API - (组合式API)"></a>2.Composition API - (组合式API)</h5><p>　　在 vue3 Composition API 中，我们的组件代码根据逻辑功能来组织的，一个功能所定义的所有 API 会放在一起（更加的高内聚，低耦合）。这样做即使项目很大，功能很多，我们都能快速的定位到这个功能所用到的所有API，而不像 vue2 Options API 中一个功能所用到的API都是分散的，需要改动功能，到处找API的过程是很费劲的。</p>
+<h4 id="二-Vue3-新特性介绍"><a href="#二-Vue3-新特性介绍" class="headerlink" title="(二).Vue3 新特性介绍"></a>(二).Vue3 新特性介绍</h4><h5 id="1-重写双向绑定"><a href="#1-重写双向绑定" class="headerlink" title="1. 重写双向绑定"></a>1. 重写双向绑定</h5><p>Vue2是基于Object.defineProperty()实现,借助getter()与setter()对数据进行一个数据劫持,但是这样数据双向绑定的对数组是失效的,所以Vue2内部重写了七个数组的方法:</p>
+<ul>
+<li>push</li>
+<li>pop</li>
+<li>shift</li>
+<li>unshift</li>
+<li>splice</li>
+<li>sort</li>
+<li>reverse</li>
+</ul>
+<p>以实现对数组内部数据改变的监听,又或者直接使用Vue.$set()去新增.</p>
+<p>所以Vue3就直接用Proxy去重写了数据的双向绑定,去监听数组变化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let proxyObj = new Proxy(obj,&#123;</span><br><span class="line">        get : function (target,prop) &#123;</span><br><span class="line">            return prop in target ? target[prop] : 0</span><br><span class="line">        &#125;,</span><br><span class="line">        set : function (target,prop,value) &#123;</span><br><span class="line">            target[prop] = 888;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>使用proxy还有以下优势:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//丢掉麻烦的备份数据</span><br><span class="line">//省去for in 循环</span><br><span class="line">//可以监听数组变化</span><br><span class="line">//代码更简化</span><br><span class="line">//可以监听动态新增的属性；</span><br><span class="line">//可以监听删除的属性 ；</span><br><span class="line">//可以监听数组的索引和 length 属性</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-Vue3-优化Vdom"><a href="#2-Vue3-优化Vdom" class="headerlink" title="2.Vue3 优化Vdom"></a>2.Vue3 优化Vdom</h5><p>在Vue2中,每次更新diff,都是全量对比,Vue3则只对比带有标记的,这样大大减少了非动态内容的对比消耗</p>
+<p>创建<strong>动态</strong> dom 元素的时候，Vdom 除了模拟出来了它的基本信息之外，还给它加了一个标记.这个标记就叫做 patch flag（补丁标记）</p>
+<p>patch flag 的强大之处在于，当你的 diff 算法走到 _createBlock 函数的时候，会忽略所有的静态节点，只对有标记的动态节点进行对比，而且在多层的嵌套下依然有效。</p>
+<h5 id="3-Vue3-Fragment"><a href="#3-Vue3-Fragment" class="headerlink" title="3.Vue3 Fragment"></a>3.Vue3 Fragment</h5><p>vue3 允许我们支持多个根节点</p>
+<p>原理:vue3中新增了一个类似dom的标签元素<code>&lt;Fragment&gt;&lt;/Fragment&gt;</code>。如果在vue页面中有多个元素节点。那么编译时vue会在这些元素节点上添加一个<code>&lt;Fragment&gt;&lt;/Fragment&gt;</code>标签。并且该标签不会出现在dom树中。</p>
+<h5 id="4-其他"><a href="#4-其他" class="headerlink" title="4.其他"></a>4.其他</h5><p>比如Tree shaking,支持jsp,对ts更加友好等等</p>
+<h3 id="二-ref全家桶"><a href="#二-ref全家桶" class="headerlink" title="二.ref全家桶"></a>二.ref全家桶</h3><h4 id="一-ref"><a href="#一-ref" class="headerlink" title="(一)ref()"></a>(一)ref()</h4><p>作用:接受一个内部值并返回一个响应式且可变的 ref 对象。取值跟赋值都需要通过**.value**属性</p>
+<p>小技巧:获取dom节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div ref=&quot;DOM&quot;&gt;李阳滨&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">let message = ref&lt;string&gt;(&quot;我是message&quot;)</span><br><span class="line"></span><br><span class="line">const changeMsg = () =&gt; &#123;</span><br><span class="line">  message.value = &quot;我不是message&quot;</span><br><span class="line">  //获取dom节点,名字一定要一致</span><br><span class="line">  const DOM = ref&lt;HTMLDivElement&gt;()</span><br><span class="line">  console.log(DOM.value?.innerHTML)//李阳滨</span><br><span class="line">&#125; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-Ref"><a href="#二-Ref" class="headerlink" title="(二)Ref"></a>(二)Ref</h4><p>作用:TS声明一些复杂的ref结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line">import type &#123;Ref&#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">type M =&#123;</span><br><span class="line">  name: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let message: Ref&lt;M&gt; = ref(&#123;name: &#x27;李阳滨&#x27;&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-isRef"><a href="#三-isRef" class="headerlink" title="(三)isRef()"></a>(三)isRef()</h4><p>作用:判断是不是一个ref对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; ref, Ref,isRef &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">let message: Ref&lt;string | number&gt; = ref(&quot;我是message&quot;)</span><br><span class="line"></span><br><span class="line">console.log(isRef(message)); //true</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="四-shallowRef"><a href="#四-shallowRef" class="headerlink" title="(四)shallowRef()"></a>(四)shallowRef()</h4><p>作用:ref的简化版,不能进行深度监听,只能进行浅层次监听</p>
+<p>注意:shallowRef会被ref影响</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; shallowRef &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">type M =&#123;</span><br><span class="line">  name: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let msg = shallowRef&lt;string&gt;(&quot;李阳滨&quot;)//可以响应msg的改变</span><br><span class="line">let MSG = shallowRef&lt;M&gt;(&#123;name: &#x27;李阳滨&#x27;&#125;)//不能响应MSG内部的改变</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="五-triggerRef"><a href="#五-triggerRef" class="headerlink" title="(五)triggerRef ()"></a>(五)triggerRef ()</h4><p>作用:强制更新页面DOM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; Ref, shallowRef,triggerRef &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">type Obj = &#123;</span><br><span class="line">  name: string</span><br><span class="line">&#125;</span><br><span class="line">let message: Ref&lt;Obj&gt; = shallowRef(&#123;</span><br><span class="line">  name: &quot;李阳滨&quot;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const changeMsg = () =&gt; &#123;</span><br><span class="line"> message.value.name = &#x27;小满&#x27;</span><br><span class="line"> triggerRef(message)//强制更新页面。使用shallowRef更改数据的话,其实数据已经更改了,但是页面不更新</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt; </span><br></pre></td></tr></table></figure>
+
+<p>小提示:</p>
+<p>使用ref去改写数据,源码里面先判断数据是不是对象,是对象内部逻辑是将数据交给reactive,所以说ref可以深度监听,而使用triggerRef ,就不管数据是不是对象,多不会交给reactive,所以无法进行深度监听。</p>
+<p>但是如果改变shallowRef监视对象的语句跟改变ref监视对象的语句写在一起,ref会触发triggerRef ,从而也更新了shallowRef监视对象的值</p>
+<h3 id="三-reactive全家桶"><a href="#三-reactive全家桶" class="headerlink" title="三.reactive全家桶"></a>三.reactive全家桶</h3><h4 id="一-reactive"><a href="#一-reactive" class="headerlink" title="(一)reactive"></a>(一)reactive</h4><p>作用:接受一个内部值并返回一个响应式且可变的 reactive对象。只能用来绑定引用数据类型。并且使用reactive 去修改值无须.value</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; reactive&#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">type M =&#123;</span><br><span class="line">  name: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let person = reactive&lt;M&gt;(&#123;name: &#x27;李阳滨&#x27;&#125;)</span><br><span class="line">const name = person.name</span><br><span class="line">&lt;/script&gt; </span><br></pre></td></tr></table></figure>
+
+<h4 id="二-readonly"><a href="#二-readonly" class="headerlink" title="(二)readonly"></a>(二)readonly</h4><p>作用: 让一个响应式数据变为只读的（深只读）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; reactive ,readonly&#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">const person = reactive(&#123;count:1&#125;)</span><br><span class="line">const copy = readonly(person)</span><br><span class="line"></span><br><span class="line"> person.count++ //可以更改person与copy</span><br><span class="line"> copy.count++ //报错,copy不能更改</span><br><span class="line"> &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-isReactive"><a href="#三-isReactive" class="headerlink" title="(三)isReactive"></a>(三)isReactive</h4><p>作用: 检查一个对象是否是由 reactive 创建的响应式代理</p>
+<h4 id="四-shallowReactive"><a href="#四-shallowReactive" class="headerlink" title="(四)shallowReactive"></a>(四)shallowReactive</h4><p>作用:只处理对象最外层属性的响应式（浅响应式）。如果是深层的数据只会改变值,不会改变视图</p>
+<h3 id="四-to全家桶"><a href="#四-to全家桶" class="headerlink" title="四.to全家桶"></a>四.to全家桶</h3><h4 id="一-toRef"><a href="#一-toRef" class="headerlink" title="(一)toRef()"></a>(一)toRef()</h4><p>作用:保留响应式数据特性，接收两个参数(响应式对象,属性名)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; reactive,toRef&#125; from &#x27;vue&#x27;</span><br><span class="line">const obj = reactive(&#123;</span><br><span class="line">   foo: 1,</span><br><span class="line">   bar: 1</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line">const state = toRef(obj, &#x27;bar&#x27;)//这个state还是响应式的数据(ref)</span><br><span class="line">let state: number = obj.bar//这个就只是单纯的一个数值了</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-toRefs"><a href="#二-toRefs" class="headerlink" title="(二)toRefs()"></a>(二)toRefs()</h4><p>作用:批量解构响应式数据，直接解构获得的数据就不是响应式的了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; reactive, toRefs &#125; from &#x27;vue&#x27;</span><br><span class="line">const obj = reactive(&#123;</span><br><span class="line">   foo: 1,</span><br><span class="line">   bar: 1</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line">let &#123; foo, bar &#125; = toRefs(obj)</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-toRaw"><a href="#三-toRaw" class="headerlink" title="(三)toRaw()"></a>(三)toRaw()</h4><p>作用:将响应式对象转化为普通对象</p>
+<h3 id="五-computed属性"><a href="#五-computed属性" class="headerlink" title="五.computed属性"></a>五.computed属性</h3><h4 id="一-定义"><a href="#一-定义" class="headerlink" title="(一)定义:"></a>(一)定义:</h4><p>计算属性就是当依赖的属性的值发生变化的时候，才会触发他的更改，如果依赖的值，不发生变化的时候，使用的是缓存中的属性值。</p>
+<h4 id="二-使用"><a href="#二-使用" class="headerlink" title="(二)使用:"></a>(二)使用:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123; computed, reactive, ref &#125; from &#x27;vue&#x27;</span><br><span class="line">let price = ref(0)</span><br><span class="line"> </span><br><span class="line">let m = computed&lt;string&gt;(()=&gt;&#123;</span><br><span class="line">   return `$` + price.value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="六-watch监听器"><a href="#六-watch监听器" class="headerlink" title="六.watch监听器"></a>六.watch监听器</h3><h4 id="一-基本使用"><a href="#一-基本使用" class="headerlink" title="(一)基本使用:"></a>(一)基本使用:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//只能监听响应式数据(ref||reactive)</span><br><span class="line">//watch(source,cb,obj)</span><br><span class="line">import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line"> </span><br><span class="line">let message = ref(1)</span><br><span class="line">  </span><br><span class="line">watch(message, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">    console.log(&#x27;旧的值----&#x27;, oldVal);</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    immediate:true,</span><br><span class="line">    deep:true,</span><br><span class="line">    //pre 组件更新前调用 sync 同步执行 post 组件更新之后执行</span><br><span class="line">    flush:&quot;pre&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-注意事项"><a href="#二-注意事项" class="headerlink" title="(二)注意事项:"></a>(二)注意事项:</h4><h5 id="1-监听多个数据"><a href="#1-监听多个数据" class="headerlink" title="1.监听多个数据"></a>1.监听多个数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ref, watch &#125; from &#x27;vue&#x27;</span><br><span class="line"> </span><br><span class="line">let message = ref(1)</span><br><span class="line">let message2 = ref(1)</span><br><span class="line"></span><br><span class="line">//可以分开写</span><br><span class="line">watch(message, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">&#125;)</span><br><span class="line">watch(message2, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//也可以写成数组的形式,那newVal也是数组</span><br><span class="line">watch([message,message2], (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-深度监听"><a href="#2-深度监听" class="headerlink" title="2.深度监听"></a>2.深度监听</h5><p>监听ref时深度监听时需要开启deep:true</p>
+<p>而监听reactive,可开可不开,因为vue源码对source有个判断,如果是reactive类型,vue会默认开启deep</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ref, watch,reactive &#125; from &#x27;vue&#x27;</span><br><span class="line"> </span><br><span class="line">let message = ref(&#123;</span><br><span class="line">  h:&#123;</span><br><span class="line">    n:&#123;</span><br><span class="line">      age:18</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">let message2 = reactive(&#123;</span><br><span class="line">  h:&#123;</span><br><span class="line">    n:&#123;</span><br><span class="line">      age:18</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">  </span><br><span class="line">watch(message, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    deep:true</span><br><span class="line">&#125;)</span><br><span class="line">watch(message2, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值2----&#x27;, newVal);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-只监听对象中的一个属性"><a href="#3-只监听对象中的一个属性" class="headerlink" title="3.只监听对象中的一个属性"></a>3.只监听对象中的一个属性</h5><p>将source写成函数返回值的形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ref, watch,reactive &#125; from &#x27;vue&#x27;</span><br><span class="line"> </span><br><span class="line">let message = ref(&#123;</span><br><span class="line">  h:&#123;</span><br><span class="line">    n:&#123;</span><br><span class="line">      age:18，</span><br><span class="line">      name:&quot;李阳滨&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">watch(（）=&gt;message.h.n.age, (newVal, oldVal) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;新的值----&#x27;, newVal);</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    deep:true</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-深度监听对象出现的同源问题"><a href="#4-深度监听对象出现的同源问题" class="headerlink" title="4.深度监听对象出现的同源问题"></a>4.深度监听对象出现的同源问题</h5><p>有时候我们使用watch并且添加deep:true深度监听一个对象时候，获取到的newVal和oldVal数据一致，官方一点这种现象叫做：深度监听对象出现的同源问题</p>
+<p>其实就是：在遍历(不是替换) 对象或数组时，旧值将与新值相同，因为它们的引用指向同一个对象&#x2F;数组。Vue 不会保留变异之前值的副本；</p>
+<h5 id="5-watch返回值"><a href="#5-watch返回值" class="headerlink" title="5.watch返回值"></a>5.watch返回值</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//调用stop() 可以停止监听。</span><br><span class="line">const stop = watch(x, (new,old)=&gt;&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="七-watchEffect"><a href="#七-watchEffect" class="headerlink" title="七.watchEffect"></a>七.watchEffect</h3><h4 id="一-定义-1"><a href="#一-定义-1" class="headerlink" title="(一)定义"></a>(一)定义</h4><p>立即执行传入的一个函数，同时响应式追踪其依赖，并在其依赖变更时重新运行该函数。如果用到message 就只会监听message 就是用到几个监听几个 而且是非惰性会默认调用一次。类似于watch开启了immediate</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let message = ref&lt;string&gt;(&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line"> watchEffect(() =&gt; &#123;</span><br><span class="line">    console.log(&#x27;message&#x27;, message.value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-清除副作用-oninvalidate"><a href="#二-清除副作用-oninvalidate" class="headerlink" title="(二)清除副作用(oninvalidate)"></a>(二)清除副作用(oninvalidate)</h4><p>就是在触发监听之前会调用一个函数可以处理你的逻辑例如:防抖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; watchEffect, ref &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">let message = ref&lt;string&gt;(&#x27;&#x27;)</span><br><span class="line"></span><br><span class="line"> watchEffect((oninvalidate) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;message&#x27;, message.value);</span><br><span class="line">    oninvalidate(()=&gt;&#123; </span><br><span class="line">      //执行一些操作在(触发监听)console.log(&#x27;message&#x27;)之前,默认调用的第一次不会执行</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-返回值"><a href="#三-返回值" class="headerlink" title="(三)返回值"></a>(三)返回值</h4><p>与wacth一样,也存在返回值,停止监听</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//调用stop() 可以停止监听</span><br><span class="line">const stop =  watchEffect((oninvalidate) =&gt; &#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="四-一些配置项"><a href="#四-一些配置项" class="headerlink" title="(四)一些配置项"></a>(四)一些配置项</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">watchEffect((oninvalidate) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;,&#123;</span><br><span class="line">  //pre 组件更新前调用 sync 同步执行 post 组件更新之后执行</span><br><span class="line">  flush:&quot;pre&quot;,</span><br><span class="line">  //调试</span><br><span class="line">  onTrigger()&#123;</span><br><span class="line">    debugger</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2022/12/13/%E5%9C%A8vue2%E4%B8%AD%E5%B0%86js%E6%94%B9%E4%B8%BAts/">在vue2中将js改为ts<span class="note">Older</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://example.com/">@李阳滨</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
