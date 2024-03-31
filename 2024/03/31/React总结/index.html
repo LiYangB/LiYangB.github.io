@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>React总结 - 个人博客</title>
+
+  
+    <meta name="description" content="React教程文件概述:本人已经有vue基础,想要系统的了解React相关知识,主要参考B站视频学习:0-课程内容介绍_哔哩哔哩_bilibili 本文件为简要的记录. 一创建项目(一)通过官方脚手架1npx create-react-app &lt;projectname&gt;  能创建一个最基本的react项目。 只做了react基本的搭建和构建，没有配上任何路由和状态管理。项目使用webp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React总结">
+<meta property="og:url" content="http://example.com/2024/03/31/React%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="React教程文件概述:本人已经有vue基础,想要系统的了解React相关知识,主要参考B站视频学习:0-课程内容介绍_哔哩哔哩_bilibili 本文件为简要的记录. 一创建项目(一)通过官方脚手架1npx create-react-app &lt;projectname&gt;  能创建一个最基本的react项目。 只做了react基本的搭建和构建，没有配上任何路由和状态管理。项目使用webp">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-31T14:42:46.000Z">
+<meta property="article:modified_time" content="2024-03-31T14:44:20.018Z">
+<meta property="article:author" content="李阳滨">
+<meta property="article:tag" content="个人总结">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main">个人博客</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%A6%82%E8%BF%B0"><span class="toc-text">文件概述:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-text">一创建项目</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E9%80%9A%E8%BF%87%E5%AE%98%E6%96%B9%E8%84%9A%E6%89%8B%E6%9E%B6"><span class="toc-text">(一)通过官方脚手架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E9%80%9A%E8%BF%87%E5%B8%B8%E8%A7%81%E7%9A%84%E9%9B%86%E6%88%90%E8%84%9A%E6%89%8B%E6%9E%B6%E5%A6%82%EF%BC%9Aumi%EF%BC%88%E4%B9%8C%E7%B1%B3%EF%BC%89"><span class="toc-text">(二)通过常见的集成脚手架如：umi（乌米）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8Creact%E7%94%B1%E4%B8%A4%E4%B8%AA%E6%A0%B8%E5%BF%83%E5%BA%93%E7%BB%84%E6%88%90"><span class="toc-text">二react由两个核心库组成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-react"><span class="toc-text">(一)react</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-react-dom"><span class="toc-text">(二)react-dom</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89react%E7%BB%84%E4%BB%B6%E5%88%86%E7%B1%BB"><span class="toc-text">三react组件分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%87%BD%E6%95%B0%E7%BB%84%E4%BB%B6%EF%BC%88%E6%96%B0%E7%9A%84%E5%86%99%E6%B3%95%EF%BC%89"><span class="toc-text">(一)函数组件（新的写法）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-class%E7%BB%84%E4%BB%B6"><span class="toc-text">(二)class组件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9Bclass%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%86%99%E6%B3%95"><span class="toc-text">四class组件中的一些写法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6"><span class="toc-text">(一)绑定事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-text">(二)响应式数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-react%E5%93%8D%E5%BA%94%E5%BC%8F%E4%BD%93%E7%B3%BB%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">1.react响应式体系的原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-setState%E6%96%B9%E6%B3%95%E7%9A%84%E4%BF%AE%E6%94%B9%E6%98%AF%E5%BC%82%E6%AD%A5%E7%9A%84"><span class="toc-text">2.setState方法的修改是异步的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-setState%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E6%80%A7"><span class="toc-text">3.setState的一些特性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-PureComponent%E4%B8%8B%E5%AF%B9%E4%BA%8E%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="toc-text">4.PureComponent下对于对象和数组的修改</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E4%B8%8E%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93"><span class="toc-text">(三)条件渲染与列表渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="toc-text">1.条件渲染</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93"><span class="toc-text">2.列表渲染</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-%E8%A1%A8%E5%8D%95%E7%BB%91%E5%AE%9A"><span class="toc-text">(四)表单绑定</span></a></li></ol></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2024-03-31T14:42:46.000Z">2024-03-31</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>React总结</span></h1>
+<h1 id="React教程"><a href="#React教程" class="headerlink" title="React教程"></a>React教程</h1><h2 id="文件概述"><a href="#文件概述" class="headerlink" title="文件概述:"></a>文件概述:</h2><p>本人已经有vue基础,想要系统的了解React相关知识,主要参考B站视频学习:<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Mu411p7cV?p=1&vd_source=8e0bfd23a9b6d4c3ef2308ea3aeffb5e">0-课程内容介绍_哔哩哔哩_bilibili</a></p>
+<p>本文件为简要的记录.</p>
+<h2 id="一创建项目"><a href="#一创建项目" class="headerlink" title="一创建项目"></a>一创建项目</h2><h4 id="一-通过官方脚手架"><a href="#一-通过官方脚手架" class="headerlink" title="(一)通过官方脚手架"></a>(一)通过官方脚手架</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app &lt;projectname&gt;</span><br></pre></td></tr></table></figure>
+
+<p>能创建一个最基本的react项目。</p>
+<p>只做了react基本的搭建和构建，没有配上任何路由和状态管理。项目使用webpack构建</p>
+<h4 id="二-通过常见的集成脚手架如：umi（乌米）"><a href="#二-通过常见的集成脚手架如：umi（乌米）" class="headerlink" title="(二)通过常见的集成脚手架如：umi（乌米）"></a>(二)通过常见的集成脚手架如：umi（乌米）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i umi -g</span><br><span class="line">npm create umi</span><br></pre></td></tr></table></figure>
+
+<p>选择对应的需要的框架，回车就初始化好了项目<br>然后安装依赖</p>
+<h2 id="二react由两个核心库组成"><a href="#二react由两个核心库组成" class="headerlink" title="二react由两个核心库组成"></a>二react由两个核心库组成</h2><h4 id="一-react"><a href="#一-react" class="headerlink" title="(一)react"></a>(一)react</h4><p>React核心库，提供react的个个功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-react-dom"><a href="#二-react-dom" class="headerlink" title="(二)react-dom"></a>(二)react-dom</h4><p>提供一些dom操作方法，用于把react创建出来的react对象挂载到真正的htmldom中，或者从htmldom中卸载。核心作用类似于vue的mount</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import ReactDOM from &#x27;react-dom/client&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三react组件分类"><a href="#三react组件分类" class="headerlink" title="三react组件分类"></a>三react组件分类</h2><h4 id="一-函数组件（新的写法）"><a href="#一-函数组件（新的写法）" class="headerlink" title="(一)函数组件（新的写法）"></a>(一)函数组件（新的写法）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function Hello() &#123;</span><br><span class="line">    return &lt;div&gt;hello&lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;Hello&gt;&lt;/Hello&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-class组件"><a href="#二-class组件" class="headerlink" title="(二)class组件"></a>(二)class组件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.Component &#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;hello class&lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">return (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;HelloClass&gt;&lt;/HelloClass&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>备注：</p>
+<ul>
+<li>React项目利用babel做了对js的编译，所以我们是可以直接在js里写jsx的写法，当然也可以不借助jsx，借助React.createElement()创建一个React-element对象。</li>
+<li>组件首字母要大写，不大写会报错</li>
+<li>jsx里面渲染不同内容的区别<ul>
+<li>字符串，数字：直接渲染</li>
+<li>方法：无法渲染</li>
+<li>对象：只能渲染element对象</li>
+<li>布尔值：不渲染任何内容</li>
+<li>数组：把数组里的每一项单独渲染</li>
+<li>Undefine，null：不渲染任何内容</li>
+<li>表达式：运行表达式</li>
+</ul>
+</li>
+</ul>
+<h2 id="四class组件中的一些写法"><a href="#四class组件中的一些写法" class="headerlink" title="四class组件中的一些写法"></a>四class组件中的一些写法</h2><h4 id="一-绑定事件"><a href="#一-绑定事件" class="headerlink" title="(一)绑定事件"></a>(一)绑定事件</h4><p>类似于原生，on+方法名（首字母大写）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.Component &#123;</span><br><span class="line">    //1，给方法调用bind规定this，2，写成一个匿名箭头函数 3，方法本身写成箭头函数</span><br><span class="line">    f1 = (a, b, e) =&gt; &#123;</span><br><span class="line">      //并不是原生，而是合成 的事件对象</span><br><span class="line">      console.log(e)</span><br><span class="line">      //阻止冒泡,阻止默认</span><br><span class="line">      e.stopPropagation()</span><br><span class="line">	  e.preventDefault()</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;div onClick=&#123;this.f1.bind(this, 1, 2)&#125;&gt;hello class&lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>备注:</p>
+<ul>
+<li>给到事件绑定的一定得是一个方法，不要直接调用方法(或者执行语句)，调用方法只会在页面初次渲染时执行一次</li>
+</ul>
+<h4 id="二-响应式数据"><a href="#二-响应式数据" class="headerlink" title="(二)响应式数据"></a>(二)响应式数据</h4><p>响应式数据定义在类的state属性中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//完整写法</span><br><span class="line">  class HelloClass extends React.Component &#123;</span><br><span class="line">    constructor (props) &#123;</span><br><span class="line">      super(props)</span><br><span class="line">      //这里面写响应式数据，类似vue的date</span><br><span class="line">      this.state = &#123;</span><br><span class="line">        a: 111</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //上面可以简写成</span><br><span class="line">    this.state = &#123;</span><br><span class="line">     a: 111</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&#123;this.state.a&#125;&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-react响应式体系的原理"><a href="#1-react响应式体系的原理" class="headerlink" title="1.react响应式体系的原理"></a>1.react响应式体系的原理</h5><p>react修改能改值，但无法触发更新，因为react没有像vue一样监听get和set，而是在调用setState的时候调用react的更新操作</p>
+<p>setState工作流程:</p>
+<ul>
+<li><p>调用setState</p>
+</li>
+<li><p>给入一个对象</p>
+</li>
+<li><p>给入得对象和state对象进行浅合并,类似</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.assign(&#123;&#125;,&#123;&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合并后调用更新方法进行更新</p>
+</li>
+</ul>
+<p>调用setState方法会触发更新，修改state并不会触发更新，所以要实现双向数据绑定要这样写</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.Component &#123;</span><br><span class="line">  this.state = &#123;</span><br><span class="line">   a: 111，</span><br><span class="line">   b: &#123;</span><br><span class="line">     c: 222,</span><br><span class="line">     d: 333</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  f1 = () =&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      a: ++this.state.a,</span><br><span class="line">      //改对象或者数组时，对象内所有值多要先copy一份，不然没改的值就会丢失</span><br><span class="line">      b: &#123;</span><br><span class="line">        ...this.state.b,</span><br><span class="line">        c: 444</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;</span><br><span class="line">      &lt;div&gt;&#123;this.state.a&#125;&lt;/div&gt;</span><br><span class="line">      &lt;div onClick=&#123;this.f1.bind(this)&#125;&gt;点击加一&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-setState方法的修改是异步的"><a href="#2-setState方法的修改是异步的" class="headerlink" title="2.setState方法的修改是异步的"></a>2.setState方法的修改是异步的</h5><p>所以如果我们要获取修改后的值，需要在setState的第二个参数里获取，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.Component &#123;</span><br><span class="line">  this.state = &#123;</span><br><span class="line">   a: 111,</span><br><span class="line">   b: &#123;</span><br><span class="line">     c: 222,</span><br><span class="line">     d: 333</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  f1 = () =&gt; &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      a: ++this.state.a</span><br><span class="line">    &#125;,()=&gt;&#123;</span><br><span class="line">      console.log(this.state.a)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div&gt;</span><br><span class="line">      &lt;div&gt;&#123;this.state.a&#125;&lt;/div&gt;</span><br><span class="line">      &lt;div onClick=&#123;this.f1.bind(this)&#125;&gt;点击加一&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-setState的一些特性"><a href="#3-setState的一些特性" class="headerlink" title="3.setState的一些特性"></a>3.setState的一些特性</h5><ul>
+<li><p>setState方法多次修改，会合并为一次，统一更新</p>
+</li>
+<li><p>不要在render里直接setState，因为调用setState方法会触发render更新，render更新又会触发setState，实现死循环</p>
+</li>
+<li><p>setState调用就会触发更新，不管你是否有修改，这造成了一个问题，重复修改为相同的值也会让组件更新。可以通过继承 React.PureComponent去解决修改为相同的值会让组件更新</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.PureComponent &#123;</span><br><span class="line">    this.state = &#123;</span><br><span class="line">     a: 111</span><br><span class="line">    &#125;</span><br><span class="line">    f1 = () =&gt; &#123;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        a: ++this.state.a</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&#123;this.state.a&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div onClick=&#123;this.f1.bind(this)&#125;&gt;点击加一&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="4-PureComponent下对于对象和数组的修改"><a href="#4-PureComponent下对于对象和数组的修改" class="headerlink" title="4.PureComponent下对于对象和数组的修改"></a>4.PureComponent下对于对象和数组的修改</h5><p>因为PureComponent会根据state是否改变来决定是否更新，而我们对于对象数组这样的引用类型判断他是否改变的原理是看他的内存地址，而不是内容</p>
+<p>所以我们PureComponent下修改对象和数组，一定要赋予一个新对象，所以一般我们不直接操作原对象，而是先拷贝一份，在进行操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class HelloClass extends React.PureComponent &#123;</span><br><span class="line">    this.state = &#123;</span><br><span class="line">     a: 111,</span><br><span class="line">     b: &#123;</span><br><span class="line">       c: 222,</span><br><span class="line">       d: 333</span><br><span class="line">     &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    f1 = () =&gt; &#123;</span><br><span class="line">      const _b = &#123;...this.state.b&#125;</span><br><span class="line">      _b.c = 444</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        b: _b</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&#123;this.state.a&#125;&lt;/div&gt;</span><br><span class="line">        &lt;div onClick=&#123;this.f1.bind(this)&#125;&gt;点击加一&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-条件渲染与列表渲染"><a href="#三-条件渲染与列表渲染" class="headerlink" title="(三)条件渲染与列表渲染"></a>(三)条件渲染与列表渲染</h4><p>React没有vue一样的指令，一切操作本质上都是我们通过运算生成不同的内容，拿去渲染，得到不同的页面</p>
+<h5 id="1-条件渲染"><a href="#1-条件渲染" class="headerlink" title="1.条件渲染"></a>1.条件渲染</h5><p>1，react渲染undefined，null，空字符串，false不会渲染成任何内容</p>
+<p>2，如果渲染一个jsx编写的html元素，就会渲染成页面上的内容</p>
+<p>3，一般借助三目运算实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.PureComponent &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    show: true,</span><br><span class="line">  &#125;</span><br><span class="line">  f1() &#123;</span><br><span class="line">    if (this.state.show) &#123;</span><br><span class="line">      return &lt;div&gt;div1&lt;/div&gt;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return &quot;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &lt;div&gt;条件渲染&lt;/div&gt;</span><br><span class="line">      &#123;/* &#123;this.state.show &amp;&amp; &lt;div&gt;div1&lt;/div&gt;&#125; */&#125;</span><br><span class="line">      &#123;this.f1()&#125;</span><br><span class="line">      &lt;button onClick=&#123;() =&gt; &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">          show: !this.state.show</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;&#125;&gt;&#123;this.state.show ? &quot;隐藏&quot; : &quot;显示&quot;&#125;&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-列表渲染"><a href="#2-列表渲染" class="headerlink" title="2.列表渲染"></a>2.列表渲染</h5><p>1，渲染一个数组会把数组里的每一项单独取出渲染</p>
+<p>2，那么我们编写一个里面存放的都是html结构的数组，就会渲染成列表</p>
+<p>3，一般借助map或者filter实现，因为可以直接返回数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.PureComponent &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    originArr: [1, 2, 3]//[1,2,3]=&gt;[&lt;div&gt;1&lt;/div&gt;,&lt;div&gt;2&lt;/div&gt;,&lt;div&gt;3&lt;/div&gt;]</span><br><span class="line">  &#125;</span><br><span class="line">  addData = () =&gt; &#123;</span><br><span class="line">    let _arr = [...this.state.originArr];</span><br><span class="line">    _arr.push(Math.random() * 10);</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      originArr: _arr</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &lt;div&gt;列表渲染&lt;/div&gt;</span><br><span class="line">      &#123;/* &#123;this.getArr()&#125; */&#125;</span><br><span class="line">      &#123;</span><br><span class="line">        this.state.originArr.map((item) =&gt; &#123;</span><br><span class="line">          return &lt;div key=&#123;item&#125;&gt;&#123;item&#125;&lt;/div&gt;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      &lt;button onClick=&#123;this.addData&#125;&gt;添加&lt;/button&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="四-表单绑定"><a href="#四-表单绑定" class="headerlink" title="(四)表单绑定"></a>(四)表单绑定</h4><p>React中很多思路都是按原生的操作去做的，表单绑定也是如此</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.PureComponent &#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    inputValue: &quot;&quot;,</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &#123;this.state.inputValue&#125;</span><br><span class="line">      &lt;input value=&#123;this.state.inputValue&#125; onInput=&#123;(e) =&gt; &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">          inputValue: e.target.value</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;&#125; /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2023/09/24/JavaScript-%E7%AC%94%E8%AE%B0/">JavaScript 笔记<span class="note">Older</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://example.com/">@李阳滨</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
