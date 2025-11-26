@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://mdrs.yuanjin.tech/img/202208101043348.png">
 <meta property="og:image" content="http://mdrs.yuanjin.tech/img/202208101048899.png">
 <meta property="article:published_time" content="2025-11-02T12:23:06.000Z">
-<meta property="article:modified_time" content="2025-11-26T15:14:59.544Z">
+<meta property="article:modified_time" content="2025-11-26T15:23:25.380Z">
 <meta property="article:author" content="李阳滨">
 <meta property="article:tag" content="个人总结">
 <meta name="twitter:card" content="summary">
@@ -72,7 +72,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-text">浏览器的进程模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E8%BF%9B%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为进程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为线程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">浏览器有哪些进程和线程？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E4%B8%BB%E7%BA%BF%E7%A8%8B%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">渲染主线程是如何工作的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%A5%E5%B9%B2%E8%A7%A3%E9%87%8A"><span class="toc-text">若干解释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E5%BC%82%E6%AD%A5%EF%BC%9F"><span class="toc-text">何为异步？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%98%BB%E7%A2%8D%E6%B8%B2%E6%9F%93%EF%BC%9F"><span class="toc-text">JS为何会阻碍渲染？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E6%9C%89%E4%BC%98%E5%85%88%E7%BA%A7%E5%90%97%EF%BC%9F"><span class="toc-text">任务有优先级吗？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-reflow%EF%BC%9F%EF%BC%88%E5%9B%9E%E6%B5%81%EF%BC%89"><span class="toc-text">什么是 reflow？（回流）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-repaint%EF%BC%9F%EF%BC%88%E9%87%8D%E7%BB%98%EF%BC%89"><span class="toc-text">什么是 repaint？（重绘）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-transform-%E7%9A%84%E6%95%88%E7%8E%87%E9%AB%98%EF%BC%9F"><span class="toc-text">为什么 transform 的效率高？</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="toc-text">事件循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-text">浏览器的进程模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E8%BF%9B%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为进程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为线程？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">浏览器有哪些进程和线程？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E4%B8%BB%E7%BA%BF%E7%A8%8B%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">渲染主线程是如何工作的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8B%A5%E5%B9%B2%E8%A7%A3%E9%87%8A"><span class="toc-text">若干解释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E5%BC%82%E6%AD%A5%EF%BC%9F"><span class="toc-text">何为异步？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JS%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%98%BB%E7%A2%8D%E6%B8%B2%E6%9F%93%EF%BC%9F"><span class="toc-text">JS为何会阻碍渲染？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E6%9C%89%E4%BC%98%E5%85%88%E7%BA%A7%E5%90%97%EF%BC%9F"><span class="toc-text">任务有优先级吗？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%EF%BC%9F"><span class="toc-text">浏览器是如何渲染页面的？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-reflow%EF%BC%9F%EF%BC%88%E5%9B%9E%E6%B5%81%EF%BC%89"><span class="toc-text">什么是 reflow？（回流）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-repaint%EF%BC%9F%EF%BC%88%E9%87%8D%E7%BB%98%EF%BC%89"><span class="toc-text">什么是 repaint？（重绘）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-transform-%E7%9A%84%E6%95%88%E7%8E%87%E9%AB%98%EF%BC%9F"><span class="toc-text">为什么 transform 的效率高？</span></a></li></ol></li></ol></div></div></div>
 
 
 </div>
@@ -88,13 +88,13 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>前端杂谈</span></h1>
-<h1 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h1><h2 id="浏览器的进程模型"><a href="#浏览器的进程模型" class="headerlink" title="浏览器的进程模型"></a>浏览器的进程模型</h2><h3 id="何为进程？"><a href="#何为进程？" class="headerlink" title="何为进程？"></a>何为进程？</h3><p>程序运行需要有它自己专属的内存空间，可以把这块内存空间简单的理解为进程</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><h3 id="浏览器的进程模型"><a href="#浏览器的进程模型" class="headerlink" title="浏览器的进程模型"></a>浏览器的进程模型</h3><h4 id="何为进程？"><a href="#何为进程？" class="headerlink" title="何为进程？"></a>何为进程？</h4><p>程序运行需要有它自己专属的内存空间，可以把这块内存空间简单的理解为进程</p>
 <p>每个应用至少有一个进程，进程之间相互独立，即使要通信，也需要双方同意。</p>
-<h3 id="何为线程？"><a href="#何为线程？" class="headerlink" title="何为线程？"></a>何为线程？</h3><p>有了进程后，就可以运行程序的代码了。</p>
+<h4 id="何为线程？"><a href="#何为线程？" class="headerlink" title="何为线程？"></a>何为线程？</h4><p>有了进程后，就可以运行程序的代码了。</p>
 <p>运行代码的「人」称之为「线程」。</p>
 <p>一个进程至少有一个线程，所以在进程开启后会自动创建一个线程来运行代码，该线程称之为主线程。</p>
 <p>如果程序需要同时执行多块代码，主线程就会启动更多的线程来执行代码，所以一个进程中可以包含多个线程。</p>
-<h3 id="浏览器有哪些进程和线程？"><a href="#浏览器有哪些进程和线程？" class="headerlink" title="浏览器有哪些进程和线程？"></a>浏览器有哪些进程和线程？</h3><p><strong>浏览器是一个多进程多线程的应用程序</strong></p>
+<h4 id="浏览器有哪些进程和线程？"><a href="#浏览器有哪些进程和线程？" class="headerlink" title="浏览器有哪些进程和线程？"></a>浏览器有哪些进程和线程？</h4><p><strong>浏览器是一个多进程多线程的应用程序</strong></p>
 <p>浏览器内部工作极其复杂。</p>
 <p>为了避免相互影响，为了减少连环崩溃的几率，当启动浏览器后，它会自动启动多个进程。</p>
 <blockquote>
@@ -116,7 +116,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="渲染主线程是如何工作的？"><a href="#渲染主线程是如何工作的？" class="headerlink" title="渲染主线程是如何工作的？"></a>渲染主线程是如何工作的？</h2><p>渲染主线程是浏览器中最繁忙的线程，需要它处理的任务包括但不限于：</p>
+<h3 id="渲染主线程是如何工作的？"><a href="#渲染主线程是如何工作的？" class="headerlink" title="渲染主线程是如何工作的？"></a>渲染主线程是如何工作的？</h3><p>渲染主线程是浏览器中最繁忙的线程，需要它处理的任务包括但不限于：</p>
 <ul>
 <li>解析 HTML</li>
 <li>解析 CSS</li>
@@ -149,7 +149,7 @@
 </ol>
 <p>这样一来，就可以让每个任务有条不紊的、持续的进行下去了。</p>
 <p><strong>整个过程，被称之为事件循环（消息循环）</strong></p>
-<h2 id="若干解释"><a href="#若干解释" class="headerlink" title="若干解释"></a>若干解释</h2><h3 id="何为异步？"><a href="#何为异步？" class="headerlink" title="何为异步？"></a>何为异步？</h3><p>代码在执行过程中，会遇到一些无法立即处理的任务，比如：</p>
+<h3 id="若干解释"><a href="#若干解释" class="headerlink" title="若干解释"></a>若干解释</h3><h4 id="何为异步？"><a href="#何为异步？" class="headerlink" title="何为异步？"></a>何为异步？</h4><p>代码在执行过程中，会遇到一些无法立即处理的任务，比如：</p>
 <ul>
 <li>计时完成后需要执行的任务 —— <code>setTimeout</code>、<code>setInterval</code></li>
 <li>网络通信完成后需要执行的任务 – <code>XHR</code>、<code>Fetch</code></li>
@@ -170,12 +170,12 @@
 <p>所以浏览器采用异步的方式来避免。具体做法是当某些任务发生时，比如计时器、网络、事件监听，主线程将任务交给其他线程去处理，自身立即结束任务的执行，转而执行后续代码。当其他线程完成时，将事先传递的回调函数包装成任务，加入到消息队列的末尾排队，等待主线程调度执行。</p>
 <p>在这种异步模式下，浏览器永不阻塞，从而最大限度的保证了单线程的流畅运行。</p>
 </blockquote>
-<h3 id="JS为何会阻碍渲染？"><a href="#JS为何会阻碍渲染？" class="headerlink" title="JS为何会阻碍渲染？"></a>JS为何会阻碍渲染？</h3><p>先看代码</p>
+<h4 id="JS为何会阻碍渲染？"><a href="#JS为何会阻碍渲染？" class="headerlink" title="JS为何会阻碍渲染？"></a>JS为何会阻碍渲染？</h4><p>先看代码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Mr.Yuan is awesome!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>change<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">var</span> h1 = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 死循环指定的时间</span></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">function</span> <span class="title function_">delay</span>(<span class="params">duration</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> start = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">while</span> (<span class="title class_">Date</span>.<span class="title function_">now</span>() - start &lt; duration) &#123;&#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  btn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    h1.<span class="property">textContent</span> = <span class="string">&#x27;袁老师很帅！&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">delay</span>(<span class="number">3000</span>);</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>点击按钮后，会发生什么呢？</p>
 <p>等待三秒后，页面出现袁老师很帅！</p>
-<h3 id="任务有优先级吗？"><a href="#任务有优先级吗？" class="headerlink" title="任务有优先级吗？"></a>任务有优先级吗？</h3><p>任务没有优先级，在消息队列中先进先出</p>
+<h4 id="任务有优先级吗？"><a href="#任务有优先级吗？" class="headerlink" title="任务有优先级吗？"></a>任务有优先级吗？</h4><p>任务没有优先级，在消息队列中先进先出</p>
 <p>但<strong>消息队列是有优先级的</strong></p>
 <p>根据 W3C 的最新解释:</p>
 <ul>
@@ -218,7 +218,7 @@
 <li>受事件循环的影响，计时器的回调函数只能在主线程空闲时运行，因此又带来了偏差</li>
 </ol>
 </blockquote>
-<h1 id="浏览器是如何渲染页面的？"><a href="#浏览器是如何渲染页面的？" class="headerlink" title="浏览器是如何渲染页面的？"></a>浏览器是如何渲染页面的？</h1><p>当浏览器的网络线程收到 HTML 文档后，会产生一个渲染任务，并将其传递给渲染主线程的消息队列。</p>
+<h2 id="浏览器是如何渲染页面的？"><a href="#浏览器是如何渲染页面的？" class="headerlink" title="浏览器是如何渲染页面的？"></a>浏览器是如何渲染页面的？</h2><p>当浏览器的网络线程收到 HTML 文档后，会产生一个渲染任务，并将其传递给渲染主线程的消息队列。</p>
 <p>在事件循环机制的作用下，渲染主线程取出消息队列中的渲染任务，开启渲染流程。</p>
 <hr>
 <p>整个渲染流程分为多个阶段，分别是： HTML 解析、样式计算、布局、分层、绘制、分块、光栅化、画</p>
@@ -263,15 +263,15 @@
 <p>指引会标识出每个位图应该画到屏幕的哪个位置，以及会考虑到旋转、缩放等变形。</p>
 <p>变形发生在合成线程，与渲染主线程无关，这就是<code>transform</code>效率高的本质原因。</p>
 <p>合成线程会把 quad 提交给 GPU 进程，由 GPU 进程产生系统调用，提交给 GPU 硬件，完成最终的屏幕成像。</p>
-<h2 id="什么是-reflow？（回流）"><a href="#什么是-reflow？（回流）" class="headerlink" title="什么是 reflow？（回流）"></a>什么是 reflow？（回流）</h2><p>reflow 的本质就是重新计算 layout 树。</p>
+<h3 id="什么是-reflow？（回流）"><a href="#什么是-reflow？（回流）" class="headerlink" title="什么是 reflow？（回流）"></a>什么是 reflow？（回流）</h3><p>reflow 的本质就是重新计算 layout 树。</p>
 <p>当进行了会影响布局树的操作后，需要重新计算布局树，会引发 layout。</p>
 <p>为了避免连续的多次操作导致布局树反复计算，浏览器会合并这些操作，当 JS 代码全部完成后再进行统一计算。所以，改动属性造成的 reflow 是异步完成的。</p>
 <p>也同样因为如此，当 JS 获取布局属性时，就可能造成无法获取到最新的布局信息。</p>
 <p>浏览器在反复权衡下，最终决定获取属性立即 reflow。</p>
-<h2 id="什么是-repaint？（重绘）"><a href="#什么是-repaint？（重绘）" class="headerlink" title="什么是 repaint？（重绘）"></a>什么是 repaint？（重绘）</h2><p>repaint 的本质就是重新根据分层信息计算了绘制指令。</p>
+<h3 id="什么是-repaint？（重绘）"><a href="#什么是-repaint？（重绘）" class="headerlink" title="什么是 repaint？（重绘）"></a>什么是 repaint？（重绘）</h3><p>repaint 的本质就是重新根据分层信息计算了绘制指令。</p>
 <p>当改动了可见样式后，就需要重新计算，会引发 repaint。</p>
 <p>由于元素的布局信息也属于可见样式，所以 reflow 一定会引起 repaint。</p>
-<h2 id="为什么-transform-的效率高？"><a href="#为什么-transform-的效率高？" class="headerlink" title="为什么 transform 的效率高？"></a>为什么 transform 的效率高？</h2><p>因为 transform 既不会影响布局也不会影响绘制指令，它影响的只是渲染流程的最后一个「draw」阶段</p>
+<h3 id="为什么-transform-的效率高？"><a href="#为什么-transform-的效率高？" class="headerlink" title="为什么 transform 的效率高？"></a>为什么 transform 的效率高？</h3><p>因为 transform 既不会影响布局也不会影响绘制指令，它影响的只是渲染流程的最后一个「draw」阶段</p>
 <p>由于 draw 阶段在合成线程中，所以 transform 的变化几乎不会影响渲染主线程。反之，渲染主线程无论如何忙碌，也不会影响 transform 的变化。</p>
 
 
