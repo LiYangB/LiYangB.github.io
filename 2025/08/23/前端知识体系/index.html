@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta name="generator" content="Hexo 6.2.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
+  <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>前端知识体系 - 个人博客</title>
+
+  
+    <meta name="description" content="前端知识体系HTML总结HTML个人总结 - 个人博客 下面列出的是一些细节 contenteditable属性该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可编辑的状态 在实际开发中，通常用于制作富文本框。 可以继承，覆盖 Draggable该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可拖拽的元素 默认a标签，img标签是开启的 拖拽元素的周期拖拽开始12con">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识体系">
+<meta property="og:url" content="http://example.com/2025/08/23/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="前端知识体系HTML总结HTML个人总结 - 个人博客 下面列出的是一些细节 contenteditable属性该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可编辑的状态 在实际开发中，通常用于制作富文本框。 可以继承，覆盖 Draggable该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可拖拽的元素 默认a标签，img标签是开启的 拖拽元素的周期拖拽开始12con">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://mdrs.yuanjin.tech/img/202208092230847.png">
+<meta property="og:image" content="http://mdrs.yuanjin.tech/img/202208101043348.png">
+<meta property="og:image" content="http://mdrs.yuanjin.tech/img/202208101048899.png">
+<meta property="article:published_time" content="2025-08-23T12:26:09.000Z">
+<meta property="article:modified_time" content="2026-02-25T12:54:32.922Z">
+<meta property="article:author" content="李阳滨">
+<meta property="article:tag" content="个人总结">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mdrs.yuanjin.tech/img/202208092230847.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="title" href="/"><div class="main">个人博客</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#contenteditable%E5%B1%9E%E6%80%A7"><span class="toc-text">contenteditable属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Draggable"><span class="toc-text">Draggable</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E5%85%83%E7%B4%A0%E7%9A%84%E5%91%A8%E6%9C%9F"><span class="toc-text">拖拽元素的周期</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E5%BC%80%E5%A7%8B"><span class="toc-text">拖拽开始</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E4%B8%AD"><span class="toc-text">拖拽中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E7%BB%93%E6%9D%9F"><span class="toc-text">拖拽结束</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E5%8C%BA%E5%9F%9F%E6%9C%89%E5%85%B3%E6%8B%96%E6%8B%BD%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="toc-text">目标区域有关拖拽的事件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E8%BF%9B%E5%85%A5"><span class="toc-text">拖拽进入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E5%9C%A8%E5%8C%BA%E5%9F%9F%E7%A7%BB%E5%8A%A8"><span class="toc-text">拖拽在区域移动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E7%A7%BB%E5%87%BA"><span class="toc-text">拖拽移出</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8B%96%E6%8B%BD%E9%87%8A%E6%94%BE"><span class="toc-text">拖拽释放</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Canvas"><span class="toc-text">Canvas</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E8%AF%86canvas%EF%BC%8C%E7%94%BB%E7%BA%BF"><span class="toc-text">初识canvas，画线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E7%9F%A9%E5%BD%A2%E4%B8%8E%E6%B8%85%E5%B1%8F"><span class="toc-text">画矩形与清屏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E5%9C%86"><span class="toc-text">画圆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%BB%E5%9C%86%E8%A7%92"><span class="toc-text">画圆角</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%A9%E6%94%BE"><span class="toc-text">缩放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%8B%E8%BD%AC"><span class="toc-text">旋转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%9D%90%E6%A0%87%E7%B3%BB%E5%8E%9F%E7%82%B9"><span class="toc-text">修改坐标系原点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#save-amp-restore"><span class="toc-text">save&amp;restore</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="toc-text">背景图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98"><span class="toc-text">线性渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%90%E5%B0%84%E6%B8%90%E5%8F%98"><span class="toc-text">辐射渐变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B4%E5%BD%B1"><span class="toc-text">阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E5%AD%97"><span class="toc-text">文字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%AB%AF%E6%A0%B7%E5%BC%8F"><span class="toc-text">线端样式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#audio%E4%B8%8Evideo"><span class="toc-text">audio与video</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%92%AD%E6%94%BE%E4%B8%8E%E6%9A%82%E5%81%9C"><span class="toc-text">播放与暂停</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E8%BF%9B%E5%BA%A6"><span class="toc-text">时间进度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E5%80%8D%E9%80%9F"><span class="toc-text">视频倍速</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E5%A3%B0%E9%9F%B3"><span class="toc-text">视频声音</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE"><span class="toc-text">获取地理位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E4%BB%AA"><span class="toc-text">水平仪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#requestAnimationFrame"><span class="toc-text">requestAnimationFrame</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#woker"><span class="toc-text">woker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="toc-text">怪异盒模型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%BA%E5%AF%B8%E7%9A%84%E7%99%BE%E5%88%86%E6%AF%94"><span class="toc-text">尺寸的百分比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%80%BC%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="toc-text">属性值计算过程简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%A1%AE%E5%AE%9A%E5%A3%B0%E6%98%8E%E5%80%BC%EF%BC%9A"><span class="toc-text">1.确定声明值：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%B1%82%E5%8F%A0%E5%86%B2%E7%AA%81%EF%BC%9A"><span class="toc-text">2.层叠冲突：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-text">3.使用继承：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E5%80%BC%EF%BC%9A"><span class="toc-text">4.使用默认值：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">伪类选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS"><span class="toc-text">JS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="toc-text">事件循环</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E8%BF%9B%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span class="toc-text">浏览器的进程模型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E8%BF%9B%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为进程？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">何为线程？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%EF%BC%9F"><span class="toc-text">浏览器有哪些进程和线程？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E4%B8%BB%E7%BA%BF%E7%A8%8B%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-text">渲染主线程是如何工作的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8B%A5%E5%B9%B2%E8%A7%A3%E9%87%8A"><span class="toc-text">若干解释</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E5%BC%82%E6%AD%A5%EF%BC%9F"><span class="toc-text">何为异步？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS%E4%B8%BA%E4%BD%95%E4%BC%9A%E9%98%BB%E7%A2%8D%E6%B8%B2%E6%9F%93%EF%BC%9F"><span class="toc-text">JS为何会阻碍渲染？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E6%9C%89%E4%BC%98%E5%85%88%E7%BA%A7%E5%90%97%EF%BC%9F"><span class="toc-text">任务有优先级吗？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%9A%84%EF%BC%9F"><span class="toc-text">浏览器是如何渲染页面的？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-reflow%EF%BC%9F%EF%BC%88%E5%9B%9E%E6%B5%81%EF%BC%89"><span class="toc-text">什么是 reflow？（回流）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-repaint%EF%BC%9F%EF%BC%88%E9%87%8D%E7%BB%98%EF%BC%89"><span class="toc-text">什么是 repaint？（重绘）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88-transform-%E7%9A%84%E6%95%88%E7%8E%87%E9%AB%98%EF%BC%9F"><span class="toc-text">为什么 transform 的效率高？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TS"><span class="toc-text">TS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-text">网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-text">模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Commonjs"><span class="toc-text">Commonjs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5"><span class="toc-text">导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA"><span class="toc-text">导出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-text">拓展</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E8%BF%90%E8%A1%8C"><span class="toc-text">浏览器端运行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6-%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-text">ES6 模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E6%AD%A5%E5%B0%9D%E8%AF%95"><span class="toc-text">初步尝试</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-1"><span class="toc-text">导出</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5-1"><span class="toc-text">导入</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-text">运行</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF"><span class="toc-text">在浏览器端</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8Node%E4%B8%AD"><span class="toc-text">在Node中</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA-2"><span class="toc-text">导出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5-2"><span class="toc-text">导入</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E5%85%A8%E9%83%A8%EF%BC%88%E9%80%9A%E7%94%A8%EF%BC%89"><span class="toc-text">导入全部（通用）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E5%AF%BC%E5%85%A5%EF%BC%88%E5%AF%B9%E5%BA%94%EF%BC%9A%E5%88%86%E5%88%AB%E5%AF%BC%E5%87%BA%E3%80%81%E7%BB%9F%E2%BC%80%E5%AF%BC%E5%87%BA%EF%BC%89"><span class="toc-text">命名导入（对应：分别导出、统⼀导出）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%AF%BC%E5%85%A5%EF%BC%88%E5%AF%B9%E5%BA%94%EF%BC%9A%E9%BB%98%E8%AE%A4%E5%AF%BC%E5%87%BA%EF%BC%89"><span class="toc-text">默认导入（对应：默认导出）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E5%AF%BC%E5%85%A5-%E4%B8%8E-%E9%BB%98%E8%AE%A4%E5%AF%BC%E5%85%A5%E5%8F%AF%E4%BB%A5%E6%B7%B7%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-text">命名导入 与 默认导入可以混合使用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5"><span class="toc-text">动态导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#import-%E5%8F%AF%E4%BB%A5%E4%B8%8D%E6%8E%A5%E6%94%B6%E4%BB%BB%E4%BD%95%E6%95%B0%E6%8D%AE"><span class="toc-text">import 可以不接收任何数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%B3"><span class="toc-text">引申</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%97%A0%E6%A8%A1%E5%9D%97%E5%8C%96%E4%BB%A3%E7%A0%81"><span class="toc-text">无模块化代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E2%BD%A4-CommonJS-%E8%A7%84%E8%8C%83"><span class="toc-text">使⽤ CommonJS 规范</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E2%BD%A4-ES6-%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83"><span class="toc-text">使⽤ ES6 模块化规范</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%86%E8%A7%A3AMD-CMD"><span class="toc-text">了解AMD,CMD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AMD"><span class="toc-text">AMD</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE"><span class="toc-text">导出数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E2%BC%8A%E6%95%B0%E6%8D%AE"><span class="toc-text">导⼊数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E2%BD%A4%E6%A8%A1%E5%9D%97"><span class="toc-text">使⽤模块</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CMD"><span class="toc-text">CMD</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE-1"><span class="toc-text">导出数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%BC%E2%BC%8A%E6%95%B0%E6%8D%AE-1"><span class="toc-text">导⼊数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E2%BD%A4%E6%A8%A1%E5%9D%97-1"><span class="toc-text">使⽤模块</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm"><span class="toc-text">npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pnpm"><span class="toc-text">pnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yarn"><span class="toc-text">yarn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7"><span class="toc-text">构建工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack"><span class="toc-text">webpack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vite"><span class="toc-text">vite</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-text">工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Babel"><span class="toc-text">Babel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jest%EF%BC%9A%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95"><span class="toc-text">jest：单元测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83"><span class="toc-text">代码规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#eslint%EF%BC%9A%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="toc-text">eslint：定义代码风格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#prettier%EF%BC%9A%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="toc-text">prettier：代码格式化工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#husky%E3%80%81lint-staged%EF%BC%9A-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%97%B6%E6%A0%A1%E9%AA%8C%E4%BB%A3%E7%A0%81"><span class="toc-text">husky、lint-staged： 提交代码时校验代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue"><span class="toc-text">vue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React"><span class="toc-text">React</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%9B%B8%E5%85%B3"><span class="toc-text">部署相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker"><span class="toc-text">Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins"><span class="toc-text">Jenkins</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%9F%8B%E7%82%B9%E4%B8%8E%E7%9B%91%E6%8E%A7"><span class="toc-text">数据埋点与监控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="toc-text">网络相关知识</span></a></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a><span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a></div><div id="post-meta">Posted on&nbsp;<time datetime="2025-08-23T12:26:09.000Z">2025-08-23</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>前端知识体系</span></h1>
+<h1 id="前端知识体系"><a href="#前端知识体系" class="headerlink" title="前端知识体系"></a>前端知识体系</h1><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><a target="_blank" rel="noopener" href="https://liyangb.github.io/2022/08/23/HTML%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">HTML个人总结 - 个人博客</a></p>
+<p>下面列出的是一些细节</p>
+<h3 id="contenteditable属性"><a href="#contenteditable属性" class="headerlink" title="contenteditable属性"></a>contenteditable属性</h3><p>该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可编辑的状态</p>
+<p>在实际开发中，通常用于制作富文本框。</p>
+<p>可以继承，覆盖</p>
+<h3 id="Draggable"><a href="#Draggable" class="headerlink" title="Draggable"></a>Draggable</h3><p>该属性是一个布尔属性，可以设置到任何元素上，它可以让该元素变为可拖拽的元素</p>
+<p>默认a标签，img标签是开启的</p>
+<h4 id="拖拽元素的周期"><a href="#拖拽元素的周期" class="headerlink" title="拖拽元素的周期"></a>拖拽元素的周期</h4><h5 id="拖拽开始"><a href="#拖拽开始" class="headerlink" title="拖拽开始"></a>拖拽开始</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const a = document.getElementsByName(&#x27;a&#x27;)[0]</span><br><span class="line">a.ondragstart=(e)=&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="拖拽中"><a href="#拖拽中" class="headerlink" title="拖拽中"></a>拖拽中</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const a = document.getElementsByName(&#x27;a&#x27;)[0]</span><br><span class="line">a.ondrag=(e)=&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="拖拽结束"><a href="#拖拽结束" class="headerlink" title="拖拽结束"></a>拖拽结束</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const a = document.getElementsByName(&#x27;a&#x27;)[0]</span><br><span class="line">a.ondragend=(e)=&gt;&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="目标区域有关拖拽的事件"><a href="#目标区域有关拖拽的事件" class="headerlink" title="目标区域有关拖拽的事件"></a>目标区域有关拖拽的事件</h4><h5 id="拖拽进入"><a href="#拖拽进入" class="headerlink" title="拖拽进入"></a>拖拽进入</h5><p>以鼠标进入为触发条件，不是拖拽元素</p>
+<p>要用拖拽元素进入得结合js，获取鼠标在元素的位置与元素大小</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.ondragenter = (e) =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="拖拽在区域移动"><a href="#拖拽在区域移动" class="headerlink" title="拖拽在区域移动"></a>拖拽在区域移动</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.ondragover = (e) =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="拖拽移出"><a href="#拖拽移出" class="headerlink" title="拖拽移出"></a>拖拽移出</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.ondragleave = (e) =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="拖拽释放"><a href="#拖拽释放" class="headerlink" title="拖拽释放"></a>拖拽释放</h5><p>想要触发ondrop要阻止ondragover的默认事件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a.ondragover = (e) =&gt; &#123; </span><br><span class="line">  e.preventDefault()</span><br><span class="line">&#125;</span><br><span class="line">a.ondrop = (e) =&gt; &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h3><h4 id="初识canvas，画线"><a href="#初识canvas，画线" class="headerlink" title="初识canvas，画线"></a>初识canvas，画线</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">    const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">    // 落笔</span><br><span class="line">    ctx.moveTo(100,100)</span><br><span class="line">    // 移动</span><br><span class="line">    ctx.lineTo(300,100)</span><br><span class="line">    ctx.lineTo(300,200)</span><br><span class="line">    // 闭环,只在一次绘画中才会生效</span><br><span class="line">    ctx.closePath()</span><br><span class="line">    // 粗细,一次绘画</span><br><span class="line">    ctx.lineWidth=10</span><br><span class="line">    // 填充</span><br><span class="line">    ctx.fill()</span><br><span class="line">    // 画</span><br><span class="line">    ctx.stroke()</span><br><span class="line">    // 第二次绘画了</span><br><span class="line">    ctx.lineWidth = 5</span><br><span class="line">    ctx.lineTo(0, 100)</span><br><span class="line">    ctx.lineTo(0, 200)</span><br><span class="line">    ctx.stroke()</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="画矩形与清屏"><a href="#画矩形与清屏" class="headerlink" title="画矩形与清屏"></a>画矩形与清屏</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">    const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">    // x点，y点，长，高</span><br><span class="line">    ctx.rect(100, 200, 200, 100)</span><br><span class="line">    ctx.stroke()</span><br><span class="line"></span><br><span class="line">    // 直接画</span><br><span class="line">    ctx.strokeRect(100, 50, 50, 50)</span><br><span class="line"></span><br><span class="line">    // 直接画填充的矩形</span><br><span class="line">    ctx.fillRect(0,0,50,50)</span><br><span class="line">    </span><br><span class="line">    // 清屏，x原点，y原点，长，高</span><br><span class="line">    ctx.clearRect(0,0,500,600)</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="画圆"><a href="#画圆" class="headerlink" title="画圆"></a>画圆</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">    const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">    // 圆心(x,y)，半径(r),弧度(起始弧度，以水平方向最右边为起始，结束弧度)，方向(顺时针，0，逆时针，1)</span><br><span class="line">    ctx.arc(200,100,100,0,Math.PI,0)</span><br><span class="line">    ctx.stroke()</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="画圆角"><a href="#画圆角" class="headerlink" title="画圆角"></a>画圆角</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">    const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">    /*</span><br><span class="line">    *  画圆角</span><br><span class="line">    *  起始点100,110</span><br><span class="line">    *  中间b点(100,200),原正方形的角</span><br><span class="line">    *  方向c点(101,200)，坐标只提供方向，具体大小不会影响</span><br><span class="line">    *  圆角半径 10</span><br><span class="line">    */</span><br><span class="line">    ctx.moveTo(100,110)</span><br><span class="line">    ctx.arcTo(100,200,101,200,10)</span><br><span class="line"></span><br><span class="line">    // 剩余</span><br><span class="line">    ctx.arcTo(200,200,200,100,10)</span><br><span class="line">    ctx.arcTo(200,100,100,100,10)</span><br><span class="line">    ctx.arcTo(100,100,100,200,10)</span><br><span class="line"></span><br><span class="line">    ctx.stroke()</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">// x轴与y轴</span><br><span class="line">ctx.scale(2,1)</span><br></pre></td></tr></table></figure>
+
+<h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h4><p>旋转的原点是坐标系的原点，默认是画布的左上角</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">ctx.rotate(Math.PI/6)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改坐标系原点"><a href="#修改坐标系原点" class="headerlink" title="修改坐标系原点"></a>修改坐标系原点</h4><p>修改了坐标系原点后，canvas上原来的点的对应位置也会发生改变</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">ctx.translate(100, 100)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="save-amp-restore"><a href="#save-amp-restore" class="headerlink" title="save&amp;restore"></a>save&amp;restore</h4><p>类似暂存与恢复，在因为缩放，旋转，修改原点等多是全局的，所以需要</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">// 暂存缩放，旋转，坐标原点等</span><br><span class="line">ctx.save()</span><br><span class="line">ctx.lineWidth = 10</span><br><span class="line">ctx.rotate(Math.PI / 6)</span><br><span class="line">ctx.strokeRect(0, 0, 100, 50)</span><br><span class="line">// 恢复</span><br><span class="line">ctx.restore()</span><br><span class="line">ctx.strokeRect(100, 200, 100, 50)</span><br><span class="line">ctx.stroke()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">var img  = new Image()</span><br><span class="line">img.src = &#x27;./01.京东图片/1.png&#x27;</span><br><span class="line">img.onload=()=&gt;&#123;</span><br><span class="line">  const bg = ctx.createPattern(img,&#x27;no-repeat&#x27;)</span><br><span class="line">  ctx.fillStyle = bg</span><br><span class="line">  // 背景图片的原点是坐标系的原点</span><br><span class="line">  ctx.fillRect(0,0,200,100)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">// x(0,0)到y(0,200)</span><br><span class="line">const bg = ctx.createLinearGradient(0, 0, 0, 200)</span><br><span class="line">bg.addColorStop(0, &#x27;#fff&#x27;)</span><br><span class="line">bg.addColorStop(0.5, &#x27;#bfa&#x27;)</span><br><span class="line">bg.addColorStop(1, &#x27;#000&#x27;)</span><br><span class="line">ctx.fillStyle = bg</span><br><span class="line">ctx.fillRect(0, 0, 200, 200)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="辐射渐变"><a href="#辐射渐变" class="headerlink" title="辐射渐变"></a>辐射渐变</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">   const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">   const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">// 从x(200,200)半径10的圆到y(200,200)半径100的圆渐变</span><br><span class="line">   const bg = ctx.createRadialGradient(200, 200, 10, 200,200,100)</span><br><span class="line">   bg.addColorStop(0, &#x27;#fff&#x27;)</span><br><span class="line">   bg.addColorStop(0.5, &#x27;#bfa&#x27;)</span><br><span class="line">   bg.addColorStop(1, &#x27;#000&#x27;)</span><br><span class="line">   ctx.fillStyle = bg</span><br><span class="line">   ctx.fillRect(100, 100, 200, 200)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">ctx.save()</span><br><span class="line">ctx.shadowColor = &#x27;red&#x27;</span><br><span class="line">ctx.shadowBlur = 10</span><br><span class="line">ctx.shadowOffsetX = 15</span><br><span class="line">ctx.shadowOffsetY = 15</span><br><span class="line">ctx.strokeRect(100, 100, 200, 200)</span><br><span class="line">ctx.restore()</span><br><span class="line">ctx.strokeRect(0, 0, 200, 200)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line">ctx.save()</span><br><span class="line">// 设置字体大小，font-family</span><br><span class="line">ctx.font = &#x27;30px inhref&#x27;</span><br><span class="line">// 文字描边，文字颜色无效</span><br><span class="line">ctx.strokeText(&#x27;lyb&#x27;, 200, 100)</span><br><span class="line">ctx.restore()</span><br><span class="line">// 文字填充，设置文字颜色</span><br><span class="line">ctx.fillStyle = &#x27;red&#x27;</span><br><span class="line">ctx.fillText(&#x27;hhh&#x27;, 200, 50)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="线端样式"><a href="#线端样式" class="headerlink" title="线端样式"></a>线端样式</h4><p>lineCap &#x3D; type</p>
+<p>butt：线段末端以方形结束<br>round：线段末端以圆形结束<br>square：线段末端以方形结束，但是增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">ctx.beginPath()</span><br><span class="line">ctx.moveTo(100, 100)</span><br><span class="line">ctx.lineTo(100, 200)</span><br><span class="line">ctx.lineWidth = 10</span><br><span class="line">ctx.lineCap = &#x27;round&#x27;</span><br><span class="line">ctx.stroke()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>ineJoin &#x3D; type</p>
+<p>round 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。 圆角的半径是线段的宽度。<br>bevel 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。<br>miter(默认) 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%8F%B1%E5%BD%A2&spm=1001.2101.3001.7020">菱形</a>区域。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const canvas = document.getElementById(&#x27;canvas&#x27;)</span><br><span class="line">const ctx = canvas.getContext(&#x27;2d&#x27;)</span><br><span class="line"></span><br><span class="line">ctx.beginPath()</span><br><span class="line">ctx.moveTo(100, 100)</span><br><span class="line">ctx.lineTo(100, 200)</span><br><span class="line">ctx.lineTo(200, 200)</span><br><span class="line">ctx.lineWidth = 10</span><br><span class="line">ctx.lineJoin = &#x27;round&#x27;</span><br><span class="line">ctx.stroke()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="audio与video"><a href="#audio与video" class="headerlink" title="audio与video"></a>audio与video</h3><h4 id="播放与暂停"><a href="#播放与暂停" class="headerlink" title="播放与暂停"></a>播放与暂停</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;video id=&quot;video&quot; src=&quot;./01.京东图片/video.mov&quot;&gt;&lt;/video&gt;</span><br><span class="line">&lt;button id=&quot;button&quot;&gt;播放&lt;/button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  const video = document.getElementById(&#x27;video&#x27;)</span><br><span class="line">  const button = document.getElementById(&#x27;button&#x27;)</span><br><span class="line">  button.onclick = ()=&gt;&#123;</span><br><span class="line">    // 判断当前视频播放状态</span><br><span class="line">    if(video.paused)&#123;</span><br><span class="line">      video.play()</span><br><span class="line">      button.innerHTML = &#x27;暂停&#x27;</span><br><span class="line">    &#125; else&#123;</span><br><span class="line">      video.pause()</span><br><span class="line">      button.innerHTML = &#x27;播放&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="时间进度"><a href="#时间进度" class="headerlink" title="时间进度"></a>时间进度</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setInterval(()=&gt;&#123;</span><br><span class="line">  console.log(&quot;总共时间&quot;,video.duration,&quot;单位秒&quot;)</span><br><span class="line">  console.log(&quot;播放时间&quot;,video.currentTime)</span><br><span class="line">&#125;,1000)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="视频倍速"><a href="#视频倍速" class="headerlink" title="视频倍速"></a>视频倍速</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 当前视频播放速度</span><br><span class="line">video.playbackRate = video.playbackRate + 0.5</span><br><span class="line">console.log(&quot;当前播放速度：&quot;,video.playbackRate)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="视频声音"><a href="#视频声音" class="headerlink" title="视频声音"></a>视频声音</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">volume.onclick = () =&gt; &#123;</span><br><span class="line">  // 当前视频播放声音，范围0~1</span><br><span class="line">  if(video.volume + 0.1 &lt;= 1)&#123;</span><br><span class="line">    video.volume = video.volume + 0.1</span><br><span class="line">  &#125; else&#123;</span><br><span class="line">    video.volume = 0</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(&quot;当前播放声音：&quot;,video.volume)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="获取地理位置"><a href="#获取地理位置" class="headerlink" title="获取地理位置"></a>获取地理位置</h3><p>window.navigator.geolocation.getCurrentPosition</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 成功的回调与失败的回调</span><br><span class="line">window.navigator.geolocation.getCurrentPosition((position)=&gt;&#123;</span><br><span class="line">  console.log(position)</span><br><span class="line">  console.log(&quot;经度&quot;,position.coords.longitude)</span><br><span class="line">  console.log(&quot;纬度&quot;,position.coords.latitude)</span><br><span class="line">&#125;, ()=&gt;&#123;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="水平仪"><a href="#水平仪" class="headerlink" title="水平仪"></a>水平仪</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;alpha&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;beta&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;gamma&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  const alpha = document.getElementById(&#x27;alpha&#x27;)</span><br><span class="line">  const beta = document.getElementById(&#x27;beta&#x27;)</span><br><span class="line">  const gamma = document.getElementById(&#x27;gamma&#x27;)</span><br><span class="line">  window.addEventListener(&quot;deviceorientation&quot;,(event)=&gt;&#123;</span><br><span class="line">    console.log(event)</span><br><span class="line">    alpha.innerHTML = &#x27;指北，[0,360),为0时指北，180指南，alpha：&#x27;+ event.alpha.toFixed(0,2)</span><br><span class="line">    beta.innerHTML = &#x27;平放时为0，短边直立时为90，beta：&#x27;+event.beta.toFixed(0, 2)</span><br><span class="line">    gamma.innerHTML = &#x27;平放时为0，长边直立时为90，gamma&#x27;+event.gamma.toFixed(0, 2)</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;one&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  const one = document.getElementById(&#x27;one&#x27;)</span><br><span class="line">  const timer = null</span><br><span class="line">  let a = 0</span><br><span class="line">  const move = () =&gt; &#123;</span><br><span class="line">    if (a &gt; 100) &#123;</span><br><span class="line">      cancelAnimationFrame(timer)</span><br><span class="line">      a = 0</span><br><span class="line">      return</span><br><span class="line">    &#125;</span><br><span class="line">    one.innerHTML = a</span><br><span class="line">    a++</span><br><span class="line">    timer = requestAnimationFrame(move)</span><br><span class="line">  &#125;</span><br><span class="line">  move()</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="woker"><a href="#woker" class="headerlink" title="woker"></a>woker</h3><p>worker是多线程的，但是有以下限制</p>
+<ul>
+<li>不能读取window对象</li>
+<li>不能操作dom对象</li>
+<li>不能读取文件，可以发生ajax请求</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  const a = 10000</span><br><span class="line">  const worker = new Worker(&#x27;./worker.js&#x27;)</span><br><span class="line">  worker.postMessage(&#123;</span><br><span class="line">    num: a</span><br><span class="line">  &#125;)</span><br><span class="line">  worker.onmessage = (e) =&gt; &#123;</span><br><span class="line">    console.log(e.data)</span><br><span class="line">    console.log(e)</span><br><span class="line">  &#125;</span><br><span class="line">  // 终止worker</span><br><span class="line">  worker.terminate()</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">this.onmessage = (e) =&gt; &#123;</span><br><span class="line">  console.log(&quot;worker&quot;, e)</span><br><span class="line">  let result = 0</span><br><span class="line">  for (let index = 0; index &lt; e.data.num; index++) &#123;</span><br><span class="line">    result = result + index</span><br><span class="line">  &#125;</span><br><span class="line">  this.postMessage(result)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="怪异盒模型："><a href="#怪异盒模型：" class="headerlink" title="怪异盒模型："></a>怪异盒模型：</h3><p>   box-sizing:<br>        属性值：<br>            box-sizing:content-box;  常规盒模型（默认值）<br>            box-sizing:border-box:   怪异盒模型（IE盒模型，一般要这样设置，控制尺寸更加直观）<br>        怪异盒模型特点：padding和border都会在元素的宽高的内部，不会把盒子撑大。</p>
+<h3 id="尺寸的百分比"><a href="#尺寸的百分比" class="headerlink" title="尺寸的百分比"></a>尺寸的百分比</h3><p>绝大部分可以书写尺寸的地方，都可以书写百分比</p>
+<p>百分比是一个相对单位，其相对于元素的<strong>参考系</strong>，比如：</p>
+<ul>
+<li>普通元素的参考系为<strong>父元素的内容区域</strong></li>
+<li>绝对（固定）定位元素的参考系为父元素中<strong>第一个定位元素的padding区域</strong></li>
+</ul>
+<p>下面罗列常见的百分比情况</p>
+<table>
+<thead>
+<tr>
+<th>css属性</th>
+<th>百分比相对于</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>参考系的<strong>宽度</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>height</td>
+<td>参考系的<strong>高度</strong></td>
+<td>参考系高度受本身宽度影响时，设置无效</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>参考系的<strong>宽度</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>border</td>
+<td>参考系的<strong>宽度</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>margin</td>
+<td>参考系的<strong>宽度</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="属性值计算过程简介"><a href="#属性值计算过程简介" class="headerlink" title="属性值计算过程简介"></a>属性值计算过程简介</h3><h4 id="1-确定声明值："><a href="#1-确定声明值：" class="headerlink" title="1.确定声明值："></a>1.确定声明值：</h4><p>参考样式表中没有冲突的声明，作为CSS属性值</p>
+<h4 id="2-层叠冲突："><a href="#2-层叠冲突：" class="headerlink" title="2.层叠冲突："></a>2.层叠冲突：</h4><p>对样式表有冲突的声明使用层叠规则，确定CSS属性值</p>
+<ul>
+<li>比较重要性（作者样式表高于浏览器默认样式表）</li>
+<li>比较特殊性（比较css权重）</li>
+<li>比较源次序（权重一样，写在后面的会覆盖前面的）</li>
+</ul>
+<h4 id="3-使用继承："><a href="#3-使用继承：" class="headerlink" title="3.使用继承："></a>3.使用继承：</h4><p>对仍然没有值的属性，若可以继承，则继承父元素的值</p>
+<h4 id="4-使用默认值："><a href="#4-使用默认值：" class="headerlink" title="4.使用默认值："></a>4.使用默认值：</h4><p>对仍然没有值的属性，使用默认值</p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><blockquote>
+<p>css伪类选择器大全：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:link</td>
+<td>选中未访问过的超链接</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>选中已访问过的超链接</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>选中鼠标移入的元素</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>选中鼠标按下的元素</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>选中聚焦的表单元素</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>选中被禁用的表单元素</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>选中被选中的表单元素</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>选中第一个子元素<br />p:first-child(第一个子元素是p元素的样式，要是第一个子元素不是p元素就没样式了)</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>选中最后一个子元素</td>
+</tr>
+<tr>
+<td>:nth-child(an+b)</td>
+<td>选中第「an+b」个子元素<br />a和b是常量，n的值会从0开始依次递增</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>选中第一个指定类型的子元素<br />p:first-of-type(第一个子元素是p元素的样式，要是第一个子元素不是p元素还有样式<br />一直找到第一个p元素)</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>选中最后一个指定类型的子元素</td>
+</tr>
+<tr>
+<td>:nth-of-type(an+b)</td>
+<td>选中第「an+b」个指定类型的子元素<br />a和b是常量，n的值会从0开始依次递增</td>
+</tr>
+</tbody></table>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>详细的可以看<a target="_blank" rel="noopener" href="https://liyangb.github.io/2023/09/24/JavaScript-%E7%AC%94%E8%AE%B0/">JavaScript 笔记 - 个人博客</a></p>
+<h3 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h3><h4 id="浏览器的进程模型"><a href="#浏览器的进程模型" class="headerlink" title="浏览器的进程模型"></a>浏览器的进程模型</h4><h5 id="何为进程？"><a href="#何为进程？" class="headerlink" title="何为进程？"></a>何为进程？</h5><p>程序运行需要有它自己专属的内存空间，可以把这块内存空间简单的理解为进程</p>
+<p>每个应用至少有一个进程，进程之间相互独立，即使要通信，也需要双方同意。</p>
+<h5 id="何为线程？"><a href="#何为线程？" class="headerlink" title="何为线程？"></a>何为线程？</h5><p>有了进程后，就可以运行程序的代码了。</p>
+<p>运行代码的「人」称之为「线程」。</p>
+<p>一个进程至少有一个线程，所以在进程开启后会自动创建一个线程来运行代码，该线程称之为主线程。</p>
+<p>如果程序需要同时执行多块代码，主线程就会启动更多的线程来执行代码，所以一个进程中可以包含多个线程。</p>
+<h5 id="浏览器有哪些进程和线程？"><a href="#浏览器有哪些进程和线程？" class="headerlink" title="浏览器有哪些进程和线程？"></a>浏览器有哪些进程和线程？</h5><p><strong>浏览器是一个多进程多线程的应用程序</strong></p>
+<p>浏览器内部工作极其复杂。</p>
+<p>为了避免相互影响，为了减少连环崩溃的几率，当启动浏览器后，它会自动启动多个进程。</p>
+<blockquote>
+<p>可以在浏览器的任务管理器中查看当前的所有进程</p>
+</blockquote>
+<p>其中，最主要的进程有：</p>
+<ol>
+<li><p>浏览器进程</p>
+<p>主要负责界面显示、用户交互、子进程管理等。浏览器进程内部会启动多个线程处理不同的任务。</p>
+</li>
+<li><p>网络进程</p>
+<p>负责加载网络资源。网络进程内部会启动多个线程来处理不同的网络任务。</p>
+</li>
+<li><p><strong>渲染进程</strong>（本节课重点讲解的进程）</p>
+<p>渲染进程启动后，会开启一个<strong>渲染主线程</strong>，主线程负责执行 HTML、CSS、JS 代码。</p>
+<p>默认情况下，浏览器会为每个标签页开启一个新的渲染进程，以保证不同的标签页之间不相互影响。</p>
+<blockquote>
+<p>将来该默认模式可能会有所改变，有兴趣的同学可参见<a target="_blank" rel="noopener" href="https://chromium.googlesource.com/chromium/src/+/main/docs/process_model_and_site_isolation.md#Modes-and-Availability">chrome官方说明文档</a></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="渲染主线程是如何工作的？"><a href="#渲染主线程是如何工作的？" class="headerlink" title="渲染主线程是如何工作的？"></a>渲染主线程是如何工作的？</h4><p>渲染主线程是浏览器中最繁忙的线程，需要它处理的任务包括但不限于：</p>
+<ul>
+<li>解析 HTML</li>
+<li>解析 CSS</li>
+<li>计算样式</li>
+<li>布局</li>
+<li>处理图层</li>
+<li>每秒把页面画 60 次</li>
+<li>执行全局 JS 代码</li>
+<li>执行事件处理函数</li>
+<li>执行计时器的回调函数</li>
+<li>……</li>
+</ul>
+<blockquote>
+<p>思考题：为什么渲染进程不适用多个线程来处理这些事情？</p>
+</blockquote>
+<p>要处理这么多的任务，主线程遇到了一个前所未有的难题：如何调度任务？</p>
+<p>比如：</p>
+<ul>
+<li>我正在执行一个 JS 函数，执行到一半的时候用户点击了按钮，我该立即去执行点击事件的处理函数吗？</li>
+<li>我正在执行一个 JS 函数，执行到一半的时候某个计时器到达了时间，我该立即去执行它的回调吗？</li>
+<li>浏览器进程通知我“用户点击了按钮”，与此同时，某个计时器也到达了时间，我应该处理哪一个呢？</li>
+<li>……</li>
+</ul>
+<p>渲染主线程想出了一个绝妙的主意来处理这个问题：排队</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://mdrs.yuanjin.tech/img/202208092230847.png" alt="image-20220809223027806"></p>
+<ol>
+<li>在最开始的时候，渲染主线程会进入一个无限循环</li>
+<li>每一次循环会检查消息队列中是否有任务存在。如果有，就取出第一个任务执行，执行完一个后进入下一次循环；如果没有，则进入休眠状态。</li>
+<li>其他所有线程（包括其他进程的线程）可以随时向消息队列添加任务。新任务会加到消息队列的末尾。在添加新任务时，如果主线程是休眠状态，则会将其唤醒以继续循环拿取任务</li>
+</ol>
+<p>这样一来，就可以让每个任务有条不紊的、持续的进行下去了。</p>
+<p><strong>整个过程，被称之为事件循环（消息循环）</strong></p>
+<h4 id="若干解释"><a href="#若干解释" class="headerlink" title="若干解释"></a>若干解释</h4><h5 id="何为异步？"><a href="#何为异步？" class="headerlink" title="何为异步？"></a>何为异步？</h5><p>代码在执行过程中，会遇到一些无法立即处理的任务，比如：</p>
+<ul>
+<li>计时完成后需要执行的任务 —— <code>setTimeout</code>、<code>setInterval</code></li>
+<li>网络通信完成后需要执行的任务 – <code>XHR</code>、<code>Fetch</code></li>
+<li>用户操作后需要执行的任务 – <code>addEventListener</code></li>
+</ul>
+<p>如果让渲染主线程等待这些任务的时机达到，就会导致主线程长期处于「阻塞」的状态，从而导致浏览器「卡死」</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://mdrs.yuanjin.tech/img/202208101043348.png" alt="image-20220810104344296"></p>
+<p><strong>渲染主线程承担着极其重要的工作，无论如何都不能阻塞！</strong></p>
+<p>因此，浏览器选择<strong>异步</strong>来解决这个问题</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://mdrs.yuanjin.tech/img/202208101048899.png" alt="image-20220810104858857"></p>
+<p>使用异步的方式，<strong>渲染主线程永不阻塞</strong></p>
+<blockquote>
+<p>面试题：如何理解 JS 的异步？</p>
+<p>参考答案：</p>
+<p>JS是一门单线程的语言，这是因为它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
+<p>而渲染主线程承担着诸多的工作，渲染页面、执行 JS 都在其中运行。</p>
+<p>如果使用同步的方式，就极有可能导致主线程产生阻塞，从而导致消息队列中的很多其他任务无法得到执行。这样一来，一方面会导致繁忙的主线程白白的消耗时间，另一方面导致页面无法及时更新，给用户造成卡死现象。</p>
+<p>所以浏览器采用异步的方式来避免。具体做法是当某些任务发生时，比如计时器、网络、事件监听，主线程将任务交给其他线程去处理，自身立即结束任务的执行，转而执行后续代码。当其他线程完成时，将事先传递的回调函数包装成任务，加入到消息队列的末尾排队，等待主线程调度执行。</p>
+<p>在这种异步模式下，浏览器永不阻塞，从而最大限度的保证了单线程的流畅运行。</p>
+</blockquote>
+<h5 id="JS为何会阻碍渲染？"><a href="#JS为何会阻碍渲染？" class="headerlink" title="JS为何会阻碍渲染？"></a>JS为何会阻碍渲染？</h5><p>先看代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Mr.Yuan is awesome!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>change<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">var</span> h1 = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;h1&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">var</span> btn = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;button&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="comment">// 死循环指定的时间</span></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">function</span> <span class="title function_">delay</span>(<span class="params">duration</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> start = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">while</span> (<span class="title class_">Date</span>.<span class="title function_">now</span>() - start &lt; duration) &#123;&#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  btn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    h1.<span class="property">textContent</span> = <span class="string">&#x27;袁老师很帅！&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">delay</span>(<span class="number">3000</span>);</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>点击按钮后，会发生什么呢？</p>
+<p>等待三秒后，页面出现袁老师很帅！</p>
+<h5 id="任务有优先级吗？"><a href="#任务有优先级吗？" class="headerlink" title="任务有优先级吗？"></a>任务有优先级吗？</h5><p>任务没有优先级，在消息队列中先进先出</p>
+<p>但<strong>消息队列是有优先级的</strong></p>
+<p>根据 W3C 的最新解释:</p>
+<ul>
+<li>每个任务都有一个任务类型，同一个类型的任务必须在一个队列，不同类型的任务可以分属于不同的队列。<br>在一次事件循环中，浏览器可以根据实际情况从不同的队列中取出任务执行。</li>
+<li>浏览器必须准备好一个微队列，微队列中的任务优先所有其他任务执行<br><a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint">https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint</a></li>
+</ul>
+<blockquote>
+<p>随着浏览器的复杂度急剧提升，W3C 不再使用宏队列的说法</p>
+</blockquote>
+<p>在目前 chrome 的实现中，至少包含了下面的队列：</p>
+<ul>
+<li>延时队列：用于存放计时器到达后的回调任务，优先级「中」</li>
+<li>交互队列：用于存放用户操作后产生的事件处理任务，优先级「高」</li>
+<li>微队列：用户存放需要最快执行的任务，优先级「最高」</li>
+</ul>
+<blockquote>
+<p>添加任务到微队列的主要方式主要是使用 Promise、MutationObserver</p>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 立即把一个函数添加到微队列</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>().<span class="title function_">then</span>(函数)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>浏览器还有很多其他的队列，由于和我们开发关系不大，不作考虑</p>
+</blockquote>
+<blockquote>
+<p>面试题：阐述一下 JS 的事件循环</p>
+<p>参考答案：</p>
+<p>事件循环又叫做消息循环，是浏览器渲染主线程的工作方式。</p>
+<p>在 Chrome 的源码中，它开启一个不会结束的 for 循环，每次循环从消息队列中取出第一个任务执行，而其他线程只需要在合适的时候将任务加入到队列末尾即可。</p>
+<p>过去把消息队列简单分为宏队列和微队列，这种说法目前已无法满足复杂的浏览器环境，取而代之的是一种更加灵活多变的处理方式。</p>
+<p>根据 W3C 官方的解释，每个任务有不同的类型，同类型的任务必须在同一个队列，不同的任务可以属于不同的队列。不同任务队列有不同的优先级，在一次事件循环中，由浏览器自行决定取哪一个队列的任务。但浏览器必须有一个微队列，微队列的任务一定具有最高的优先级，必须优先调度执行。</p>
+</blockquote>
+<blockquote>
+<p>面试题：JS 中的计时器能做到精确计时吗？为什么？</p>
+<p>参考答案：</p>
+<p>不行，因为：</p>
+<ol>
+<li>计算机硬件没有原子钟，无法做到精确计时</li>
+<li>操作系统的计时函数本身就有少量偏差，由于 JS 的计时器最终调用的是操作系统的函数，也就携带了这些偏差</li>
+<li>按照 W3C 的标准，浏览器实现计时器时，如果嵌套层级超过 5 层，则会带有 4 毫秒的最少时间，这样在计时时间少于 4 毫秒时又带来了偏差</li>
+<li>受事件循环的影响，计时器的回调函数只能在主线程空闲时运行，因此又带来了偏差</li>
+</ol>
+</blockquote>
+<h3 id="浏览器是如何渲染页面的？"><a href="#浏览器是如何渲染页面的？" class="headerlink" title="浏览器是如何渲染页面的？"></a>浏览器是如何渲染页面的？</h3><p>当浏览器的网络线程收到 HTML 文档后，会产生一个渲染任务，并将其传递给渲染主线程的消息队列。</p>
+<p>在事件循环机制的作用下，渲染主线程取出消息队列中的渲染任务，开启渲染流程。</p>
+<hr>
+<p>整个渲染流程分为多个阶段，分别是： HTML 解析、样式计算、布局、分层、绘制、分块、光栅化、画</p>
+<p>每个阶段都有明确的输入输出，上一个阶段的输出会成为下一个阶段的输入。</p>
+<p>这样，整个渲染流程就形成了一套组织严密的生产流水线。</p>
+<hr>
+<p>渲染的第一步是<strong>解析 HTML</strong>。</p>
+<p>解析过程中遇到 CSS 解析 CSS，遇到 JS 执行 JS。为了提高解析效率，浏览器在开始解析前，会启动一个预解析的线程，率先下载 HTML 中的外部 CSS 文件和 外部的 JS 文件。</p>
+<p>如果主线程解析到<code>link</code>位置，此时外部的 CSS 文件还没有下载解析好，主线程不会等待，继续解析后续的 HTML。这是因为下载和解析 CSS 的工作是在预解析线程中进行的。这就是 CSS 不会阻塞 HTML 解析的根本原因。</p>
+<p>如果主线程解析到<code>script</code>位置，会停止解析 HTML，转而等待 JS 文件下载好，并将全局代码解析执行完成后，才能继续解析 HTML。这是因为 JS 代码的执行过程可能会修改当前的 DOM 树，所以 DOM 树的生成必须暂停。这就是 JS 会阻塞 HTML 解析的根本原因。</p>
+<p>第一步完成后，会得到 DOM 树和 CSSOM 树，浏览器的默认样式、内部样式、外部样式、行内样式均会包含在 CSSOM 树中。</p>
+<hr>
+<p>渲染的下一步是<strong>样式计算</strong>。</p>
+<p>主线程会遍历得到的 DOM 树，依次为树中的每个节点计算出它最终的样式，称之为 Computed Style。</p>
+<p>在这一过程中，很多预设值会变成绝对值，比如<code>red</code>会变成<code>rgb(255,0,0)</code>；相对单位会变成绝对单位，比如<code>em</code>会变成<code>px</code></p>
+<p>这一步完成后，会得到一棵带有样式的 DOM 树。</p>
+<hr>
+<p>接下来是<strong>布局</strong>，布局完成后会得到布局树。</p>
+<p>布局阶段会依次遍历 DOM 树的每一个节点，计算每个节点的几何信息。例如节点的宽高、相对包含块的位置。</p>
+<p>大部分时候，DOM 树和布局树并非一一对应。</p>
+<p>比如<code>display:none</code>的节点没有几何信息，因此不会生成到布局树；又比如使用了伪元素选择器，虽然 DOM 树中不存在这些伪元素节点，但它们拥有几何信息，所以会生成到布局树中。还有匿名行盒、匿名块盒等等都会导致 DOM 树和布局树无法一一对应。</p>
+<hr>
+<p>下一步是<strong>分层</strong></p>
+<p>主线程会使用一套复杂的策略对整个布局树中进行分层。</p>
+<p>分层的好处在于，将来某一个层改变后，仅会对该层进行后续处理，从而提升效率。</p>
+<p>滚动条、堆叠上下文、transform、opacity 等样式都会或多或少的影响分层结果，也可以通过<code>will-change</code>属性更大程度的影响分层结果。</p>
+<hr>
+<p>再下一步是<strong>绘制</strong></p>
+<p>主线程会为每个层单独产生绘制指令集，用于描述这一层的内容该如何画出来。</p>
+<hr>
+<p>完成绘制后，主线程将每个图层的绘制信息提交给合成线程，剩余工作将由合成线程完成。</p>
+<p>合成线程首先对每个图层进行分块，将其划分为更多的小区域。</p>
+<p>它会从线程池中拿取多个线程来完成分块工作。</p>
+<hr>
+<p>分块完成后，进入<strong>光栅化</strong>阶段。</p>
+<p>合成线程会将块信息交给 GPU 进程，以极高的速度完成光栅化。</p>
+<p>GPU 进程会开启多个线程来完成光栅化，并且优先处理靠近视口区域的块。</p>
+<p>光栅化的结果，就是一块一块的位图</p>
+<hr>
+<p>最后一个阶段就是<strong>画</strong>了</p>
+<p>合成线程拿到每个层、每个块的位图后，生成一个个「指引（quad）」信息。</p>
+<p>指引会标识出每个位图应该画到屏幕的哪个位置，以及会考虑到旋转、缩放等变形。</p>
+<p>变形发生在合成线程，与渲染主线程无关，这就是<code>transform</code>效率高的本质原因。</p>
+<p>合成线程会把 quad 提交给 GPU 进程，由 GPU 进程产生系统调用，提交给 GPU 硬件，完成最终的屏幕成像。</p>
+<h4 id="什么是-reflow？（回流）"><a href="#什么是-reflow？（回流）" class="headerlink" title="什么是 reflow？（回流）"></a>什么是 reflow？（回流）</h4><p>reflow 的本质就是重新计算 layout 树。</p>
+<p>当进行了会影响布局树的操作后，需要重新计算布局树，会引发 layout。</p>
+<p>为了避免连续的多次操作导致布局树反复计算，浏览器会合并这些操作，当 JS 代码全部完成后再进行统一计算。所以，改动属性造成的 reflow 是异步完成的。</p>
+<p>也同样因为如此，当 JS 获取布局属性时，就可能造成无法获取到最新的布局信息。</p>
+<p>浏览器在反复权衡下，最终决定获取属性立即 reflow。</p>
+<h4 id="什么是-repaint？（重绘）"><a href="#什么是-repaint？（重绘）" class="headerlink" title="什么是 repaint？（重绘）"></a>什么是 repaint？（重绘）</h4><p>repaint 的本质就是重新根据分层信息计算了绘制指令。</p>
+<p>当改动了可见样式后，就需要重新计算，会引发 repaint。</p>
+<p>由于元素的布局信息也属于可见样式，所以 reflow 一定会引起 repaint。</p>
+<h4 id="为什么-transform-的效率高？"><a href="#为什么-transform-的效率高？" class="headerlink" title="为什么 transform 的效率高？"></a>为什么 transform 的效率高？</h4><p>因为 transform 既不会影响布局也不会影响绘制指令，它影响的只是渲染流程的最后一个「draw」阶段</p>
+<p>由于 draw 阶段在合成线程中，所以 transform 的变化几乎不会影响渲染主线程。反之，渲染主线程无论如何忙碌，也不会影响 transform 的变化。</p>
+<h2 id="TS"><a href="#TS" class="headerlink" title="TS"></a>TS</h2><p>参考：<a target="_blank" rel="noopener" href="https://liyangb.github.io/2022/12/04/TS%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">TS个人总结 - 个人博客</a></p>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><p>参考<a target="_blank" rel="noopener" href="https://liyangb.github.io/2025/11/02/%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/">网络简介 - 个人博客</a></p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>什么是模块化？</p>
+<ul>
+<li>将程序⽂件依据⼀定规则拆分成多个⽂件，这种编码⽅式就是模块化的编码⽅式。</li>
+<li>拆分出来每个⽂件就是⼀个模块，模块中的数据都是私有的，模块之间互相隔离。</li>
+<li>同时也能通过⼀些⼿段，可以把模块内的指定数据“交出去”，供其他模块使⽤。</li>
+</ul>
+<p>模块化的核⼼思想就是：模块之间是隔离的，通过<strong>导⼊</strong>和<strong>导出</strong>进⾏数据和功能的共享。</p>
+<h3 id="Commonjs"><a href="#Commonjs" class="headerlink" title="Commonjs"></a>Commonjs</h3><p>在服务端应用广泛，内置在node.js中</p>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 在js中</span><br><span class="line">const &#123;name,slogan,getTel&#125; = require(&#x27;./school.js&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const name = &#x27;尚硅谷&#x27;</span><br><span class="line">const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br><span class="line"></span><br><span class="line">// 法一</span><br><span class="line">exports.name = name</span><br><span class="line">exports.slogan = slogan</span><br><span class="line"></span><br><span class="line">// 法二</span><br><span class="line">module.exports = &#123;name,slogan&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>每个模块内部的：this 、exports 、modules.exports 在初始时，都指向同⼀<br>个空对象，该空对象就是当前模块导出的数据</li>
+<li>⽆论如何修改导出对象，最终导出的都是module.exports 的值。 </li>
+<li>exports 是对module.exports 的初始引⽤，仅为了⽅便给导出象添加属性，所以<br>不能使⽤ exports &#x3D; value 的形式导出数据，但是可以使⽤module.exports &#x3D; xxxx<br>导出数据。</li>
+</ol>
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><p>⼀个 JS 模块在执⾏时，是被包裹在⼀个内置函数中执⾏的，所以每个模块都有⾃⼰的作⽤域，我<br>们可以通过如下⽅式验证这⼀说法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(arguments.callee.toString())</span><br></pre></td></tr></table></figure>
+
+<p>内置函数的⼤致形式如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 内部已经将exports, require, module当做参数，所以可以直接调用，无需引入</span><br><span class="line">function (exports, require, module, __filename, __dirname)&#123;</span><br><span class="line"> /*********************/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="浏览器端运行"><a href="#浏览器端运行" class="headerlink" title="浏览器端运行"></a>浏览器端运行</h4><p>Node.js 默认是⽀持 CommonJS 规范的，但浏览器端不⽀持，所以需要经过编译，步骤如下：</p>
+<p>第⼀步：全局安装 browserify ：npm i browserify -g </p>
+<p>第⼆步：在终端执行命令，编译入口文件index.js为build.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browserify index.js -o build.js</span><br></pre></td></tr></table></figure>
+
+<p>第三步：⻚⾯中引⼊使⽤</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;./build.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ES6-模块化"><a href="#ES6-模块化" class="headerlink" title="ES6 模块化"></a>ES6 模块化</h3><p>ES6 模块化规范是⼀个官⽅标准的规范，且浏览器与服务端均⽀持该规范,但是均需要对应处理</p>
+<h4 id="初步尝试"><a href="#初步尝试" class="headerlink" title="初步尝试"></a>初步尝试</h4><h5 id="导出-1"><a href="#导出-1" class="headerlink" title="导出"></a>导出</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export let name = &#123;str:&#x27;尚硅⾕&#x27;&#125;</span><br><span class="line"></span><br><span class="line">export const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br></pre></td></tr></table></figure>
+
+<h5 id="导入-1"><a href="#导入-1" class="headerlink" title="导入"></a>导入</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 导⼊暴露的所有内容</span><br><span class="line">import * as school from &#x27;./school.js&#x27;</span><br><span class="line"></span><br><span class="line">console.log(school.name)</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h4><h5 id="在浏览器端"><a href="#在浏览器端" class="headerlink" title="在浏览器端"></a>在浏览器端</h5><p>通过设置type&#x3D;”module”来引入，运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 就是通过设置type=&quot;module&quot;来达到隔离的效果，这样引入的index.js中的变量就不会绑到window上</span><br><span class="line">&lt;script type=&quot;module&quot; src=&quot;./index.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="在Node中"><a href="#在Node中" class="headerlink" title="在Node中"></a>在Node中</h5><p>⽅式⼀：将JavaScript ⽂件后缀从.js 改为.mjs ，Node 则会⾃动识别 ES6 模块。 </p>
+<p>⽅式⼆：在package.json 中设置type 属性值为module 。</p>
+<h4 id="导出-2"><a href="#导出-2" class="headerlink" title="导出"></a>导出</h4><p>ES6 模块化提供 3 种导出⽅式：①分别导出、②统⼀导出、③默认导出</p>
+<p>三种导出可以混合使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 分别导出</span><br><span class="line">export let name = &#123;str:&#x27;尚硅⾕&#x27;&#125;</span><br><span class="line">export const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br><span class="line"></span><br><span class="line">// 统⼀导出</span><br><span class="line">let name = &#123;str:&#x27;尚硅⾕&#x27;&#125;</span><br><span class="line">const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br><span class="line">// 注意这里是export，不是commonjs的exports。</span><br><span class="line">// 同时这里导出的也不是一个es6简写的对象,只是恰好用&#123;&#125;标记，因为如果用对象的键值对，会报错</span><br><span class="line">export &#123;name,slogan,getTel&#125;</span><br><span class="line"></span><br><span class="line">// 默认导出</span><br><span class="line">let name = &#123;str:&#x27;尚硅⾕&#x27;&#125;</span><br><span class="line">const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br><span class="line">// 这里的&#123;&#125;就是对象了</span><br><span class="line">export default &#123;name,slogan&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="导入-2"><a href="#导入-2" class="headerlink" title="导入"></a>导入</h4><p>使⽤何种导⼊⽅式，要根据导出⽅式决定。</p>
+<h5 id="导入全部（通用）"><a href="#导入全部（通用）" class="headerlink" title="导入全部（通用）"></a>导入全部（通用）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import * as school from &#x27;./school.js&#x27;</span><br><span class="line">// 可以通过school.XXX访问分别导出与统一导出的</span><br><span class="line">console.log(school.name)</span><br><span class="line">// 要通过school.default.XXX访问默认导出的</span><br><span class="line">console.log(school.default.name)</span><br></pre></td></tr></table></figure>
+
+<h5 id="命名导入（对应：分别导出、统⼀导出）"><a href="#命名导入（对应：分别导出、统⼀导出）" class="headerlink" title="命名导入（对应：分别导出、统⼀导出）"></a>命名导入（对应：分别导出、统⼀导出）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; name,slogan &#125; from &#x27;./school.js&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>通过as 重命名:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; name as myName,slogan,getTel &#125; from &#x27;./school.js&#x27;</span><br></pre></td></tr></table></figure>
+
+<h5 id="默认导入（对应：默认导出）"><a href="#默认导入（对应：默认导出）" class="headerlink" title="默认导入（对应：默认导出）"></a>默认导入（对应：默认导出）</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// student即为default导出对象，student也可以随意命名</span><br><span class="line">import student from &#x27;./student.js&#x27;</span><br></pre></td></tr></table></figure>
+
+<h5 id="命名导入-与-默认导入可以混合使用"><a href="#命名导入-与-默认导入可以混合使用" class="headerlink" title="命名导入 与 默认导入可以混合使用"></a>命名导入 与 默认导入可以混合使用</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import getTel,&#123;name,slogan&#125; from &#x27;./school.js&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="动态导入"><a href="#动态导入" class="headerlink" title="动态导入"></a>动态导入</h4><p>允许在运⾏时按需加载模块，返回值是⼀个 Promise。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const school = await import(&#x27;./school.js&#x27;);</span><br><span class="line">console.log(school)</span><br></pre></td></tr></table></figure>
+
+<h4 id="import-可以不接收任何数据"><a href="#import-可以不接收任何数据" class="headerlink" title="import 可以不接收任何数据"></a>import 可以不接收任何数据</h4><p>例如只是让 mock.js 参与运⾏ </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#x27;./mock.js&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="引申"><a href="#引申" class="headerlink" title="引申"></a>引申</h4><h5 id="无模块化代码"><a href="#无模块化代码" class="headerlink" title="无模块化代码"></a>无模块化代码</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function count ()&#123;</span><br><span class="line"> let sum = 1</span><br><span class="line"> function increment()&#123;</span><br><span class="line"> sum += 1</span><br><span class="line"> &#125;</span><br><span class="line"> return &#123;sum,increment&#125;</span><br><span class="line">&#125;</span><br><span class="line">const &#123;sum,increment&#125; = count()</span><br><span class="line"></span><br><span class="line">console.log(sum) // 1</span><br><span class="line">increment() </span><br><span class="line">increment()</span><br><span class="line">console.log(sum) // 1</span><br></pre></td></tr></table></figure>
+
+<h5 id="使⽤-CommonJS-规范"><a href="#使⽤-CommonJS-规范" class="headerlink" title="使⽤ CommonJS 规范"></a>使⽤ CommonJS 规范</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// count.js</span><br><span class="line"> let sum = 1</span><br><span class="line"> function increment ()&#123;</span><br><span class="line">  sum += 1</span><br><span class="line"> &#125;</span><br><span class="line"> module.exports = &#123;sum,increment&#125;</span><br><span class="line"> </span><br><span class="line">// index.js</span><br><span class="line"> const &#123;sum,increment&#125; = require(&#x27;./count.js&#x27;)</span><br><span class="line"> console.log(sum) // 1</span><br><span class="line"> increment()</span><br><span class="line"> increment()</span><br><span class="line"> console.log(sum) // 1</span><br></pre></td></tr></table></figure>
+
+<h5 id="使⽤-ES6-模块化规范"><a href="#使⽤-ES6-模块化规范" class="headerlink" title="使⽤ ES6 模块化规范"></a>使⽤ ES6 模块化规范</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// count.js</span><br><span class="line"> let sum = 1</span><br><span class="line">  function increment()&#123;</span><br><span class="line">  sum += 1</span><br><span class="line"> &#125;</span><br><span class="line"> export &#123;sum,increment&#125;</span><br><span class="line">// index.js</span><br><span class="line"> import &#123;sum,increment&#125; from &#x27;./count.js&#x27;</span><br><span class="line"> </span><br><span class="line"> console.log(sum) //1</span><br><span class="line"> increment()</span><br><span class="line"> increment()</span><br><span class="line"> console.log(sum) //3</span><br></pre></td></tr></table></figure>
+
+<p>所以，使用 ES6 模块化规范导出的常量，务必⽤const 来定义，因为如果在原文件的方法中改变了暴露的常量，同时该方法也暴露出去了，引入的值会莫名其妙改变就很恐怖 </p>
+<h3 id="了解AMD-CMD"><a href="#了解AMD-CMD" class="headerlink" title="了解AMD,CMD"></a>了解AMD,CMD</h3><h4 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h4><p>第⼀步:准备文件结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- js</span><br><span class="line">  -main.js</span><br><span class="line">  - school.js</span><br><span class="line">  - student.js</span><br><span class="line">- libs</span><br><span class="line">  - require.js</span><br><span class="line">- index.html</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>js ⽂件夹中存放业务逻辑代码，main.js ⽤于汇总各模块。 </li>
+<li>libs 中存放的是第三⽅库，例如必须要⽤的require.js 。</li>
+</ol>
+<p>第⼆步：在index.html 中配置main.js 与require.js </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script data-main=&quot;./js/main.js&quot; src=&quot;./libs/require.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>第三步：在main.js 中编写模块配置对象，注册所有模块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> /*AMD_require.js模块化的⼊⼝⽂件，要编写配置对象，并且有固定的写法*/</span><br><span class="line"> requirejs.config(&#123;</span><br><span class="line">  //基本路径</span><br><span class="line">  baseUrl: &quot;./js&quot;,</span><br><span class="line">  //模块标识名与模块路径映射</span><br><span class="line">  paths: &#123;</span><br><span class="line">   school: &quot;school&quot;,</span><br><span class="line">   student: &quot;student&quot;,</span><br><span class="line"> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="导出数据"><a href="#导出数据" class="headerlink" title="导出数据"></a>导出数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// school.js中</span><br><span class="line">define(function()&#123;</span><br><span class="line"> const name = &#x27;张三&#x27;</span><br><span class="line"> const motto = &#x27;⾛⾃⼰的路，让别⼈五路可⾛！&#x27;</span><br><span class="line"> return &#123;name,motto&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="导⼊数据"><a href="#导⼊数据" class="headerlink" title="导⼊数据"></a>导⼊数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// [&#x27;school&#x27;]表示当前模块要依赖的模块名字</span><br><span class="line">// 回调接收到的school是模块导出的数据</span><br><span class="line">define([&#x27;school&#x27;],function(school)&#123;</span><br><span class="line"> let name = &#123;str:&#x27;尚硅⾕&#x27;&#125;</span><br><span class="line"> const slogan = &#x27;让天下没有难学的技术！&#x27;+ school</span><br><span class="line"> return &#123;name,slogan,getTel&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="使⽤模块"><a href="#使⽤模块" class="headerlink" title="使⽤模块"></a>使⽤模块</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// main.js</span><br><span class="line">requirejs([&#x27;school&#x27;,&#x27;student&#x27;],function(school,student)&#123;</span><br><span class="line">  console.log(&#x27;main&#x27;,school)</span><br><span class="line">  console.log(&#x27;main&#x27;,student)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><p>创建者是阿里的某位</p>
+<p>第⼀步:准备文件结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- models</span><br><span class="line">  -main.js</span><br><span class="line">  - school.js</span><br><span class="line">  - student.js</span><br><span class="line">- libs</span><br><span class="line">  - sea.js</span><br><span class="line">- index.html</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>js ⽂件夹中存放业务逻辑代码，main.js ⽤于汇总各模块。 </li>
+<li>libs 中存放的是第三⽅库，例如必须要⽤的sea.js 。</li>
+</ol>
+<p>第⼆步:在index.html 中配置main.js 与sea.js </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;./libs/sea.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"> seajs.use(&#x27;./modules/main.js&#x27;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="导出数据-1"><a href="#导出数据-1" class="headerlink" title="导出数据"></a>导出数据</h5><p>CMD 中同样使⽤index.html HTMLdefine 函数定义模块并导出数据 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">school.js</span><br><span class="line">/* 收到的三个参数分别为：require、exports、module</span><br><span class="line">  require⽤于引⼊其他模块</span><br><span class="line">  exports、module⽤于导出数据</span><br><span class="line">*/</span><br><span class="line">define(function(require,exports,module)&#123;</span><br><span class="line">const name = &#x27;尚硅⾕&#x27;</span><br><span class="line">const slogan = &#x27;让天下没有难学的技术！&#x27;</span><br><span class="line"></span><br><span class="line">// 导出数据</span><br><span class="line">module.exports = &#123;name,slogan,getTel&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="导⼊数据-1"><a href="#导⼊数据-1" class="headerlink" title="导⼊数据"></a>导⼊数据</h5><p>CMD 规范中使⽤收到的require 参数进⾏模块导⼊ </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// student.js</span><br><span class="line">define(function(require,exports,module)&#123;</span><br><span class="line">const name = &#x27;张三&#x27;</span><br><span class="line">const motto = &#x27;相信明天会更好！&#x27;</span><br><span class="line">// 引⼊school</span><br><span class="line">模块</span><br><span class="line">const school = require(&#x27;./school&#x27;)</span><br><span class="line">console.log(welcome)</span><br><span class="line"></span><br><span class="line">exports.name = name</span><br><span class="line">exports.motto = motto</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="使⽤模块-1"><a href="#使⽤模块-1" class="headerlink" title="使⽤模块"></a>使⽤模块</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// main.js</span><br><span class="line">define(function(require)&#123;</span><br><span class="line">  const school = require(&#x27;./school&#x27;)</span><br><span class="line">  const student = require(&#x27;./student&#x27;)</span><br><span class="line">  // 使⽤模块</span><br><span class="line">  console.log(school)</span><br><span class="line">  console.log(student)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h2><p>个人感觉这些</p>
+<h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p><a target="_blank" rel="noopener" href="https://docs.npmjs.com/">https://docs.npmjs.com/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.cn/">https://www.npmjs.cn/</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903870578032647?searchId=20250407214415DF759285CD86110E0842#heading-11">https://juejin.cn/post/6844903870578032647?searchId=20250407214415DF759285CD86110E0842#heading-11</a></p>
+<h3 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h3><h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><h2 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h2><h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><h3 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h3><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h3><p>主要来处理js的语言问题</p>
+<ul>
+<li>兼容性<ul>
+<li>api兼容（polyfill）：core.js</li>
+<li>语法兼容（runtime）</li>
+</ul>
+</li>
+<li>语法增强：jsx，tsx等</li>
+</ul>
+<p>要实现兼容性或者语法增强会有一系列库，然后就要借助babel（预设）去整合这些转换代码的库，将源代码转换成兼容的代码</p>
+<h3 id="jest：单元测试"><a href="#jest：单元测试" class="headerlink" title="jest：单元测试"></a>jest：单元测试</h3><h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><h3 id="eslint：定义代码风格"><a href="#eslint：定义代码风格" class="headerlink" title="eslint：定义代码风格"></a>eslint：定义代码风格</h3><h3 id="prettier：代码格式化工具"><a href="#prettier：代码格式化工具" class="headerlink" title="prettier：代码格式化工具"></a>prettier：代码格式化工具</h3><h3 id="husky、lint-staged：-提交代码时校验代码"><a href="#husky、lint-staged：-提交代码时校验代码" class="headerlink" title="husky、lint-staged： 提交代码时校验代码"></a>husky、lint-staged： 提交代码时校验代码</h3><h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><p>参考：<a target="_blank" rel="noopener" href="https://liyangb.github.io/2023/01/29/vue3%E4%B8%AA%E4%BA%BA%E6%95%99%E7%A8%8B/">vue3个人教程 - 个人博客</a></p>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>参考：<a target="_blank" rel="noopener" href="https://liyangb.github.io/2024/03/31/React%E6%80%BB%E7%BB%93/">React总结 - 个人博客</a></p>
+<h2 id="部署相关"><a href="#部署相关" class="headerlink" title="部署相关"></a>部署相关</h2><h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><h3 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h3><h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="数据埋点与监控"><a href="#数据埋点与监控" class="headerlink" title="数据埋点与监控"></a>数据埋点与监控</h3><h3 id="网络相关知识"><a href="#网络相关知识" class="headerlink" title="网络相关知识"></a>网络相关知识</h3>
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>READ NEXT</span></section><section class="body fs14"><a id="next" href="/2024/03/31/React%E6%80%BB%E7%BB%93/">React总结<span class="note">Older</span></a><div class="line"></div><a id="prev" href="/2025/11/02/%E7%BD%91%E7%BB%9C%E7%AE%80%E4%BB%8B/">网络简介<span class="note">Newer</span></a></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</p>
+<p>This site was deployed by <a href="http://example.com/">@李阳滨</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a>.</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0';
+  stellar.config = {
+    date_suffix: {
+      just: 'Just',
+      min: 'minutes ago',
+      hour: 'hours ago',
+      day: 'days ago',
+      month: 'months ago',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
