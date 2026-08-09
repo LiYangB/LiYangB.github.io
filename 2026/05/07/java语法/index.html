@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://heuqqdmbyk.feishu.cn/space/api/box/stream/download/asynccode/?code=MDNlZDMzMWMxMTc3MmI0MmE1NDdjNjM3M2EzZjIxYWNfUGp0UGkwdDZ2TDFxYlljS0dFNm5BYnpudnQwUXRZejBfVG9rZW46RHZZT2JoYlQzb3FrajF4dlI2YWNlVDhKblZlXzE3ODA0MTAxMzM6MTc4MDQxMzczM19WNA">
 <meta property="og:image" content="https://heuqqdmbyk.feishu.cn/space/api/box/stream/download/asynccode/?code=MjM2NGI4ODhlZTE3YjExODNlYTg3MjA3OWY4MTQ1NzRfc1FhbWRidlUwSFhwa1NPcFBLVG9KTVhNSG9nZlJEZGNfVG9rZW46TXJJbWJwUXBlbzBIaXZ4MWxiRWNsVFJPbkgwXzE3ODA0MTAxMzM6MTc4MDQxMzczM19WNA">
 <meta property="article:published_time" content="2026-05-06T16:01:48.000Z">
-<meta property="article:modified_time" content="2026-08-02T15:34:31.200Z">
+<meta property="article:modified_time" content="2026-08-09T15:51:11.540Z">
 <meta property="article:author" content="李阳滨">
 <meta property="article:tag" content="java 个人总结">
 <meta name="twitter:card" content="summary">
@@ -79,7 +79,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95"><span class="toc-text">Java核心语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-text">字面量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E5%88%86%E6%8A%80%E5%B7%A7"><span class="toc-text">区分技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%EF%BC%9F"><span class="toc-text">什么是变量？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-text">变量的定义格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="toc-text">格式详解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">变量的注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">Java语言数据类型的分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%B1%BB%E5%85%AB%E7%A7%8D"><span class="toc-text">基本数据类型的四类八种</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E8%AE%B0%E5%BF%86%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%82%B9%EF%BC%9A"><span class="toc-text">需要记忆以下几点：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">注意点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E6%80%A7%E8%A6%81%E6%B1%82"><span class="toc-text">硬性要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BB%BA%E8%AE%AE"><span class="toc-text">软件建议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95"><span class="toc-text">小驼峰命名法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%A7%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95"><span class="toc-text">大驼峰命名法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E5%BD%95%E5%85%A5"><span class="toc-text">键盘录入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">算术运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-text">基本介绍</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">隐式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-text">案例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-text">强制转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84-%E6%93%8D%E4%BD%9C"><span class="toc-text">字符串的+操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%9A%84-%E6%93%8D%E4%BD%9C"><span class="toc-text">字符的+操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%E6%80%BB%E7%BB%93"><span class="toc-text">算术运算符总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">自增自减运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">扩展赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#amp-%E5%92%8C-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">&amp; 和 | 的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%8F%96%E5%8F%8D%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">!（取反）的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">短路逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">三元运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">运算符的优先级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%E5%88%86%E7%B1%BB"><span class="toc-text">流程控制语句分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%EF%BC%9Aif%E8%AF%AD%E5%8F%A5"><span class="toc-text">判断语句：if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5"><span class="toc-text">switch语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#switch%E7%9A%84%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-text">switch的扩展知识：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84%EF%BC%88%E6%8E%8C%E6%8F%A1%EF%BC%89"><span class="toc-text">for循环结构（掌握）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%E6%A0%BC%E5%BC%8F"><span class="toc-text">for循环格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="toc-text">while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F"><span class="toc-text">格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do%E2%80%A6while%E5%BE%AA%E7%8E%AF"><span class="toc-text">do…while循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">三种格式的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="toc-text">无限循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for%E6%A0%BC%E5%BC%8F"><span class="toc-text">for格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#while%E6%A0%BC%E5%BC%8F"><span class="toc-text">while格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do%E2%80%A6while%E6%A0%BC%E5%BC%8F"><span class="toc-text">do…while格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">无限循环的注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">条件控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#break"><span class="toc-text">break</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue"><span class="toc-text">continue</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Random"><span class="toc-text">Random</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84-1"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">数组的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">数组的静态初始化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E8%AE%BF%E9%97%AE"><span class="toc-text">数组元素访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">数组的遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">数组的动态初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%A4%E7%A7%8D%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">数组两种初始化方式的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">数组常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-text">方法概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">方法的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">无参数方法定义和调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带参数方法定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8-1"><span class="toc-text">带参数方法定义和调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%A2%E5%8F%82%E5%92%8C%E5%AE%9E%E5%8F%82"><span class="toc-text">形参和实参</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带返回值方法的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带返回值方法定义和调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">方法的注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-text">方法的注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%9A%E7%94%A8%E6%A0%BC%E5%BC%8F"><span class="toc-text">方法的通用格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-text">方法重载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD-1"><span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E7%BB%83%E4%B9%A0"><span class="toc-text">方法重载练习</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E7%9A%84%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="toc-text">Java的运行原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-text">Java的运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E6%80%BB%E7%BB%93"><span class="toc-text">运行机制总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%92%8C%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80"><span class="toc-text">内存和内存地址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-text">内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80"><span class="toc-text">内存地址</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%84%E5%88%99"><span class="toc-text">规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-text">Java中的内存分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">变量在内存中的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%98%E9%87%8F%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BC%A0%E9%80%92"><span class="toc-text">基本类型的变量在方法中进行传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">数组在内存中的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">访问数组的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BC%A0%E9%80%92"><span class="toc-text">数组在方法中进行传递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-text">面向对象编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">面向对象编程快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">类的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-text">构造器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#this"><span class="toc-text">this</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-text">封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Javabean-%E5%AE%9E%E4%BD%93%E7%B1%BB"><span class="toc-text">Javabean(实体类)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static"><span class="toc-text">static</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#static%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">static关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-text">成员变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#static%E4%BF%AE%E9%A5%B0%E6%96%B9%E6%B3%95"><span class="toc-text">static修饰方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%EF%BC%8C%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%A0%E7%82%B9%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">静态方法，实例方法访问相关的几点注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%A7%E6%89%BF%EF%BC%9F"><span class="toc-text">什么是继承？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">权限修饰符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">继承的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">子类构造器的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#super-%E2%80%A6-%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E6%9C%89%E5%8F%82%E6%95%B0%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">super(…)调用父类有参数构造器的常见应用场景是什么？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#this-%E2%80%A6-%E8%B0%83%E7%94%A8%E5%85%84%E5%BC%9F%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-text">this(…)调用兄弟构造器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-text">多态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">多态的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E4%B8%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98"><span class="toc-text">多态下的类型转换问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-text">final</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E7%B1%BB%EF%BC%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-text">单例类（设计模式）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-text">单例设计模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-text">枚举类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E3%80%81%E7%89%B9%E7%82%B9"><span class="toc-text">抽象类的注意事项、特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">使用抽象类的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-text">模板方法设计模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">接口的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDK8%E5%BC%80%E5%A7%8B%EF%BC%8C%E6%8E%A5%E5%8F%A3%E6%96%B0%E5%A2%9E%E4%BA%86%E4%B8%89%E7%A7%8D%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">JDK8开始，接口新增了三种形式的方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">接口的注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-text">抽象类、接口的区别对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">成员内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">静态内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">局部内部类（了解）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">匿名内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BD%A2%E5%BC%8F"><span class="toc-text">匿名内部类在开发中的常见形式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E7%9C%9F%E5%AE%9E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B"><span class="toc-text">匿名内部类在开发中的真实使用场景示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="toc-text">函数式编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%9C%81%E7%95%A5%E8%A7%84%E5%88%99"><span class="toc-text">Lambda表达式的省略规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">静态方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">实例方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%AE%9A%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">特定类的方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-text">构造器引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList"><span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GUI%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">GUI（了解）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E7%9A%84GUI%E7%BC%96%E7%A8%8B%E5%8C%85"><span class="toc-text">Java的GUI编程包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">常见的布局管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#FlowLayout"><span class="toc-text">FlowLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BorderLayout"><span class="toc-text">BorderLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GridLayout"><span class="toc-text">GridLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BoxLayout"><span class="toc-text">BoxLayout</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">事件处理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-text">异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">异常的基本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%EF%BC%88throws%EF%BC%89"><span class="toc-text">抛出异常（throws）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8-try%E2%80%A6catch"><span class="toc-text">捕获异常(try…catch)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-text">自定义异常</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB"><span class="toc-text">泛型类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-text">泛型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%B8%8A%E4%B8%8B%E9%99%90"><span class="toc-text">通配符与泛型的上下限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">泛型支持的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-text">包装类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-text">集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Collection%E9%9B%86%E5%90%88"><span class="toc-text">Collection集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%93%AA%E4%B8%A4%E5%A4%A7%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%EF%BC%8C%E5%90%84%E8%87%AA%E6%9C%89%E5%95%A5%E7%89%B9%E7%82%B9%EF%BC%9F"><span class="toc-text">有哪两大常用的集合体系，各自有啥特点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Collection%E7%9A%84%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="toc-text">Collection的常用功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">三种遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%81%8D%E5%8E%86"><span class="toc-text">迭代器遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF"><span class="toc-text">增强for循环</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">Lambda表达式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">三种遍历方式的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%E9%9B%86%E5%90%88"><span class="toc-text">List集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List%E9%9B%86%E5%90%88%E6%94%AF%E6%8C%81%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">List集合支持的遍历方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList%E5%92%8CLinkedList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">ArrayList和LinkedList的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">数组的特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">链表的特点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">LinkedList的应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%AE%BE%E8%AE%A1%E9%98%9F%E5%88%97"><span class="toc-text">可以用来设计队列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%AE%BE%E8%AE%A1%E6%A0%88"><span class="toc-text">可以用来设计栈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%E7%B3%BB%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-text">Set系列集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HashSet%E9%9B%86%E5%90%88%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">HashSet集合的底层原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-text">哈希表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89HasdSet%E5%8E%BB%E9%87%8D"><span class="toc-text">自定义HasdSet去重</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedHashSet%E9%9B%86%E5%90%88%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">LinkedHashSet集合的底层原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TreeSet%E9%9B%86%E5%90%88"><span class="toc-text">TreeSet集合</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99"><span class="toc-text">自定义排序规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88"><span class="toc-text">Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">Map集合的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">Map集合的遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%94%AE%E6%89%BE%E5%80%BC"><span class="toc-text">键找值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="toc-text">键值对</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F-1"><span class="toc-text">Lambda表达式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">Map集合的实现类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream%E6%B5%81"><span class="toc-text">Stream流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%EF%BC%9A"><span class="toc-text">认识：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="toc-text">使用：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%BB%93%E6%96%B9%E6%B3%95%EF%BC%88%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%EF%BC%89%EF%BC%9A"><span class="toc-text">终结方法（常用的四种）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%B6%E9%9B%86Stream%E6%B5%81"><span class="toc-text">收集Stream流</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">方法中的可变参数：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collections%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%9A"><span class="toc-text">Collections工具类：</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">TOC</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95"><span class="toc-text">Java核心语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-text">字面量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BA%E5%88%86%E6%8A%80%E5%B7%A7"><span class="toc-text">区分技巧</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%98%E9%87%8F%EF%BC%9F"><span class="toc-text">什么是变量？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-text">变量的定义格式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3"><span class="toc-text">格式详解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">变量的注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">Java语言数据类型的分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%9B%9B%E7%B1%BB%E5%85%AB%E7%A7%8D"><span class="toc-text">基本数据类型的四类八种</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E8%AE%B0%E5%BF%86%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%82%B9%EF%BC%9A"><span class="toc-text">需要记忆以下几点：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">注意点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E6%80%A7%E8%A6%81%E6%B1%82"><span class="toc-text">硬性要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BB%BA%E8%AE%AE"><span class="toc-text">软件建议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B0%8F%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95"><span class="toc-text">小驼峰命名法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%A7%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95"><span class="toc-text">大驼峰命名法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E5%BD%95%E5%85%A5"><span class="toc-text">键盘录入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">算术运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-text">基本介绍</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">隐式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B"><span class="toc-text">案例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2"><span class="toc-text">强制转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84-%E6%93%8D%E4%BD%9C"><span class="toc-text">字符串的+操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%9A%84-%E6%93%8D%E4%BD%9C"><span class="toc-text">字符的+操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%E6%80%BB%E7%BB%93"><span class="toc-text">算术运算符总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%A2%9E%E8%87%AA%E5%87%8F%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">自增自减运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">扩展赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#amp-%E5%92%8C-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">&amp; 和 | 的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%8F%96%E5%8F%8D%EF%BC%89%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">!（取反）的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%AD%E8%B7%AF%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">短路逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">三元运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">运算符的优先级</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">流程控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5%E5%88%86%E7%B1%BB"><span class="toc-text">流程控制语句分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%EF%BC%9Aif%E8%AF%AD%E5%8F%A5"><span class="toc-text">判断语句：if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch%E8%AF%AD%E5%8F%A5"><span class="toc-text">switch语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#switch%E7%9A%84%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-text">switch的扩展知识：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84%EF%BC%88%E6%8E%8C%E6%8F%A1%EF%BC%89"><span class="toc-text">for循环结构（掌握）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%E6%A0%BC%E5%BC%8F"><span class="toc-text">for循环格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF"><span class="toc-text">while循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F"><span class="toc-text">格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do%E2%80%A6while%E5%BE%AA%E7%8E%AF"><span class="toc-text">do…while循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">三种格式的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF"><span class="toc-text">无限循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for%E6%A0%BC%E5%BC%8F"><span class="toc-text">for格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#while%E6%A0%BC%E5%BC%8F"><span class="toc-text">while格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#do%E2%80%A6while%E6%A0%BC%E5%BC%8F"><span class="toc-text">do…while格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">无限循环的注意事项</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-text">条件控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#break"><span class="toc-text">break</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#continue"><span class="toc-text">continue</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Random"><span class="toc-text">Random</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84-1"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">数组的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%9D%99%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">数组的静态初始化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E8%AE%BF%E9%97%AE"><span class="toc-text">数组元素访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-text">索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">数组的遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">数组的动态初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%A4%E7%A7%8D%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">数组两种初始化方式的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">数组常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E6%A6%82%E8%BF%B0"><span class="toc-text">方法概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">方法的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">无参数方法定义和调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带参数方法定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8-1"><span class="toc-text">带参数方法定义和调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%A2%E5%8F%82%E5%92%8C%E5%AE%9E%E5%8F%82"><span class="toc-text">形参和实参</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带返回值方法的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E8%BF%94%E5%9B%9E%E5%80%BC%E6%96%B9%E6%B3%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-text">带返回值方法定义和调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">方法的注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-text">方法的注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%9A%E7%94%A8%E6%A0%BC%E5%BC%8F"><span class="toc-text">方法的通用格式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="toc-text">方法重载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD-1"><span class="toc-text">方法重载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD%E7%BB%83%E4%B9%A0"><span class="toc-text">方法重载练习</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E7%9A%84%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="toc-text">Java的运行原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-text">Java的运行机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E6%80%BB%E7%BB%93"><span class="toc-text">运行机制总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%92%8C%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80"><span class="toc-text">内存和内存地址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-text">内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80"><span class="toc-text">内存地址</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%84%E5%88%99"><span class="toc-text">规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E4%B8%AD%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-text">Java中的内存分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">变量在内存中的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%98%E9%87%8F%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BC%A0%E9%80%92"><span class="toc-text">基本类型的变量在方法中进行传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">数组在内存中的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E7%BB%84%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">访问数组的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%9C%A8%E6%96%B9%E6%B3%95%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BC%A0%E9%80%92"><span class="toc-text">数组在方法中进行传递</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-text">面向对象编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">面向对象编程快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">类的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-text">构造器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#this"><span class="toc-text">this</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-text">封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Javabean-%E5%AE%9E%E4%BD%93%E7%B1%BB"><span class="toc-text">Javabean(实体类)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#static"><span class="toc-text">static</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#static%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">static关键字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-text">成员变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#static%E4%BF%AE%E9%A5%B0%E6%96%B9%E6%B3%95"><span class="toc-text">static修饰方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%EF%BC%8C%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%A0%E7%82%B9%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">静态方法，实例方法访问相关的几点注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-text">继承</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BB%A7%E6%89%BF%EF%BC%9F"><span class="toc-text">什么是继承？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-text">权限修饰符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">继承的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-text">方法重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">子类构造器的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#super-%E2%80%A6-%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E6%9C%89%E5%8F%82%E6%95%B0%E6%9E%84%E9%80%A0%E5%99%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">super(…)调用父类有参数构造器的常见应用场景是什么？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#this-%E2%80%A6-%E8%B0%83%E7%94%A8%E5%85%84%E5%BC%9F%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-text">this(…)调用兄弟构造器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-text">多态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">多态的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E4%B8%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98"><span class="toc-text">多态下的类型转换问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-text">final</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-text">常量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E7%B1%BB%EF%BC%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-text">单例类（设计模式）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-text">单例设计模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB"><span class="toc-text">枚举类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">抽象类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E3%80%81%E7%89%B9%E7%82%B9"><span class="toc-text">抽象类的注意事项、特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">使用抽象类的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-text">模板方法设计模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-text">接口的好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDK8%E5%BC%80%E5%A7%8B%EF%BC%8C%E6%8E%A5%E5%8F%A3%E6%96%B0%E5%A2%9E%E4%BA%86%E4%B8%89%E7%A7%8D%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">JDK8开始，接口新增了三种形式的方法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">接口的注意事项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB%E5%AF%B9%E6%AF%94"><span class="toc-text">抽象类、接口的区别对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%91%98%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">成员内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">静态内部类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%86%85%E9%83%A8%E7%B1%BB%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">局部内部类（了解）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">匿名内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%B8%B8%E8%A7%81%E5%BD%A2%E5%BC%8F"><span class="toc-text">匿名内部类在开发中的常见形式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E7%9C%9F%E5%AE%9E%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B"><span class="toc-text">匿名内部类在开发中的真实使用场景示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B"><span class="toc-text">函数式编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E7%9C%81%E7%95%A5%E8%A7%84%E5%88%99"><span class="toc-text">Lambda表达式的省略规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">静态方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">实例方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%AE%9A%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-text">特定类的方法引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-text">构造器引用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String"><span class="toc-text">String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList"><span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GUI%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89"><span class="toc-text">GUI（了解）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E7%9A%84GUI%E7%BC%96%E7%A8%8B%E5%8C%85"><span class="toc-text">Java的GUI编程包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">常见的布局管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#FlowLayout"><span class="toc-text">FlowLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BorderLayout"><span class="toc-text">BorderLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GridLayout"><span class="toc-text">GridLayout</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BoxLayout"><span class="toc-text">BoxLayout</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">事件处理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-text">异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-text">异常的基本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%EF%BC%88throws%EF%BC%89"><span class="toc-text">抛出异常（throws）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8-try%E2%80%A6catch"><span class="toc-text">捕获异常(try…catch)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-text">自定义异常</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB"><span class="toc-text">泛型类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-text">泛型接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%9A%84%E4%B8%8A%E4%B8%8B%E9%99%90"><span class="toc-text">通配符与泛型的上下限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%94%AF%E6%8C%81%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">泛型支持的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-text">包装类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-text">集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Collection%E9%9B%86%E5%90%88"><span class="toc-text">Collection集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%93%AA%E4%B8%A4%E5%A4%A7%E5%B8%B8%E7%94%A8%E7%9A%84%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%EF%BC%8C%E5%90%84%E8%87%AA%E6%9C%89%E5%95%A5%E7%89%B9%E7%82%B9%EF%BC%9F"><span class="toc-text">有哪两大常用的集合体系，各自有啥特点？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Collection%E7%9A%84%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD"><span class="toc-text">Collection的常用功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">三种遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%81%8D%E5%8E%86"><span class="toc-text">迭代器遍历</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF"><span class="toc-text">增强for循环</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">Lambda表达式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">三种遍历方式的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List%E9%9B%86%E5%90%88"><span class="toc-text">List集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List%E9%9B%86%E5%90%88%E6%94%AF%E6%8C%81%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">List集合支持的遍历方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList%E5%92%8CLinkedList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">ArrayList和LinkedList的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">数组的特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">链表的特点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">LinkedList的应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%AE%BE%E8%AE%A1%E9%98%9F%E5%88%97"><span class="toc-text">可以用来设计队列</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E8%AE%BE%E8%AE%A1%E6%A0%88"><span class="toc-text">可以用来设计栈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%E7%B3%BB%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-text">Set系列集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HashSet%E9%9B%86%E5%90%88%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">HashSet集合的底层原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-text">哈希表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89HasdSet%E5%8E%BB%E9%87%8D"><span class="toc-text">自定义HasdSet去重</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedHashSet%E9%9B%86%E5%90%88%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">LinkedHashSet集合的底层原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TreeSet%E9%9B%86%E5%90%88"><span class="toc-text">TreeSet集合</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99"><span class="toc-text">自定义排序规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88"><span class="toc-text">Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">Map集合的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">Map集合的遍历方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%94%AE%E6%89%BE%E5%80%BC"><span class="toc-text">键找值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="toc-text">键值对</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F-1"><span class="toc-text">Lambda表达式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">Map集合的实现类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream%E6%B5%81"><span class="toc-text">Stream流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%EF%BC%9A"><span class="toc-text">认识：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%EF%BC%9A"><span class="toc-text">使用：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%88%E7%BB%93%E6%96%B9%E6%B3%95%EF%BC%88%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9B%9B%E7%A7%8D%EF%BC%89%EF%BC%9A"><span class="toc-text">终结方法（常用的四种）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%B6%E9%9B%86Stream%E6%B5%81"><span class="toc-text">收集Stream流</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%AD%E7%9A%84%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-text">方法中的可变参数：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collections%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%9A"><span class="toc-text">Collections工具类：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File-amp-IO%E6%B5%81"><span class="toc-text">File&amp;IO流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#File"><span class="toc-text">File</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#File%E6%8F%90%E4%BE%9B%E7%9A%84%E5%88%A4%E6%96%AD%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E3%80%81%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF%E5%8A%9F%E8%83%BD"><span class="toc-text">File提供的判断文件类型、获取文件信息功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#File%E6%8F%90%E4%BE%9B%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">File提供的创建和删除文件的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#File%E6%8F%90%E4%BE%9B%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">File提供的遍历文件夹的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2"><span class="toc-text">文件搜索</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">字符集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">常见字符集</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%87%E5%87%86ASCII%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">标准ASCII字符集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GBK%EF%BC%88%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83%EF%BC%8C%E5%9B%BD%E6%A0%87%EF%BC%89"><span class="toc-text">GBK（汉字内码扩展规范，国标）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Unicode%E5%AD%97%E7%AC%A6%E9%9B%86-%E7%BB%9F%E4%B8%80%E7%A0%81%EF%BC%8C%E4%B9%9F%E5%8F%AB%E4%B8%87%E5%9B%BD%E7%A0%81"><span class="toc-text">Unicode字符集(统一码，也叫万国码)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UTF-8%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">UTF-8字符集</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%AF%B9%E5%AD%97%E7%AC%A6%E8%BF%9B%E8%A1%8C%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81%E6%93%8D%E4%BD%9C"><span class="toc-text">使用程序对字符进行编码和解码操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E5%AD%97%E7%AC%A6%E7%9A%84%E7%BC%96%E7%A0%81"><span class="toc-text">对字符的编码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E5%AD%97%E7%AC%A6%E7%9A%84%E8%A7%A3%E7%A0%81"><span class="toc-text">对字符的解码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IO%E6%B5%81"><span class="toc-text">IO流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86IO%E6%B5%81"><span class="toc-text">认识IO流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-text">字节输入流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-text">字节输出流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6"><span class="toc-text">文件复制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-text">字符输入流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-text">字符输出流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81"><span class="toc-text">缓冲流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B5%81"><span class="toc-text">其他流</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#InputStreamReader%EF%BC%88%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E8%BD%AC%E6%8D%A2%E6%B5%81%EF%BC%89"><span class="toc-text">InputStreamReader（字符输入转换流）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%8D%B0%E6%B5%81"><span class="toc-text">打印流</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-text">特殊数据流</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IO%E6%A1%86%E6%9E%B6"><span class="toc-text">IO框架</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B"><span class="toc-text">创建线程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%A7%E6%89%BFThread%E7%B1%BB"><span class="toc-text">继承Thread类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Runnable%E6%8E%A5%E5%8F%A3"><span class="toc-text">实现Runnable接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0Callable%E6%8E%A5%E5%8F%A3"><span class="toc-text">实现Callable接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">线程的常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-text">线程安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-text">线程同步</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">同步代码块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95"><span class="toc-text">同步方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Lock%E9%94%81"><span class="toc-text">Lock锁</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-text">线程池</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-text">创建线程池</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86Runnable%E4%BB%BB%E5%8A%A1"><span class="toc-text">处理Runnable任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86Callable%E4%BB%BB%E5%8A%A1"><span class="toc-text">处理Callable任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87Executors%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E6%B1%A0"><span class="toc-text">通过Executors创建线程池</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91-x2F-%E5%B9%B6%E8%A1%8C"><span class="toc-text">并发&#x2F;并行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-text">并发的含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">并行的理解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B"><span class="toc-text">网络编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E4%B8%89%E8%A6%81%E7%B4%A0"><span class="toc-text">网络通信三要素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80"><span class="toc-text">IP地址</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#IPv4"><span class="toc-text">IPv4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IPv6"><span class="toc-text">IPv6</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IP%E5%9F%9F%E5%90%8D%EF%BC%88Domain-Name%EF%BC%89"><span class="toc-text">IP域名（Domain Name）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DNS%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%EF%BC%88Domain-Name-System%EF%BC%89"><span class="toc-text">DNS域名解析（Domain Name System）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%AC%E7%BD%91IP%E3%80%81%E5%86%85%E7%BD%91IP"><span class="toc-text">公网IP、内网IP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#InetAddress"><span class="toc-text">InetAddress</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AB%AF%E5%8F%A3"><span class="toc-text">端口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE"><span class="toc-text">协议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="toc-text">通信协议</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%80%E6%94%BE%E5%BC%8F%E7%BD%91%E7%BB%9C%E4%BA%92%E8%81%94%E6%A0%87%E5%87%86%EF%BC%9AOSI%E7%BD%91%E7%BB%9C%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-text">开放式网络互联标准：OSI网络参考模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UDP-User-Datagram-Protocol-%EF%BC%9A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE%E3%80%82"><span class="toc-text">UDP(User Datagram Protocol)：用户数据报协议。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#TCP-Transmission-Control-Protocol-%EF%BC%9A%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE%E3%80%82"><span class="toc-text">TCP(Transmission Control Protocol) ：传输控制协议。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UDP%E9%80%9A%E4%BF%A1"><span class="toc-text">UDP通信</span></a></li></ol></li></ol></div></div></div>
 
 
 </div>
@@ -1966,9 +1966,1119 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo4test;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">public class CollectionsDemo2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：Colllections工具类</span><br><span class="line">        List&lt;String&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">        // 1、Collections的方法批量加</span><br><span class="line">        Collections.addAll(list,&quot;张无忌&quot;,&quot;周芷若&quot;,&quot;赵敏&quot;,&quot;张强&quot;,&quot;张三丰&quot;,&quot;张翠山&quot;);</span><br><span class="line">        System.out.println(list);</span><br><span class="line"></span><br><span class="line">        // 2、打乱顺序</span><br><span class="line">        Collections.shuffle(list);</span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h2 id="File-amp-IO流"><a href="#File-amp-IO流" class="headerlink" title="File&amp;IO流"></a>File&amp;IO流</h2><p>File是java.io.包下的类， File类的对象，用于代表当前操作系统的文件（可以是文件、或文件夹）。</p>
+<p>IO流用于读写数据的（可以读写文件，或网络中的数据…）</p>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a><strong>File</strong></h3><p>File类的对象可以代表文件&#x2F;文件夹，并可以调用其提供的方法对象文件进行操作。</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public <strong>File(String pathname)</strong></td>
+<td>根据文件路径创建文件对象</td>
+</tr>
+<tr>
+<td>public File(String parent, String child)</td>
+<td>根据父路径和子路径名字创建文件对象</td>
+</tr>
+<tr>
+<td>public File(File parent, String child)</td>
+<td>根据父路径对应文件对象和子路径名字创建文件对象</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong></p>
+<p>File对象既可以代表文件、也可以代表文件夹。</p>
+<p>File封装的对象仅仅是一个路径名，这个路径可以是存在的，也允许是不存在的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1file;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line"></span><br><span class="line">public class FileDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 目标：创建File创建对象代表文件（文件/目录），搞清楚其提供的对文件进行操作的方法。</span><br><span class="line">        // 1、创建File对象，去获取某个文件的信息</span><br><span class="line">//        File f1 = new File(&quot;E:\\resource\\dlei.jpg&quot;);</span><br><span class="line">        File f1 = new File(&quot;E:/resource/dlei.jpg&quot;);</span><br><span class="line"></span><br><span class="line">        System.out.println(f1.length()); // 字节个数</span><br><span class="line">        System.out.println(f1.getName());</span><br><span class="line">        System.out.println(f1.isFile()); // true</span><br><span class="line">        System.out.println(f1.isDirectory()); // false</span><br><span class="line"></span><br><span class="line">        // 2、可以使用相对路径定位文件对象</span><br><span class="line">        // 只要带盘符的都称之为：绝对路径 E:/resource/dlei.jpg</span><br><span class="line">        // 相对路径：不带盘符，默认是到你的idea工程下直接寻找文件的。一般用来找工程下的项目文件的。</span><br><span class="line">        File f2 = new File(&quot;day03-file-io\\src\\dlei01.txt&quot;);</span><br><span class="line">        System.out.println(f2.length());</span><br><span class="line">        System.out.println(f2.getAbsoluteFile()); // 获取绝对路径</span><br><span class="line"></span><br><span class="line">        // 3、创建对象代表不存在的文件路径。</span><br><span class="line">        File f3 = new File(&quot;E:\\resource\\dlei01.txt&quot;);</span><br><span class="line">        System.out.println(f3.exists()); // 判断是否存在</span><br><span class="line">        System.out.println(f3.createNewFile()); // 把这个文件创建出来</span><br><span class="line"></span><br><span class="line">        // 4、创建对象代表不存在的文件夹路径。</span><br><span class="line">        File f4 = new File(&quot;E:\\resource\\aaa&quot;);</span><br><span class="line">        System.out.println(f4.mkdir()); // mkdir只能创建一级文件夹</span><br><span class="line"></span><br><span class="line">        File f5 = new File(&quot;E:\\resource\\kkk\\jjj\\mmm&quot;);</span><br><span class="line">        System.out.println(f5.mkdirs()); // mkdir可以创建多级文件夹，很重要！</span><br><span class="line"></span><br><span class="line">        // 5、创建File对象代表存在的文件，然后删除它</span><br><span class="line">        File f6 = new File(&quot;E:\\resource\\dlei01.txt&quot;);</span><br><span class="line">        System.out.println(f6.delete()); // 删除文件</span><br><span class="line"></span><br><span class="line">        // 6、创建File对象代表存在的文件夹，然后删除它</span><br><span class="line">        File f7 = new File(&quot;E:\\resource\\aaa&quot;);</span><br><span class="line">        System.out.println(f7.delete());  // 只能删除空文件，不能删除非空文件夹</span><br><span class="line"></span><br><span class="line">        File f8 = new File(&quot;E:\\resource&quot;);</span><br><span class="line">        System.out.println(f8.delete());  // 只能删除空文件，不能删除非空文件夹</span><br><span class="line"></span><br><span class="line">        // 8、可以获取某个目录下的全部一级文件名称</span><br><span class="line">        File f9 = new File(&quot;E:\\磊哥面授\\AI+Java基础入门课程\\day08-面向对象高级、Lambda、GUI编程\\视频&quot;);</span><br><span class="line">        String[] names = f9.list();</span><br><span class="line">        for (String name : names) &#123;</span><br><span class="line">            System.out.println(name);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        File[] files = f9.listFiles();</span><br><span class="line">        for (File file : files) &#123;</span><br><span class="line">            System.out.println(file.getAbsoluteFile()); // 获取绝对路径</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="File提供的判断文件类型、获取文件信息功能"><a href="#File提供的判断文件类型、获取文件信息功能" class="headerlink" title="File提供的判断文件类型、获取文件信息功能"></a>File提供的判断文件类型、获取文件信息功能</h4><table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public boolean exists()</td>
+<td>判断当前文件对象，对应的文件路径是否存在，存在返回true</td>
+</tr>
+<tr>
+<td>public boolean isFile()</td>
+<td>判断当前文件对象指代的是否是文件，是文件返回true，反之。</td>
+</tr>
+<tr>
+<td>public boolean isDirectory()</td>
+<td>判断当前文件对象指代的是否是文件夹，是文件夹返回true，反之。</td>
+</tr>
+<tr>
+<td>public String getName()</td>
+<td>获取文件的名称（包含后缀）</td>
+</tr>
+<tr>
+<td>public long length()</td>
+<td>获取文件的大小，返回字节个数</td>
+</tr>
+<tr>
+<td>public long lastModified()</td>
+<td>获取文件的最后修改时间。</td>
+</tr>
+<tr>
+<td>public String getPath()</td>
+<td>获取创建文件对象时，使用的路径</td>
+</tr>
+<tr>
+<td>public String getAbsolutePath()</td>
+<td>获取绝对路径</td>
+</tr>
+</tbody></table>
+<h4 id="File提供的创建和删除文件的方法"><a href="#File提供的创建和删除文件的方法" class="headerlink" title="File提供的创建和删除文件的方法"></a>File提供的创建和删除文件的方法</h4><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public boolean createNewFile()</td>
+<td>创建一个新的空的文件</td>
+</tr>
+<tr>
+<td>public boolean mkdir()</td>
+<td>只能创建一级文件夹</td>
+</tr>
+<tr>
+<td>public boolean mkdirs()</td>
+<td>可以创建多级文件夹</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   boolean delete()</td>
+<td>删除文件、空文件夹</td>
+</tr>
+</tbody></table>
+<p>delete方法默认只能删除文件和空文件夹，删除后的文件不会进入回收站。</p>
+<h4 id="File提供的遍历文件夹的方法"><a href="#File提供的遍历文件夹的方法" class="headerlink" title="File提供的遍历文件夹的方法"></a>File提供的遍历文件夹的方法</h4><table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public String[] list()</td>
+<td>获取当前目录下所有的”一级文件名称”到一个字符串数组中去返回。</td>
+</tr>
+<tr>
+<td>public File[] listFiles()</td>
+<td>获取当前目录下所有的”一级文件对象”到一个文件对象数组中去返回（重点）</td>
+</tr>
+</tbody></table>
+<p>使用listFiles方法时的注意事项：</p>
+<ul>
+<li>当主调是文件，或者路径不存在时，返回null</li>
+<li>当主调是空文件夹时，返回一个长度为0的数组</li>
+<li>当主调是一个有内容的文件夹时，将里面所有一级文件和文件夹的路径放在File数组中返回</li>
+<li>当主调是一个文件夹，且里面有隐藏文件时，将里面所有文件和文件夹的路径放在File数组中返回，包含隐藏文件</li>
+<li>当主调是一个文件夹，但是没有权限访问该文件夹时，返回null</li>
+</ul>
+<h4 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a><strong>文件搜索</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo2recursion;</span><br><span class="line"></span><br><span class="line">import java.io.File;</span><br><span class="line"></span><br><span class="line">public class FileSearchTest4 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：完成文件搜索。找出D:盘下的QQ.exe的位置。</span><br><span class="line">        try &#123;</span><br><span class="line">            File dir = new File(&quot;D:/&quot;);</span><br><span class="line">            searchFile(dir , &quot;QQ.exe&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 搜索文件</span><br><span class="line">     * @param dir 搜索的目录</span><br><span class="line">     * @param fileName 搜索的文件名称</span><br><span class="line">     */</span><br><span class="line">    public static void searchFile(File dir, String fileName) throws Exception &#123;</span><br><span class="line">        // 1、判断极端情况</span><br><span class="line">        if(dir == null || !dir.exists() || dir.isFile())&#123;</span><br><span class="line">            return; // 不搜索</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 2、获取目录下的所有一级文件或者文件夹对象</span><br><span class="line">        File[] files = dir.listFiles();</span><br><span class="line"></span><br><span class="line">        // 3、判断当前目录下是否存在一级文件对象，存在才可以遍历</span><br><span class="line">        if(files != null &amp;&amp; files.length &gt; 0)&#123;</span><br><span class="line">            // 4、遍历一级文件对象</span><br><span class="line">            for (File file : files) &#123;</span><br><span class="line">                // 5、判断当前一级文件对象是否是文件</span><br><span class="line">                if(file.isFile())&#123;</span><br><span class="line">                    // 6、判断文件名称是否和目标文件名称一致</span><br><span class="line">                    if(file.getName().contains(fileName))&#123;</span><br><span class="line">                        System.out.println(&quot;找到目标文件：&quot; + file.getAbsolutePath());</span><br><span class="line">                        Runtime r = Runtime.getRuntime();</span><br><span class="line">                        r.exec(file.getAbsolutePath());</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    // 7、如果当前一级文件对象是文件夹，则继续递归调用</span><br><span class="line">                    searchFile(file, fileName);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><h4 id="常见字符集"><a href="#常见字符集" class="headerlink" title="常见字符集"></a><strong>常见字符集</strong></h4><h5 id="标准ASCII字符集"><a href="#标准ASCII字符集" class="headerlink" title="标准ASCII字符集"></a>标准ASCII字符集</h5><p>ASCII(American Standard Code for Information Interchange)： 美国信息交换标准代码，包括了英文、符号等。标准ASCII使用1个字节存储一个字符，首位是0，因此，总共可表示128个字符.</p>
+<h5 id="GBK（汉字内码扩展规范，国标）"><a href="#GBK（汉字内码扩展规范，国标）" class="headerlink" title="GBK（汉字内码扩展规范，国标）"></a>GBK（汉字内码扩展规范，国标）</h5><p>汉字编码字符集，包含了2万多个汉字等字符，GBK中一个中文字符编码成两个字节的形式存储。</p>
+<p>注意：</p>
+<ul>
+<li>GBK兼容了ASCII字符集。</li>
+<li>汉字的第一个字节的第一位必须是1</li>
+</ul>
+<h5 id="Unicode字符集-统一码，也叫万国码"><a href="#Unicode字符集-统一码，也叫万国码" class="headerlink" title="Unicode字符集(统一码，也叫万国码)"></a>Unicode字符集(统一码，也叫万国码)</h5><p>Unicode是国际组织制定的，可以容纳世界上所有文字、符号的字符集。4个字节</p>
+<h5 id="UTF-8字符集"><a href="#UTF-8字符集" class="headerlink" title="UTF-8字符集"></a>UTF-8字符集</h5><p>是Unicode字符集的一种编码方案，采取可变长编码方案，共分四个长度区：1个字节，2个字节，3个字节，4个字节英文字符、数字等只占1个字节（兼容标准ASCII编码），汉字字符占用3个字节。</p>
+<table>
+<thead>
+<tr>
+<th>UTF-8编码方式(二进制)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>0</strong>xxxxxxx （ASCII码）</td>
+</tr>
+<tr>
+<td><strong>110</strong>xxxxx <strong>10</strong>xxxxxx</td>
+</tr>
+<tr>
+<td><strong>1110</strong>xxxx <strong>10</strong>xxxxxx <strong>10</strong>xxxxxx</td>
+</tr>
+<tr>
+<td><strong>11110</strong>xxx <strong>10</strong>xxxxxx <strong>10</strong>xxxxxx <strong>10</strong>xxxxxx</td>
+</tr>
+</tbody></table>
+<p>ASCII字符集：只有英文、数字、符号等，占1个字节。</p>
+<p>GBK字符集：汉字占2个字节，英文、数字占1个字节。</p>
+<p>UTF-8字符集：汉字占3个字节，英文、数字占1个字节。</p>
+<h4 id="使用程序对字符进行编码和解码操作"><a href="#使用程序对字符进行编码和解码操作" class="headerlink" title="使用程序对字符进行编码和解码操作"></a>使用程序对字符进行编码和解码操作</h4><h5 id="对字符的编码"><a href="#对字符的编码" class="headerlink" title="对字符的编码"></a>对字符的编码</h5><table>
+<thead>
+<tr>
+<th>String提供了如下<strong>方法</strong></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte[] getBytes()</td>
+<td>使用平台的默认字符集将该 String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+<tr>
+<td>byte[] getBytes(String charsetName)</td>
+<td>使用指定的字符集将该 String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+</tbody></table>
+<h5 id="对字符的解码"><a href="#对字符的解码" class="headerlink" title="对字符的解码"></a>对字符的解码</h5><table>
+<thead>
+<tr>
+<th>String提供了如下方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String(byte[] bytes)</td>
+<td>通过使用平台的默认字符集解码指定的字节数组来构造新的   String</td>
+</tr>
+<tr>
+<td>String(byte[] bytes, String charsetName)</td>
+<td>通过指定的字符集解码指定的字节数组来构造新的 String</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo3charset;</span><br><span class="line"></span><br><span class="line">import java.io.UnsupportedEncodingException;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">public class CharSetDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 目标：写程序实现字符编码和解码</span><br><span class="line">        // 1、编码</span><br><span class="line">        String name = &quot;我爱你中国abc666&quot;;</span><br><span class="line"></span><br><span class="line">        // byte[] bytes = name.getBytes(); // 平台的UTF-8编码的。</span><br><span class="line">        byte[] bytes = name.getBytes(&quot;GBK&quot;); // 指定GBK进行编码。</span><br><span class="line">        System.out.println(bytes.length);</span><br><span class="line">        System.out.println(Arrays.toString(bytes));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        // 2、解码</span><br><span class="line">        // String name2 = new String(bytes); // 平台的UTF-8解码的。</span><br><span class="line">        String name2 = new String(bytes, &quot;GBK&quot;);// 指定GBK进行解码</span><br><span class="line">        System.out.println(name2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h3><h4 id="认识IO流"><a href="#认识IO流" class="headerlink" title="认识IO流"></a>认识IO流</h4><p>按照流方向：IO流分为</p>
+<ul>
+<li><strong>输入流</strong></li>
+<li><strong>输出流</strong></li>
+</ul>
+<p>按照流的内容：IO流分为</p>
+<ul>
+<li><strong>字节流</strong>：<strong>适合操作所有类型的文件</strong></li>
+<li><strong>字符流</strong>：<strong>只适合操作纯文本文件</strong></li>
+</ul>
+<p>IO流是怎么划分的，大体分为几类，各自的作用？</p>
+<ul>
+<li><p>字节输入流 InputStream（读字节数据的）</p>
+</li>
+<li><p>字节输出流 OutputStream（写字节数据出去的）</p>
+</li>
+<li><p>字符输入流 Reader（读字符数据的）</p>
+</li>
+<li><p>字符输出流 Writer（写字符数据出去的）</p>
+</li>
+</ul>
+<h4 id="字节输入流"><a href="#字节输入流" class="headerlink" title="字节输入流"></a>字节输入流</h4><ul>
+<li>以内存为基准，可以把磁盘文件中的数据以字节的形式读入到内存中</li>
+<li>InputStream(抽象类)</li>
+<li>FileInputStream（实现类）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public <strong>FileInputStream(File file)</strong></td>
+<td>创建字节输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td>public <strong>FileInputStream(String pathname)</strong></td>
+<td>创建字节输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public int <strong>read()</strong></td>
+<td>每次读取一个字节返回，如果发现没有数据可读会返回-1.</td>
+</tr>
+<tr>
+<td>public int read(byte[]   buffer)</td>
+<td>每次用一个字节数组去读取数据，返回字节数组读取了多少个字节，如果发现没有数据可读会返回-1.</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo4fileinputStream;</span><br><span class="line"></span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line"></span><br><span class="line">public class FileInputStreamDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 目标：掌握文件字节输入流读取文件中的字节数组到内存中来。</span><br><span class="line">        // 1、创建文件字节输入流管道于源文件接通</span><br><span class="line">        // InputStream is = new FileInputStream(new File(&quot;day03-file-io\\src\\dlei02.txt&quot;));</span><br><span class="line">        InputStream is = new FileInputStream(&quot;day03-file-io\\src\\dlei02.txt&quot;); // 简化写法</span><br><span class="line"></span><br><span class="line">        // 2、开始读取文件中的字节并输出： 每次读取一个字节</span><br><span class="line">        // 定义一个变量记住每次读取的一个字节</span><br><span class="line">        int b;</span><br><span class="line">        while ((b = is.read()) != -1) &#123;</span><br><span class="line">            System.out.print((char) b);</span><br><span class="line">        &#125;</span><br><span class="line">        // 每次读取一个字节的问题：性能较差,读取汉字输出一定会乱码！</span><br><span class="line"></span><br><span class="line">        is.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo4fileinputStream;</span><br><span class="line"></span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line"></span><br><span class="line">public class FileInputStreamDemo3 &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 目标：掌握文件字节输入流读取文件中的字节数组到内存中来。</span><br><span class="line">        // 1、创建文件字节输入流管道于源文件接通</span><br><span class="line">        InputStream is = new FileInputStream(&quot;day03-file-io\\src\\dlei04.txt&quot;); // 简化写法</span><br><span class="line"></span><br><span class="line">        // 2、一次性读完文件的全部字节:可以避免读取汉字输出乱码的问题。如果文件过大，定义的字节数组可能引起内存溢出。</span><br><span class="line"></span><br><span class="line">        byte[] bytes = is.readAllBytes();</span><br><span class="line"></span><br><span class="line">        String rs = new String(bytes);</span><br><span class="line">        System.out.println(rs);</span><br><span class="line"></span><br><span class="line">        is.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
+<h4 id="字节输出流"><a href="#字节输出流" class="headerlink" title="字节输出流"></a>字节输出流</h4><ul>
+<li>以内存为基准，可以把内存中的数据以字节的形式写出到文件中</li>
+<li>OutputStream(抽象类)</li>
+<li>FileOutputStream（实现类）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public FileOutputStream(File file)</td>
+<td>创建字节输出流管道与源文件对象接通</td>
+</tr>
+<tr>
+<td>public FileOutputStream(String filepath)</td>
+<td>创建字节输出流管道与源文件路径接通</td>
+</tr>
+<tr>
+<td>public FileOutputStream(File file，boolean append)</td>
+<td>创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td>public FileOutputStream(String filepath，boolean append)</td>
+<td>创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public void write(int a)</td>
+<td>写一个字节出去</td>
+</tr>
+<tr>
+<td>public void write(byte[] buffer)</td>
+<td>写一个字节数组出去</td>
+</tr>
+<tr>
+<td>public void write(byte[] buffer , int pos , int len)</td>
+<td>写一个字节数组的一部分出去。</td>
+</tr>
+<tr>
+<td>public void close() throws IOException</td>
+<td>关闭流。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo5fileoutputStream;</span><br><span class="line"></span><br><span class="line">import java.io.FileNotFoundException;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.OutputStream;</span><br><span class="line"></span><br><span class="line">public class FileOutputStreamDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        // 目标：学会使用文件字节输出流。</span><br><span class="line">        // 1、创建文件字节输出流管道与目标文件接通</span><br><span class="line">        // OutputStream os = new FileOutputStream(&quot;day03-file-io/src/dlei05-out.txt&quot;); // 覆盖管道</span><br><span class="line">        OutputStream os = new FileOutputStream(&quot;day03-file-io/src/dlei05-out.txt&quot;, true); // 追加数据</span><br><span class="line"></span><br><span class="line">        // 2、写入数据</span><br><span class="line">        //  public void write(int b)</span><br><span class="line">        os.write(97); // 写入一个字节数据</span><br><span class="line">        os.write(&#x27;b&#x27;); // 写入一个字符数据</span><br><span class="line">//        os.write(&#x27;徐&#x27;); // 写入一个字符数据 会乱码</span><br><span class="line">        os.write(&quot;\r\n&quot;.getBytes()); // 换行</span><br><span class="line"></span><br><span class="line">        // 3、写一个字节数组出去</span><br><span class="line">        // public void write(byte[] b)</span><br><span class="line">        byte[] bytes = &quot;我爱你中国666&quot;.getBytes();</span><br><span class="line">        os.write(bytes);</span><br><span class="line">        os.write(&quot;\r\n&quot;.getBytes()); // 换行</span><br><span class="line"></span><br><span class="line">        // 4、写一个字节数组的一部分出去</span><br><span class="line">        // public void write(byte[] b, int pos, int len)</span><br><span class="line">        os.write(bytes, 0, 3);</span><br><span class="line">        os.write(&quot;\r\n&quot;.getBytes()); // 换行</span><br><span class="line"></span><br><span class="line">        os.close(); // 关闭管道 释放资源</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="文件复制"><a href="#文件复制" class="headerlink" title="文件复制"></a>文件复制</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">package TestIO;</span><br><span class="line"></span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line">import java.io.OutputStream;</span><br><span class="line"></span><br><span class="line">public class CopyFile &#123;</span><br><span class="line">    public static void main()&#123;</span><br><span class="line">        // 目标：使用字节流完成文件的复制操作。</span><br><span class="line">        // 源文件</span><br><span class="line">        // 目标文件</span><br><span class="line">        CopyFiles(&quot;D:\\lybCollegeStudent\\java\\project\\Default.jpg&quot;, &quot;D:\\lybCollegeStudent\\java\\project\\Default1.jpg&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    // 目标：使用字节流完成文件的复制操作。</span><br><span class="line">    public static void CopyFiles(String srcPath, String destPath)&#123;</span><br><span class="line">        // 1、创建一个文件字节输入流管道与源文件接通</span><br><span class="line">        InputStream fis = null;</span><br><span class="line">        OutputStream fos = null;</span><br><span class="line">        try &#123;</span><br><span class="line">            fis = new FileInputStream(srcPath);</span><br><span class="line">            fos = new FileOutputStream(destPath);</span><br><span class="line">            // 2、读取一个字节数组，写入一个字节数组  1024 + 1024 + 3</span><br><span class="line">            byte[] buffer = new byte[1024];</span><br><span class="line">            int len;</span><br><span class="line">            while ((len = fis.read(buffer)) != -1) &#123;</span><br><span class="line">                fos.write(buffer, 0, len); // 读取多少个字节，就写入多少个字节</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;复制成功！&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            // 最后一定会执行一次：即便程序出现异常！</span><br><span class="line">            // 3、释放资源</span><br><span class="line">            try &#123;</span><br><span class="line">                if(fos != null) fos.close();</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            try &#123;</span><br><span class="line">                if(fis != null) fis.close();</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="字符输入流"><a href="#字符输入流" class="headerlink" title="字符输入流"></a>字符输入流</h4><ul>
+<li>以内存为基准，可以把磁盘文件中的数据以字符的形式读入到内存中</li>
+<li>Reader(抽象类)</li>
+<li>FileReader（实现类）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public FileReader(File file)</td>
+<td>创建字符输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td>public FileReader(String pathname)</td>
+<td>创建字符输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public int <strong>read()</strong></td>
+<td>每次读取一个字符返回，如果发现没有数据可读会返回-1.</td>
+</tr>
+<tr>
+<td>public int read(char[]   buffer)</td>
+<td>每次用一个字符数组去读取数据，返回字符数组读取了多少个字符，如果发现没有数据可读会返回-1.</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo7fileReader;</span><br><span class="line"></span><br><span class="line">import java.io.FileReader;</span><br><span class="line">import java.io.Reader;</span><br><span class="line"></span><br><span class="line">public class FileReaderDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：掌握文件字符输入流读取字符内容到程序中来。</span><br><span class="line">        try (</span><br><span class="line">                // 1、创建文件字符输入流与源文件接通</span><br><span class="line">                Reader fr = new FileReader(&quot;day03-file-io\\src\\dlei06.txt&quot;);</span><br><span class="line">        ) &#123;</span><br><span class="line">            // 2、定义一个字符数组，每次读多个字符</span><br><span class="line">            char[] chs = new char[3];</span><br><span class="line">            int len; // 用于记录每次读取了多少个字符</span><br><span class="line">            while ((len = fr.read(chs)) != -1)&#123;</span><br><span class="line">                // 3、每次读取多个字符，并把字符数组转换成字符串输出</span><br><span class="line">                String str = new String(chs,0,len);</span><br><span class="line">                System.out.print(str);</span><br><span class="line">            &#125;</span><br><span class="line">            // 拓展：文件字符输入流每次读取多个字符，性能较好，而且读取中文</span><br><span class="line">            // 是按照字符读取，不会出现乱码！这是一种读取中文很好的方案。</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="字符输出流"><a href="#字符输出流" class="headerlink" title="字符输出流"></a>字符输出流</h4><ul>
+<li>以内存为基准，可以把内存中的数据以字符的形式写出到文件中</li>
+<li>Writer(抽象类)</li>
+<li>FileWriter（实现类</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public FileWriter(File file)</td>
+<td>创建字节输出流管道与源文件对象接通</td>
+</tr>
+<tr>
+<td>public FileWriter(String filepath)</td>
+<td>创建字节输出流管道与源文件路径接通</td>
+</tr>
+<tr>
+<td>public FileWriter(File file，boolean append)</td>
+<td>创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td>public FileWriter(String filepath，boolean append)</td>
+<td>创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void   write(int c)</td>
+<td>写一个字符</td>
+</tr>
+<tr>
+<td>void   write(String str)</td>
+<td>写一个字符串</td>
+</tr>
+<tr>
+<td>void   write(String str, int off, int len)</td>
+<td>写一个字符串的一部分</td>
+</tr>
+<tr>
+<td>void   write(char[] cbuf)</td>
+<td>写入一个字符数组</td>
+</tr>
+<tr>
+<td>void   write(char[] cbuf, int off, int len)</td>
+<td>写入字符数组的一部分</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo8filewriter;</span><br><span class="line"></span><br><span class="line">import java.io.FileWriter;</span><br><span class="line">import java.io.Writer;</span><br><span class="line"></span><br><span class="line">public class FileWriterDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：搞清楚文件字符输出流的使用：写字符出去的流。</span><br><span class="line"></span><br><span class="line">        try (</span><br><span class="line">                // 1. 创建一个字符输出流对象，指定写出的目的地。</span><br><span class="line">//                Writer fw = new FileWriter(&quot;day03-file-io/src/dlei07-out.txt&quot;); // 覆盖管道</span><br><span class="line">                Writer fw = new FileWriter(&quot;day03-file-io/src/dlei07-out.txt&quot;, true); // 追加数据</span><br><span class="line">                )&#123;</span><br><span class="line"></span><br><span class="line">            // 2. 写一个字符出去：  public void write(int c)</span><br><span class="line">            fw.write(&#x27;a&#x27;);</span><br><span class="line">            fw.write(98);</span><br><span class="line">            fw.write(&#x27;磊&#x27;);</span><br><span class="line">            fw.write(&quot;\r\n&quot;); // 换行</span><br><span class="line"></span><br><span class="line">            // 3、写一个字符串出去：  public void write(String str)</span><br><span class="line">            fw.write(&quot;java&quot;);</span><br><span class="line">            fw.write(&quot;我爱Java，虽然Java不是最好的编程之一,但是可以挣钱&quot;);</span><br><span class="line">            fw.write(&quot;\r\n&quot;); // 换行</span><br><span class="line"></span><br><span class="line">            // 4、写字符串的一部分出去：  public void write(String str, int off, int len)</span><br><span class="line">            fw.write(&quot;java&quot;, 1, 2);</span><br><span class="line">            fw.write(&quot;\r\n&quot;); // 换行</span><br><span class="line"></span><br><span class="line">            // 5、写一个字符数组出去：  public void write(char[] cbuf)</span><br><span class="line">            char[] chars = &quot;java&quot;.toCharArray();</span><br><span class="line">            fw.write(chars);</span><br><span class="line">            fw.write(&quot;\r\n&quot;); // 换行</span><br><span class="line"></span><br><span class="line">            // 6、写字符数组的一部分出去：  public void write(char[] cbuf, int off, int len)</span><br><span class="line">            fw.write(chars, 1, 2);</span><br><span class="line">            fw.write(&quot;\r\n&quot;); // 换行</span><br><span class="line"></span><br><span class="line">//             fw.flush(); // 刷新缓冲区，将缓冲区中的数据全部写出去。</span><br><span class="line">            // 刷新后，流可以继续使用。</span><br><span class="line">            // fw.close(); // 关闭资源，关闭包含了刷新！关闭后流不能继续使用！</span><br><span class="line"></span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>字符输出流写出数据后，必须刷新流，或者关闭流，写出去的数据才能生效</p>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   void flush() throws IOException</td>
+<td>刷新流，就是将内存中缓存的数据立即写到文件中去生效！</td>
+</tr>
+<tr>
+<td>public   void close() throws IOException</td>
+<td>关闭流的操作，包含了刷新！</td>
+</tr>
+</tbody></table>
+<h4 id="缓冲流"><a href="#缓冲流" class="headerlink" title="缓冲流"></a><strong>缓冲流</strong></h4><p>分为缓冲字节流与缓冲字符流，可以提高字节输入流读取数据的性能。都自带了8KB缓冲池</p>
+<p>字节缓冲输入流： BufferedInputStream</p>
+<p>字节缓冲输出流：BufferedOutputStream</p>
+<p>字符缓冲输入流：BufferedReader</p>
+<p>字符缓冲输出流：BufferedWriter</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public BufferedInputStream(InputStream is)</td>
+<td>把低级的字节输入流包装成一个高级的缓冲字节输入流，从而提高读数据的性能</td>
+</tr>
+<tr>
+<td>public BufferedOutputStream(OutputStream os)</td>
+<td>把低级的字节输出流包装成一个高级的缓冲字节输出流，从而提高写数据的性能</td>
+</tr>
+<tr>
+<td>public   BufferedReader(Reader r)</td>
+<td>把低级的字符输入流包装成字符缓冲输入流管道，从而提高字符输入流读字符数据的性能</td>
+</tr>
+<tr>
+<td>public   BufferedWriter(Writer r)</td>
+<td>把低级的字符输出流包装成一个高级的缓冲字符输出流管道，从而提高字符输出流写数据的性能</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo09bufferedInputStream;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">public class CopyDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：掌握缓冲字节流的使用。</span><br><span class="line">        // 源文件：E:\resource\jt.jpg</span><br><span class="line">        // 目标文件：D:\jt_new.jpg （复制过去的时候必须带文件名的，无法自动生成文件名。）</span><br><span class="line">        copyFile(&quot;E:\\resource\\jt.jpg&quot;, &quot;D:\\jt_new2.jpg&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 复制文件</span><br><span class="line">    public static void copyFile(String srcPath, String destPath)  &#123;</span><br><span class="line">        // 1、创建一个文件字节输入流管道与源文件接通</span><br><span class="line">        try (</span><br><span class="line">                // 这里只能放置资源对象，用完后，最终会自动调用其close方法关闭！！</span><br><span class="line">                InputStream fis = new FileInputStream(srcPath);</span><br><span class="line">                // 把低级的字节输入流包装成高级的缓冲字节输入流</span><br><span class="line">                InputStream bis = new BufferedInputStream(fis);</span><br><span class="line"></span><br><span class="line">                OutputStream fos = new FileOutputStream(destPath);</span><br><span class="line">                // 把低级的字节输出流包装成高级的缓冲字节输出流</span><br><span class="line">                OutputStream bos = new BufferedOutputStream(fos);</span><br><span class="line">                )&#123;</span><br><span class="line">            // 2、读取一个字节数组，写入一个字节数组  1024 + 1024 + 3</span><br><span class="line">            byte[] buffer = new byte[1024];</span><br><span class="line">            int len;</span><br><span class="line">            while ((len = bis.read(buffer)) != -1) &#123;</span><br><span class="line">                bos.write(buffer, 0, len); // 读取多少个字节，就写入多少个字节</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(&quot;复制成功！&quot;);</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="其他流"><a href="#其他流" class="headerlink" title="其他流"></a>其他流</h4><h5 id="InputStreamReader（字符输入转换流）"><a href="#InputStreamReader（字符输入转换流）" class="headerlink" title="InputStreamReader（字符输入转换流）"></a>InputStreamReader（字符输入转换流）</h5><p>解决不同编码时，字符流读取文本内容乱码的问题。</p>
+<p>解决思路：先获取文件的原始字节流，再将其按真实的字符集编码转成字符输入流，这样字符输入流中的字符就不乱码了。</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public InputStreamReader(InputStream is)</td>
+<td>把原始的字节输入流，按照代码默认编码转成字符输入流（与直接用FileReader的效果一样）</td>
+</tr>
+<tr>
+<td>public InputStreamReader(InputStream   is ，String   charset)</td>
+<td>把原始的字节输入流，按照指定字符集编码转成字符输入流(重点)</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo12inputstreamreader;</span><br><span class="line"></span><br><span class="line">import java.io.*;</span><br><span class="line"></span><br><span class="line">public class Demo2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：使用字符输入转换流InputStreamReader解决不同编码读取乱码的问题、</span><br><span class="line">        // 代码：UTF-8   文件 UTF-8  读取不乱码</span><br><span class="line">        // 代码：UTF-8   文件 GBK  读取乱码</span><br><span class="line">        try (</span><br><span class="line">                // 先提取文件的原始字节流</span><br><span class="line">                InputStream is = new FileInputStream(&quot;day03-file-io\\src\\dlei09.txt&quot;);</span><br><span class="line">                // 指定字符集把原始字节流转换成字符输入流</span><br><span class="line">                Reader isr = new InputStreamReader(is, &quot;GBK&quot;);</span><br><span class="line">                // 2、创建缓冲字符输入流包装低级的字符输入流</span><br><span class="line">                BufferedReader br = new BufferedReader(isr);</span><br><span class="line">        ) &#123;</span><br><span class="line">            // 定义一个字符串变量用于记住每次读取的一行数据</span><br><span class="line">            String line;</span><br><span class="line">            while ((line = br.readLine()) != null)&#123;</span><br><span class="line">                System.out.println(line);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="打印流"><a href="#打印流" class="headerlink" title="打印流"></a><strong>打印流</strong></h5><p>PrintStream&#x2F;PrintWriter（打印流）</p>
+<p>作用：打印流可以实现更方便、更高效的打印数据出去，能实现打印啥出去就是啥出去。</p>
+<p>PrintStream</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   <strong>PrintStream</strong>(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a>&#x2F;<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/File.html">File</a>&#x2F;<strong>String</strong>)</td>
+<td>打印流直接通向字节输出流&#x2F;文件&#x2F;文件路径</td>
+</tr>
+<tr>
+<td>public PrintStream(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/lang/String.html">String</a> fileName,   <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/nio/charset/Charset.html">Charset</a> charset)</td>
+<td>可以指定写出去的字符编码</td>
+</tr>
+<tr>
+<td>public PrintStream(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a> out, boolean autoFlush)</td>
+<td>可以指定实现自动刷新</td>
+</tr>
+<tr>
+<td>public PrintStream(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a> out, boolean autoFlush, <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/lang/String.html">String</a> encoding)</td>
+<td>可以指定实现自动刷新，并可指定字符的编码</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   void <strong>println</strong>**(**<strong>Xxx</strong> <strong>xx)</strong></td>
+<td>打印任意类型的数据出去</td>
+</tr>
+<tr>
+<td>public   void write(int&#x2F;byte[]&#x2F;byte[]一部分)</td>
+<td>可以支持写<strong>字节</strong>数据出去</td>
+</tr>
+</tbody></table>
+<p>PrintWriter</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   <strong>Print****Writer</strong>(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a>&#x2F;Writer&#x2F;<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/File.html">File</a>&#x2F;<strong>String</strong>)</td>
+<td>打印流直接通向字节输出流&#x2F;文件&#x2F;文件路径</td>
+</tr>
+<tr>
+<td>public PrintWriter(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/lang/String.html">String</a> fileName,   <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/nio/charset/Charset.html">Charset</a> charset)</td>
+<td>可以指定写出去的字符编码</td>
+</tr>
+<tr>
+<td>public PrintWriter(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a> out&#x2F;Writer, boolean autoFlush)</td>
+<td>可以指定实现自动刷新</td>
+</tr>
+<tr>
+<td>public PrintWriter(<a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/OutputStream.html">OutputStream</a> out, boolean autoFlush, <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/lang/String.html">String</a> encoding)</td>
+<td>可以指定实现自动刷新，并可指定字符的编码</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   void <strong>println</strong>**(**<strong>Xxx</strong> <strong>xx)</strong></td>
+<td>打印任意类型的数据出去</td>
+</tr>
+<tr>
+<td>public   void write(int&#x2F;String&#x2F;char[]&#x2F;..)</td>
+<td>可以支持写字符数据出去</td>
+</tr>
+</tbody></table>
+<p>PrintStream和PrintWriter的区别</p>
+<p>打印数据的功能上是一模一样的：都是使用方便，性能高效（核心优势）</p>
+<p>PrintStream继承自字节输出流OutputStream，因此支持写字节数据的方法。</p>
+<p>PrintWriter继承自字符输出流Writer，因此支持写字符数据出去。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo13_printstream;</span><br><span class="line"></span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.PrintStream;</span><br><span class="line">import java.io.PrintWriter;</span><br><span class="line"></span><br><span class="line">public class PrintStreamDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：打印流的使用。</span><br><span class="line">       try (</span><br><span class="line">//               PrintStream ps = new PrintStream(&quot;day03-file-io/src/ps.txt&quot;);</span><br><span class="line">               PrintStream ps = new PrintStream(new FileOutputStream(&quot;day03-file-io/src/ps.txt&quot;, true));</span><br><span class="line">//               PrintWriter ps = new PrintWriter(&quot;day03-file-io/src/ps.txt&quot;);</span><br><span class="line">               )&#123;</span><br><span class="line">           ps.println(97);</span><br><span class="line">           ps.println(&#x27;a&#x27;);</span><br><span class="line">           ps.println(&quot;黑马&quot;);</span><br><span class="line">           ps.println(true);</span><br><span class="line">           ps.println(99.9);</span><br><span class="line">       &#125;catch (Exception e)&#123;</span><br><span class="line">           e.printStackTrace();</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="特殊数据流"><a href="#特殊数据流" class="headerlink" title="特殊数据流"></a>特殊数据流</h5><h6 id="DataInputStream：允许把数据和其类型一并写出去。"><a href="#DataInputStream：允许把数据和其类型一并写出去。" class="headerlink" title="DataInputStream：允许把数据和其类型一并写出去。"></a>DataInputStream：允许把数据和其类型一并写出去。</h6><table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public <strong>DataOutputStream</strong>**(**<strong>OutputStream</strong> <strong>out)</strong></td>
+<td>创建新数据输出流包装基础的字节输出流</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   final void writeByte(int v)   throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>将byte类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td>public   final void <strong>writeInt</strong><strong>(int v)</strong> throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>将int类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td>public   final void <strong>writeDouble</strong><strong>(Double v)</strong> throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>将double类型的数据写入基础的字节输出流</td>
+</tr>
+<tr>
+<td>public   final void <strong>writeUTF</strong><strong>(String str)</strong> throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>将字符串数据以UTF-8编码成字节写入基础的字节输出流</td>
+</tr>
+<tr>
+<td>public   void write(int&#x2F;byte[]&#x2F;byte[]一部分)</td>
+<td>支持写字节数据出去</td>
+</tr>
+</tbody></table>
+<h6 id="DataOutputStream：用于读取数据输出流写出去的数据。"><a href="#DataOutputStream：用于读取数据输出流写出去的数据。" class="headerlink" title="DataOutputStream：用于读取数据输出流写出去的数据。"></a>DataOutputStream：用于读取数据输出流写出去的数据。</h6><table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public <strong>DataInputStream</strong>**(**<strong>InputStream</strong> <strong>is)</strong></td>
+<td>创建新数据输入流包装基础的字节输入流</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Public   final byte readByte()   throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>读取字节数据返回</td>
+</tr>
+<tr>
+<td>public   final int <strong>readInt</strong><strong>()</strong> throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>读取int类型的数据返回</td>
+</tr>
+<tr>
+<td>public   final double <strong>readDouble</strong><strong>()</strong> throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>读取double类型的数据返回</td>
+</tr>
+<tr>
+<td>public   final String <strong>read**<strong>UTF</strong></strong>()** throws <a href="mk:@MSITStore:D:\course\最新版Java基础入门教程\API文档\jdk-11中文api修订版.CHM::/java.base/java/io/IOException.html">IOException</a></td>
+<td>读取字符串数（UTF-8）据返回</td>
+</tr>
+<tr>
+<td>public   int readInt()&#x2F;read(byte[])</td>
+<td>支持读字节数据进来</td>
+</tr>
+</tbody></table>
+<h4 id="IO框架"><a href="#IO框架" class="headerlink" title="IO框架"></a>IO框架</h4><p>封装了Java提供的对文件、数据进行操作的代码，对外提供了更简单的方式来对文件进行操作，对数据进行读写等。</p>
+<p>①在项目中创建一个文件夹：lib</p>
+<p>②将commons-io-2.6.jar文件复制到lib文件夹</p>
+<p>③在jar文件上点右键，选择 Add as Library -&gt; 点击OK</p>
+<p>④在类中导包使用</p>
+<p>Commons-io是apache开源基金组织提供的一组有关IO操作的小框架，目的是提高IO流的开发效率。</p>
+<table>
+<thead>
+<tr>
+<th>FileUtils类提供的部分方法展示</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static void <strong>copyFile</strong>(File srcFile, File destFile)</td>
+<td>复制文件。</td>
+</tr>
+<tr>
+<td>public static void <strong>copyDirectory</strong>(File srcDir, File destDir)</td>
+<td>复制文件夹</td>
+</tr>
+<tr>
+<td>public static void <strong>deleteDirectory</strong>(File directory)</td>
+<td>删除文件夹</td>
+</tr>
+<tr>
+<td>public static String <strong>readFileToString</strong>(File file, String encoding)</td>
+<td>读数据</td>
+</tr>
+<tr>
+<td>public static void <strong>writeStringToFile</strong>(File file, String data, String charname, boolean append)</td>
+<td>写数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>IOUtils类提供的部分方法展示</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static int <strong>copy</strong>(InputStream inputStream, OutputStream outputStream)</td>
+<td>复制文件。</td>
+</tr>
+<tr>
+<td>public static int <strong>copy</strong>(Reader reader, Writer writer)</td>
+<td>复制文件。</td>
+</tr>
+<tr>
+<td>public static void <strong>write</strong>(String data, OutputStream output, String charsetName)</td>
+<td>写数据</td>
+</tr>
+</tbody></table>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a><strong>多线程</strong></h2><p>线程(Thread)是一个程序内部的一条执行流程。</p>
+<p>多线程是指从软硬件上实现的多条执行流程的技术（多条线程由CPU负责调度执行）。</p>
+<h3 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a><strong>创建线程</strong></h3><h4 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h4><p>①定义一个子类MyThread继承线程类java.lang.Thread，重写run()方法</p>
+<p>②创建MyThread类的对象</p>
+<p>③调用线程对象的start()方法启动线程（启动后还是执行run方法的）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1create;</span><br><span class="line"></span><br><span class="line">public class ThreadDemo1 &#123;</span><br><span class="line">    // main方法本身是由一条主线程负责推荐执行的。</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：认识多线程，掌握创建线程的方式一：继承Thread类来实现</span><br><span class="line">        // 4、创建线程类的对象：代表线程。</span><br><span class="line">        Thread t1 = new MyThread();</span><br><span class="line">        // 5、调用start方法，启动线程。还是调用run方法执行的</span><br><span class="line">        t1.start(); // 启动线程，让线程执行run方法</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(&quot;主线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1、定义一个子类继承Thread类，成为一个线程类。</span><br><span class="line">class MyThread extends Thread &#123;</span><br><span class="line">    // 2、重写Thread类的run方法</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        // 3、在run方法中编写线程的任务代码（线程要干的活儿）</span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(&quot;子线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>创建线程的注意事项</strong></p>
+<ul>
+<li>启动线程必须是调用start方法，不是调用run方法。</li>
+</ul>
+<p>直接调用run方法会当成普通方法执行，此时相当于还是单线程执行。</p>
+<p>只有调用start方法才是启动一个新的线程执行。</p>
+<ul>
+<li>不要把主线程任务放在启动子线程之前。这样主线程一直是先跑完的，相当于是一个单线程的效果了。</li>
+</ul>
+<h4 id="实现Runnable接口"><a href="#实现Runnable接口" class="headerlink" title="实现Runnable接口"></a>实现Runnable接口</h4><p>①定义一个线程任务类MyRunnable实现Runnable接口，重写run()方法</p>
+<p>②创建MyRunnable任务对象</p>
+<p>③把MyRunnable任务对象交给Thread处理。</p>
+<p>④调用线程对象的start()方法启动线程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1create;</span><br><span class="line"></span><br><span class="line">public class ThreadDemo2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：掌握多线程的创建方式二：实现Runnable接口来创建。</span><br><span class="line">        // 3、创建线程任务类的对象代表一个线程任务。</span><br><span class="line">        Runnable r = new MyRunnable();</span><br><span class="line">        // 4、把线程任务对象交给一个线程对象来处理</span><br><span class="line">        Thread t1 = new Thread(r); // public Thread(Runnable r)</span><br><span class="line">//        Thread t1 = new Thread(r, &quot;1号子线程&quot;); // public Thread(Runnable r,String name)</span><br><span class="line">        // 5、启动线程</span><br><span class="line">        t1.start();</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(&quot;主线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1、定义一个线程任务类实现Runnable接口</span><br><span class="line">class MyRunnable implements Runnable &#123;</span><br><span class="line">    // 2、重写run方法，设置线程任务</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(&quot;子线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>匿名内部类写法</strong></p>
+<p>①可以创建Runnable的匿名内部类对象。</p>
+<p>②再交给Thread线程对象。</p>
+<p>③再调用线程对象的start()启动线程。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1create;</span><br><span class="line"></span><br><span class="line">public class ThreadDemo2_2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：掌握多线程的创建方式二：使用Runnable接口的匿名内部类来创建</span><br><span class="line">        Runnable r = new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">                    System.out.println(&quot;子线程1输出：&quot; + i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        Thread t1 = new Thread(r); // public Thread(Runnable r)</span><br><span class="line">        t1.start();</span><br><span class="line"></span><br><span class="line">        new Thread(new Runnable() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void run() &#123;</span><br><span class="line">                for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">                    System.out.println(&quot;子线程2输出：&quot; + i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        new Thread(() -&gt; &#123;</span><br><span class="line">                for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">                    System.out.println(&quot;子线程3输出：&quot; + i);</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;).start();</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(&quot;主线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="实现Callable接口"><a href="#实现Callable接口" class="headerlink" title="实现Callable接口"></a>实现Callable接口</h4><p>假如线程执行完毕后有一些数据需要返回，前两种重写的run方法均不能直接返回结果。</p>
+<p>①、创建任务对象</p>
+<p>定义一个类实现Callable接口，重写call方法，封装要做的事情，和要返回的数据。</p>
+<p>把Callable类型的对象封装成FutureTask（线程任务对象）。</p>
+<p>②、把线程任务对象交给Thread对象。</p>
+<p>③、调用Thread对象的start方法启动线程。</p>
+<p>④、线程执行完毕后、通过FutureTask对象的的get方法去获取线程任务执行的结果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1create;</span><br><span class="line"></span><br><span class="line">import java.util.concurrent.Callable;</span><br><span class="line">import java.util.concurrent.ExecutionException;</span><br><span class="line">import java.util.concurrent.FutureTask;</span><br><span class="line"></span><br><span class="line">public class ThreadDemo3 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：掌握多线程的创建方式三：实现Callable接口，方式三的优势：可以获取线程执行完毕后的结果的。</span><br><span class="line">        // 3、创建一个Callable接口的实现类对象。</span><br><span class="line">        Callable&lt;String&gt; c1 = new MyCallable(100);</span><br><span class="line">        // 4、把Callable对象封装成一个真正的线程任务对象FutureTask对象。</span><br><span class="line">        /**</span><br><span class="line">         * 未来任务对象的作用？</span><br><span class="line">         *    a、本质是一个Runnable线程任务对象，可以交给Thread线程对象处理。</span><br><span class="line">         *    b、可以获取线程执行完毕后的结果。</span><br><span class="line">         */</span><br><span class="line">        FutureTask&lt;String&gt; f1 = new FutureTask&lt;&gt;(c1); // public FutureTask(Callable&lt;V&gt; callable)</span><br><span class="line">        // 5、把FutureTask对象作为参数传递给Thread线程对象。</span><br><span class="line">        Thread t1 = new Thread(f1);</span><br><span class="line">        // 6、启动线程。</span><br><span class="line">        t1.start();</span><br><span class="line"></span><br><span class="line">        Callable&lt;String&gt; c2 = new MyCallable(50);</span><br><span class="line">        FutureTask&lt;String&gt; f2 = new FutureTask&lt;&gt;(c2); // public FutureTask(Callable&lt;V&gt; callable)</span><br><span class="line">        Thread t2 = new Thread(f2);</span><br><span class="line">        t2.start();</span><br><span class="line"></span><br><span class="line">        // 获取线程执行完毕后返回的结果</span><br><span class="line">        try &#123;</span><br><span class="line">            // 如果主线程发现第一个线程还没有执行完毕，会让出CPU，等第一个线程执行完毕后，才会往下执行！</span><br><span class="line">            System.out.println(f1.get());</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        try &#123;</span><br><span class="line">            // 如果主线程发现第二个线程还没有执行完毕，会让出CPU，等第一个线程执行完毕后，才会往下执行！</span><br><span class="line">            System.out.println(f2.get());</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1、定义一个实现类实现Callable接口</span><br><span class="line">class MyCallable implements Callable&lt;String&gt; &#123;</span><br><span class="line">    private int n;</span><br><span class="line">    public MyCallable(int n) &#123;</span><br><span class="line">        this.n = n;</span><br><span class="line">    &#125;</span><br><span class="line">    // 2、实现call方法，定义线程执行体</span><br><span class="line">    public String call() throws Exception &#123;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for (int i = 1; i &lt;= n; i++) &#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        return &quot;子线程计算1-&quot; + n + &quot;的和是：&quot;  + sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="线程的常用方法"><a href="#线程的常用方法" class="headerlink" title="线程的常用方法"></a><strong>线程的常用方法</strong></h3><table>
+<thead>
+<tr>
+<th><strong>Thread****提供的常用方法</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public void run()</td>
+<td>线程的任务方法</td>
+</tr>
+<tr>
+<td>public void start()</td>
+<td>启动线程</td>
+</tr>
+<tr>
+<td>public String <strong>getName</strong><strong>()</strong></td>
+<td>获取当前线程的名称，线程名称默认是Thread-索引</td>
+</tr>
+<tr>
+<td>public void <strong>setName</strong><strong>(String name)</strong></td>
+<td>为线程设置名称</td>
+</tr>
+<tr>
+<td>public <strong>static</strong> Thread <strong>currentThread</strong><strong>()</strong></td>
+<td>获取当前执行的线程对象</td>
+</tr>
+<tr>
+<td>public <strong>static</strong> void <strong>sleep(long time)</strong></td>
+<td>让当前执行的线程休眠多少毫秒后，再继续执行</td>
+</tr>
+<tr>
+<td>public final void join()…</td>
+<td>让调用当前这个方法的线程先执行完！</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>Thread****提供的常见构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Thread(String name)</td>
+<td>可以为当前线程指定名称</td>
+</tr>
+<tr>
+<td>public Thread(Runnable target)</td>
+<td>封装Runnable对象成为线程对象</td>
+</tr>
+<tr>
+<td>public Thread(Runnable target, String name)</td>
+<td>封装Runnable对象成为线程对象，并指定线程名称</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo2threadapi;</span><br><span class="line"></span><br><span class="line">public class ThreadApiDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：搞清楚线程的常用方法。</span><br><span class="line">        Thread t1 = new MyThread(&quot;1号线程&quot;);</span><br><span class="line">        // t1.setName(&quot;1号线程&quot;);</span><br><span class="line">        t1.start();</span><br><span class="line">        System.out.println(t1.getName()); // 线程默认名称是：Thread-索引</span><br><span class="line"></span><br><span class="line">        Thread t2 = new MyThread(&quot;2号线程&quot;);</span><br><span class="line">        // t2.setName(&quot;2号线程&quot;);</span><br><span class="line">        t2.start();</span><br><span class="line">        System.out.println(t2.getName()); // 线程默认名称是：Thread-索引</span><br><span class="line"></span><br><span class="line">        // 哪个线程调用这个代码，这个代码就拿到哪个线程</span><br><span class="line">        Thread m = Thread.currentThread(); // 主线程</span><br><span class="line">        m.setName(&quot;主线程&quot;);</span><br><span class="line">        System.out.println(m.getName()); // main</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 1、定义一个子类继承Thread类，成为一个线程类。</span><br><span class="line">class MyThread extends Thread &#123;</span><br><span class="line">    public MyThread(String name) &#123;</span><br><span class="line">        super(name); // public Thread(String name)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 2、重写Thread类的run方法</span><br><span class="line">    @Override</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        // 3、在run方法中编写线程的任务代码（线程要干的活儿）</span><br><span class="line">        for (int i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() +&quot;子线程输出：&quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a><strong>线程安全</strong></h3><p>多个线程，同时操作同一个共享资源的时候，可能会出现业务安全问题。</p>
+<h3 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a><strong>线程同步</strong></h3><p>线程同步是线程安全问题的解决方案。让多个线程先后依次访问共享资源，这样就可以避免出现线程安全问题。</p>
+<p><strong>线程同步的常见方案</strong></p>
+<p>加锁：每次只允许一个线程加锁，加锁后才能进入访问，访问完毕后自动解锁，然后其他线程才能再加锁进来。</p>
+<h4 id="同步代码块"><a href="#同步代码块" class="headerlink" title="同步代码块"></a><strong>同步代码块</strong></h4><p>把访问共享资源的核心代码给上锁，以此保证线程安全。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 对于当前同时执行的线程来说，同步锁必须是同一把（同一个对象），否则会出bug。</span><br><span class="line"></span><br><span class="line">public void drawMoney(double money) &#123;</span><br><span class="line">        // 拿到当前谁来取钱。</span><br><span class="line">        String name = Thread.currentThread().getName();</span><br><span class="line">        // 判断余额是否足够</span><br><span class="line">        synchronized (this) &#123;</span><br><span class="line">            if (this.money &gt;= money) &#123;</span><br><span class="line">                // 余额足够，取钱</span><br><span class="line">                System.out.println(name + &quot;取钱成功，吐出了&quot; + money + &quot;元成功！&quot;);</span><br><span class="line">                // 更新余额</span><br><span class="line">                this.money -= money;</span><br><span class="line">                System.out.println(name + &quot;取钱成功，取钱后，余额剩余&quot; + this.money + &quot;元&quot;);</span><br><span class="line"></span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // 余额不足</span><br><span class="line">                System.out.println(name + &quot;取钱失败，余额不足&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>原理：每次只允许一个线程加锁后进入，执行完毕后自动解锁，其他线程才可以进来执行</p>
+<p><strong>锁对象的使用规范</strong></p>
+<p>建议使用共享资源作为锁对象，对于实例方法建议使用this作为锁对象。</p>
+<p>对于静态方法建议使用字节码（类名.class）对象作为锁对象。</p>
+<h4 id="同步方法"><a href="#同步方法" class="headerlink" title="同步方法"></a><strong>同步方法</strong></h4><p>把访问共享资源的核心方法给上锁，以此保证线程安全。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public synchronized void drawMoney(double money) &#123;</span><br><span class="line">        // 拿到当前谁来取钱。</span><br><span class="line">        String name = Thread.currentThread().getName();</span><br><span class="line">        // 判断余额是否足够</span><br><span class="line">        if (this.money &gt;= money) &#123;</span><br><span class="line">            // 余额足够，取钱</span><br><span class="line">            System.out.println(name + &quot;取钱成功，吐出了&quot; + money + &quot;元成功！&quot;);</span><br><span class="line">            // 更新余额</span><br><span class="line">            this.money -= money;</span><br><span class="line">            System.out.println(name + &quot;取钱成功，取钱后，余额剩余&quot; + this.money + &quot;元&quot;);</span><br><span class="line"></span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 余额不足</span><br><span class="line">            System.out.println(name + &quot;取钱失败，余额不足&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>原理：每次只能一个线程进入，执行完毕以后自动解锁，其他线程才可以进来执行</p>
+<p><strong>同步方法底层原理</strong></p>
+<p>同步方法其实底层也是有隐式锁对象的，只是锁的范围是整个方法代码。</p>
+<p>如果方法是实例方法：同步方法默认用this作为的锁对象。</p>
+<p>如果方法是静态方法：同步方法默认用类名.class作为的锁对象。</p>
+<h4 id="Lock锁"><a href="#Lock锁" class="headerlink" title="Lock锁"></a>Lock锁</h4><p>Lock锁是JDK5开始提供的一个新的锁定操作，通过它可以创建出锁对象进行加锁和解锁，更灵活、更方便、更强大。</p>
+<p>Lock是接口，不能直接实例化，可以采用它的实现类ReentrantLock来构建Lock锁对象。</p>
+<table>
+<thead>
+<tr>
+<th><strong>构造器</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public   ReentrantLock()</td>
+<td>获得Lock锁的实现类对象</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void lock()</td>
+<td>获得锁</td>
+</tr>
+<tr>
+<td>void unlock()</td>
+<td>释放锁</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">private final Lock lk = new ReentrantLock(); // 保护锁对象</span><br><span class="line"></span><br><span class="line">    // 小明和小红都到这里来了取钱</span><br><span class="line">    public void drawMoney(double money) &#123;</span><br><span class="line">        // 拿到当前谁来取钱。</span><br><span class="line">        String name = Thread.currentThread().getName();</span><br><span class="line">        lk.lock(); // 上锁</span><br><span class="line">        try &#123;</span><br><span class="line">            // 判断余额是否足够</span><br><span class="line">            if (this.money &gt;= money) &#123;</span><br><span class="line">                // 余额足够，取钱</span><br><span class="line">                System.out.println(name + &quot;取钱成功，吐出了&quot; + money + &quot;元成功！&quot;);</span><br><span class="line">                // 更新余额</span><br><span class="line">                this.money -= money;</span><br><span class="line">                System.out.println(name + &quot;取钱成功，取钱后，余额剩余&quot; + this.money + &quot;元&quot;);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // 余额不足</span><br><span class="line">                System.out.println(name + &quot;取钱失败，余额不足&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            lk.unlock();// 解锁</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a><strong>线程池</strong></h3><p>线程池就是一个可以复用线程的技术。</p>
+<h4 id="创建线程池"><a href="#创建线程池" class="headerlink" title="创建线程池"></a><strong>创建线程池</strong></h4><p>JDK 5.0起提供了代表线程池的接口：ExecutorService。</p>
+<ul>
+<li>方式一：使用ExecutorService的实现类ThreadPoolExecutor自创建一个线程池对象。</li>
+<li>方式二：使用Executors（线程池的工具类）调用方法返回不同特点的线程池对象。</li>
+</ul>
+<p>通过ThreadPoolExecutor创建线程池</p>
+<table>
+<thead>
+<tr>
+<th>ThreadPoolExecutor类提供的构造器</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public ThreadPoolExecutor(int   corePoolSize,                                int   maximumPoolSize,                                long   keepAliveTime,                                TimeUnit unit,                                BlockingQueue<Runnable>   workQueue,                                ThreadFactory threadFactory,                                RejectedExecutionHandler handler)</td>
+<td>使用指定的初始化参数创建一个新的线程池对象</td>
+</tr>
+</tbody></table>
+<p>参数一：corePoolSize : 指定线程池的核心线程的数量。                          </p>
+<p>参数二：maximumPoolSize：指定线程池的最大线程数量。</p>
+<p>参数三：keepAliveTime ：指定临时线程的存活时间。</p>
+<p>参数四：unit：指定临时线程存活的时间单位(秒、分、时、天）</p>
+<p>参数五：workQueue：指定线程池的任务队列。</p>
+<p>参数六：threadFactory：指定线程池的线程工厂。</p>
+<p>参数七：handler：指定线程池的任务拒绝策略（线程都在忙，任务队列也满了的时候，新任务来了该怎么处理）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo7executorService;</span><br><span class="line"></span><br><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">public class ExecutorServiceDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：创建线程池对象来使用。</span><br><span class="line">        // 1、使用线程池的实现类ThreadPoolExecutor声明七个参数来创建线程池对象。</span><br><span class="line">        ExecutorService pool = new ThreadPoolExecutor(3, 5,</span><br><span class="line">                10, TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(3),</span><br><span class="line">               Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="处理Runnable任务"><a href="#处理Runnable任务" class="headerlink" title="处理Runnable任务"></a>处理Runnable任务</h4><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void execute(Runnable command)</td>
+<td>执行 Runnable   任务</td>
+</tr>
+<tr>
+<td>Future<T>   submit(Callable<T> task)</td>
+<td>执行 Callable   任务，返回未来任务对象，用于获取线程返回的结果</td>
+</tr>
+<tr>
+<td>void   shutdown()</td>
+<td>等全部任务执行完毕后，再关闭线程池！</td>
+</tr>
+<tr>
+<td>List<Runnable>shutdownNow()</td>
+<td>立刻关闭线程池，停止正在执行的任务，并返回队列中未执行的任务</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo7executorService;</span><br><span class="line"></span><br><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">public class ExecutorServiceDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：创建线程池对象来使用。</span><br><span class="line">        // 1、使用线程池的实现类ThreadPoolExecutor声明七个参数来创建线程池对象。</span><br><span class="line">        ExecutorService pool = new ThreadPoolExecutor(3, 5,</span><br><span class="line">                10, TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(3),</span><br><span class="line">               Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line"></span><br><span class="line">        // 2、使用线程池处理任务！看会不会复用线程？</span><br><span class="line">        Runnable target = new MyRunnable();</span><br><span class="line">        pool.execute(target); // 提交第1个任务 创建第1个线程 自动启动线程处理这个任务</span><br><span class="line">        pool.execute(target); // 提交第2个任务 创建第2个线程 自动启动线程处理这个任务</span><br><span class="line">        pool.execute(target); // 提交第2个任务 创建第3个线程 自动启动线程处理这个任务</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target); // 到了临时线程的创建时机了</span><br><span class="line">        pool.execute(target); // 到了临时线程的创建时机了</span><br><span class="line">        pool.execute(target); // 到了任务拒绝策略了，忙不过来</span><br><span class="line"></span><br><span class="line">        // 3、关闭线程池 ：一般不关闭线程池。</span><br><span class="line">        // pool.shutdown(); // 等所有任务执行完毕后再关闭线程池！</span><br><span class="line">//        pool.shutdownNow(); // 立即关闭，不管任务是否执行完毕！</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>什么时候开始创建临时线程？</p>
+<p>新任务提交时发现核心线程都在忙，任务队列也满了，并且还可以创建临时线程，此时才会创建临时线程。</p>
+<p>什么时候会拒绝新任务？</p>
+<p>核心线程和临时线程都在忙，任务队列也满了，新的任务过来的时候才会开始拒绝任务。</p>
+<p><strong>任务拒绝策略</strong></p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ThreadPoolExecutor.AbortPolicy()</td>
+<td>丢弃任务并抛出RejectedExecutionException异常。是默认的策略</td>
+</tr>
+<tr>
+<td>ThreadPoolExecutor. DiscardPolicy()</td>
+<td>丢弃任务，但是不抛出异常，这是不推荐的做法</td>
+</tr>
+<tr>
+<td>ThreadPoolExecutor. DiscardOldestPolicy()</td>
+<td>抛弃队列中等待最久的任务   然后把当前任务加入队列中</td>
+</tr>
+<tr>
+<td>ThreadPoolExecutor. CallerRunsPolicy()</td>
+<td>由主线程负责调用任务的run()方法从而绕过线程池直接执行</td>
+</tr>
+</tbody></table>
+<h4 id="处理Callable任务"><a href="#处理Callable任务" class="headerlink" title="处理Callable任务"></a>处理Callable任务</h4><table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void execute(Runnable command)</td>
+<td>执行 Runnable   任务</td>
+</tr>
+<tr>
+<td>Future<T>   submit(Callable<T> task)</td>
+<td>执行 Callable   任务，返回未来任务对象，用于获取线程返回的结果</td>
+</tr>
+<tr>
+<td>void   shutdown()</td>
+<td>等全部任务执行完毕后，再关闭线程池！</td>
+</tr>
+<tr>
+<td>List<Runnable>shutdownNow()</td>
+<td>立刻关闭线程池，停止正在执行的任务，并返回队列中未执行的任务</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo7executorService;</span><br><span class="line"></span><br><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">public class ExecutorServiceDemo2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：创建线程池对象来使用。</span><br><span class="line">        // 1、使用线程池的实现类ThreadPoolExecutor声明七个参数来创建线程池对象。</span><br><span class="line">        ExecutorService pool = new ThreadPoolExecutor(3, 5,</span><br><span class="line">                10, TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(3),</span><br><span class="line">               Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());</span><br><span class="line"></span><br><span class="line">        // 2、使用线程池处理Callable任务！</span><br><span class="line">        Future&lt;String&gt; f1 = pool.submit(new MyCallable(100));</span><br><span class="line">        Future&lt;String&gt; f2 = pool.submit(new MyCallable(200));</span><br><span class="line">        Future&lt;String&gt; f3 = pool.submit(new MyCallable(300));</span><br><span class="line">        Future&lt;String&gt; f4 = pool.submit(new MyCallable(400));</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(f1.get());</span><br><span class="line">            System.out.println(f2.get());</span><br><span class="line">            System.out.println(f3.get());</span><br><span class="line">            System.out.println(f4.get());</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="通过Executors创建线程池"><a href="#通过Executors创建线程池" class="headerlink" title="通过Executors创建线程池"></a>通过Executors创建线程池</h4><p>是一个线程池的工具类，提供了很多静态方法用于返回不同特点的线程池对象。大型并发系统环境中使用Executors如果不注意可能会出现系统风险。</p>
+<table>
+<thead>
+<tr>
+<th><strong>方法名称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static <a href="mk:@MSITStore:D:\course\jdk-11中文api修订版.CHM::/java.base/java/util/concurrent/ExecutorService.html">ExecutorService</a> newFixedThreadPool(int nThreads)</td>
+<td>创建固定线程数量的线程池，如果某个线程因为执行异常而结束，那么线程池会补充一个新线程替代它。</td>
+</tr>
+<tr>
+<td>public   static <a href="mk:@MSITStore:D:\course\jdk-11中文api修订版.CHM::/java.base/java/util/concurrent/ExecutorService.html">ExecutorService</a> newSingleThreadExecutor()</td>
+<td>创建只有一个线程的线程池对象，如果该线程出现异常而结束，那么线程池会补充一个新线程。</td>
+</tr>
+<tr>
+<td>public   static <a href="mk:@MSITStore:D:\course\jdk-11中文api修订版.CHM::/java.base/java/util/concurrent/ExecutorService.html">ExecutorService</a> newCachedThreadPool()</td>
+<td>线程数量随着任务增加而增加，如果线程任务执行完毕且空闲了60s则会被回收掉。</td>
+</tr>
+<tr>
+<td>public   static <a href="mk:@MSITStore:D:\course\jdk-11中文api修订版.CHM::/java.base/java/util/concurrent/ScheduledExecutorService.html">ScheduledExecutorService</a> newScheduledThreadPool(int corePoolSize)</td>
+<td>创建一个线程池，可以实现在给定的延迟后运行任务，或者定期执行任务。</td>
+</tr>
+</tbody></table>
+<p>注意 ：这些方法的底层，都是通过线程池的实现类ThreadPoolExecutor创建的线程池对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo7executorService;</span><br><span class="line"></span><br><span class="line">import java.util.concurrent.ExecutorService;</span><br><span class="line">import java.util.concurrent.Executors;</span><br><span class="line">import java.util.concurrent.Future;</span><br><span class="line"></span><br><span class="line">public class ExecutorsDemo3 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：通过线程池工具类：Executors，调用其静态方法直接得到线程池</span><br><span class="line">        ExecutorService pool = Executors.newFixedThreadPool(3);</span><br><span class="line"></span><br><span class="line">        Future&lt;String&gt; f1 = pool.submit(new MyCallable(100));</span><br><span class="line">        Future&lt;String&gt; f2 = pool.submit(new MyCallable(200));</span><br><span class="line">        Future&lt;String&gt; f3 = pool.submit(new MyCallable(300));</span><br><span class="line">        Future&lt;String&gt; f4 = pool.submit(new MyCallable(400));</span><br><span class="line"></span><br><span class="line">        try &#123;</span><br><span class="line">            System.out.println(f1.get());</span><br><span class="line">            System.out.println(f2.get());</span><br><span class="line">            System.out.println(f3.get());</span><br><span class="line">            System.out.println(f4.get());</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="并发-x2F-并行"><a href="#并发-x2F-并行" class="headerlink" title="并发&#x2F;并行"></a>并发&#x2F;并行</h3><p>正在运行的程序（软件）就是一个独立的进程。</p>
+<p>线程是属于进程的，一个进程中可以同时运行很多个线程。</p>
+<p>进程中的多个线程其实是并发和并行执行的。</p>
+<h4 id="并发的含义"><a href="#并发的含义" class="headerlink" title="并发的含义"></a><strong>并发的含义</strong></h4><p>进程中的线程是由CPU负责调度执行的，但CPU能同时处理线程的数量有限，为了保证全部线程都能往前执行，CPU会轮询为系统的每个线程服务，由于CPU切换的速度很快，给我们的感觉这些线程在同时执行，这就是并发。</p>
+<h4 id="并行的理解"><a href="#并行的理解" class="headerlink" title="并行的理解"></a>并行的理解</h4><p>在同一个时刻上，同时有多个线程在被CPU调度执行。</p>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a><strong>网络编程</strong></h2><p><strong>基本的通信架构</strong></p>
+<p>基本的通信架构有2种形式：CS架构（Client客户端&#x2F;Server服务端 ） 、 BS架构(Browser浏览器&#x2F;Server服务端)。</p>
+<h3 id="网络通信三要素"><a href="#网络通信三要素" class="headerlink" title="网络通信三要素"></a><strong>网络通信三要素</strong></h3><h4 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h4><p>IP（Internet Protocol）：全称”互联网协议地址”，是分配给上网设备的唯一标识。</p>
+<h5 id="IPv4"><a href="#IPv4" class="headerlink" title="IPv4"></a>IPv4</h5><p>IPv4是Internet Protocol version 4的缩写，它使用32位地址，通常以点分十进制表示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.1.66</span><br></pre></td></tr></table></figure>
+
+<h5 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a><strong>IPv6</strong></h5><p>IPv6是Internet Protocol version 6的缩写，它使用128位地址，号称可以为地球上的每一粒沙子编号。</p>
+<p>IPv6分成8段，每段每四位编码成一个十六进制位表示， 每段之间用冒号（:）分开，将这种方式称为冒分十六进制。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2001:0db8:0000:0023:0008:0800:200c:417a</span><br></pre></td></tr></table></figure>
+
+<h5 id="IP域名（Domain-Name）"><a href="#IP域名（Domain-Name）" class="headerlink" title="IP域名（Domain Name）"></a>IP域名（Domain Name）</h5><p>用于在互联网上识别和定位网站的人类可读的名称。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<h5 id="DNS域名解析（Domain-Name-System）"><a href="#DNS域名解析（Domain-Name-System）" class="headerlink" title="DNS域名解析（Domain Name System）"></a>DNS域名解析（Domain Name System）</h5><p>是互联网中用于将域名转换为对应IP地址的分布式命名系统。它充当了互联网的“电话簿”，将易记的域名映射到数字化的IP地址，使得用户可以通过域名来访问网站和其他网络资源。</p>
+<h5 id="公网IP、内网IP"><a href="#公网IP、内网IP" class="headerlink" title="公网IP、内网IP"></a>公网IP、内网IP</h5><p>公网IP：是可以连接到互联网的IP地址；</p>
+<p>内网IP：也叫局域网IP，是只能组织机构内部使用的IP地址；例如，192.168. 开头的就是常见的局域网地址，范围为192.168.0.0–192.168.255.255，专门为组织机构内部使用。 </p>
+<h5 id="InetAddress"><a href="#InetAddress" class="headerlink" title="InetAddress"></a><strong>InetAddress</strong></h5><p>代表IP地址。</p>
+<p>InetAddress的常用方法</p>
+<table>
+<thead>
+<tr>
+<th>InetAddress类的常用方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static InetAddress getLocalHost()   throws   UnknownHostException</td>
+<td>获取本机IP，返回一个InetAddress对象</td>
+</tr>
+<tr>
+<td>public String getHostName()</td>
+<td>获取该ip地址对象对应的主机名。</td>
+</tr>
+<tr>
+<td>public String getHostAddress()</td>
+<td>获取该ip地址对象中的ip地址信息。</td>
+</tr>
+<tr>
+<td>public static InetAddress getByName(String host)          throws UnknownHostException</td>
+<td>根据ip地址或者域名，返回一个inetAddress对象</td>
+</tr>
+<tr>
+<td>public boolean isReachable(int   timeout)   throws   IOException</td>
+<td>判断主机在指定毫秒内与该ip对应的主机是否能连通</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">package com.itheima.demo1inetaddress;</span><br><span class="line"></span><br><span class="line">import java.net.InetAddress;</span><br><span class="line"></span><br><span class="line">public class InetAddressDemo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 目标：认识InetAddress获取本机IP对象和对方IP对象。</span><br><span class="line">        try &#123;</span><br><span class="line">            // 1.获取本机IP对象</span><br><span class="line">            InetAddress ip1 = InetAddress.getLocalHost();</span><br><span class="line">            System.out.println(ip1.getHostName());</span><br><span class="line">            System.out.println(ip1.getHostAddress());</span><br><span class="line"></span><br><span class="line">            // 2、获取对方IP对象</span><br><span class="line">            InetAddress ip2 = InetAddress.getByName(&quot;www.baidu.com&quot;);</span><br><span class="line">            System.out.println(ip2.getHostName());</span><br><span class="line">            System.out.println(ip2.getHostAddress());</span><br><span class="line"></span><br><span class="line">           // 3、判断本机与对方主机是否互通</span><br><span class="line">            System.out.println(ip2.isReachable(5000)); // false ping</span><br><span class="line">        &#125;catch (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="端口"><a href="#端口" class="headerlink" title="端口"></a><strong>端口</strong></h4><p>用来标记标记正在计算机设备上运行的应用程序，被规定为一个16位的二进制，范围是0~65535。</p>
+<p>端口分类</p>
+<p>周知端口：0~1023，被预先定义的知名应用占用（如：HTTP占用 80，FTP占用21） </p>
+<p>注册端口：1024~49151，分配给用户进程或某些应用程序。</p>
+<p>动态端口：49152到65535，之所以称为动态端口，是因为它一般不固定分配某种进程，而是动态分配。</p>
+<p>注意：我们自己开发的程序一般选择使用注册端口，且一个设备中不能出现两个程序的端口号一样，否则报错。</p>
+<h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><h5 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a><strong>通信协议</strong></h5><p>网络上通信的设备，事先规定的连接规则，以及传输数据的规则被称为网络通信协议。</p>
+<h5 id="开放式网络互联标准：OSI网络参考模型"><a href="#开放式网络互联标准：OSI网络参考模型" class="headerlink" title="开放式网络互联标准：OSI网络参考模型"></a>开放式网络互联标准：OSI网络参考模型</h5><p>OSI网络参考模型：全球网络互联标准。 </p>
+<p>TCP&#x2F;IP网络模型：事实上的国际标准。</p>
+<table>
+<thead>
+<tr>
+<th><strong>OSI****网络参考模型</strong></th>
+<th><strong>TCP&#x2F;IP****网络模型</strong></th>
+<th><strong>各层对应</strong></th>
+<th><strong>面向操作</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应用层</td>
+<td>应用层</td>
+<td>HTTP、FTP、SMTP…</td>
+<td>应用程序需要关注的：浏览器，邮箱。程序员一般在这一层开发</td>
+</tr>
+<tr>
+<td>表示层</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>会话层</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>传输层</td>
+<td><strong>UDP<strong><strong>、</strong></strong>TCP…</strong></td>
+<td>选择使用的TCP , UDP协议</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>网络层</td>
+<td>IP…</td>
+<td>封装源和目标IP</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>数据链路层+ 物理层</td>
+<td>比特流…</td>
+<td>物理设备中传输</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="UDP-User-Datagram-Protocol-：用户数据报协议。"><a href="#UDP-User-Datagram-Protocol-：用户数据报协议。" class="headerlink" title="UDP(User Datagram Protocol)：用户数据报协议。"></a>UDP(User Datagram Protocol)：用户数据报协议。</h5><p>用户数据报协议(User Datagram Protocol)</p>
+<p>UDP是面向无连接，不可靠传输的通信协议。</p>
+<p>速度快，有大小限制一次最多发送64K，数据不安全，易丢失数据。</p>
+<h5 id="TCP-Transmission-Control-Protocol-：传输控制协议。"><a href="#TCP-Transmission-Control-Protocol-：传输控制协议。" class="headerlink" title="TCP(Transmission Control Protocol) ：传输控制协议。"></a>TCP(Transmission Control Protocol) ：传输控制协议。</h5><p>TCP是一种面向连接的可靠通信协议</p>
+<p>传输前，采用“三次握手”方式建立连接，点对点的通信。</p>
+<p>在连接中可进行大数据量的传输。</p>
+<p>传输后，采用“四次挥手”方式断开连接，确保消息全部收发完毕。</p>
+<p>通信效率相对较低，可靠性相对较高。</p>
+<h3 id="UDP通信"><a href="#UDP通信" class="headerlink" title="UDP通信"></a>UDP通信</h3>
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>License</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
